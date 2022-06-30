@@ -4,10 +4,12 @@
     --fuenteHeading: 'PT Sans', sans-serif;
     --fuenteParrafos: 'Open Sans', sans-serif;
 
-    --primario: #784d3c;
-    --gris: #e1e1e1;
+    --primario: #c7d0d8;
+    --botones: #92a5cb;
+    --botonesLog: #50679a;
     --blanco: #fff;
     --negro: #000;
+    --colorTitulo: #292f33;
 }
 
 html {
@@ -28,5 +30,6 @@ body {
 /**==========Codigo esecial para todos los estilos=========**/
 
 .Header{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--negro);
+    
 }
