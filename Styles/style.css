@@ -50,7 +50,7 @@ body {
   margin-top: 5%;
 }
 .container-user {
-    position: relative;
+  position: relative;
   text-align: center;
   align-items: center;
   margin-right: 25%;
@@ -58,10 +58,10 @@ body {
   margin-top: 5%;
 }
 
-.img-back{
-    width: 100%;
-    height: 90%;
-    position: absolute;
+.img-back {
+  width: 100%;
+  height: 90%;
+  position: absolute;
 }
 
 .div-user {
@@ -93,6 +93,36 @@ input {
   border-radius: 0.5rem;
   height: 4rem;
 }
+
+.btn-login {
+  font-family: var(--fuenteParrafos);
+  font-size: 2rem;
+  background-color: var(--botones);
+  color: var(--colorTitulo);
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+.btn-login:hover {
+    background-color: #a7acb1;
+    color: var(--colorTitulo);
+  }
+
+.btn-register {
+  font-family: var(--fuenteParrafos);
+  font-size: 2rem;
+  background-color: var(--botones);
+  color: var(--colorTitulo);
+  padding: 0.5rem 3rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+.btn-register:hover {
+    background-color: #a7acb1;
+    color: var(--colorTitulo);
+  }
 
 button {
   height: 5rem;

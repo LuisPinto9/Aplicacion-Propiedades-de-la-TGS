@@ -27,6 +27,8 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
+    <script src="./Scripts/script.js"></script>
+
     <title>Propiedades de los sistemas</title>
 </head>
 
@@ -46,24 +48,27 @@
 
         <div class="container-user">
             <div class="img-back">
-                <img  src="./Images/fondo.png" alt="">
+                <img src="./Images/fondo.png" alt="">
             </div>
             <div class="img-back">
                 <h1 class="title-user">Inicio de sesión</h1>
                 <div class="pt-5 pb-1">
                     <form>
                         <div class="div-user">
-                            <label for="exampleInputEmail1" class="label-user">Nombre de Usuario</label>
+                            <label for="inputUser" class="label-user">Nombre de Usuario</label>
                             <input type="email" class="input-user" id="inputUser" aria-describedby="emailHelp">
                         </div>
                         <div class="div-password">
-                            <label for="exampleInputPassword1" class="label-password">Contraseña</label>
+                            <label for="inputPassword" class="label-password">Contraseña</label>
                             <input type="password" class="input-password" id="inputPassword">
                         </div class="div-button">
                         <div class="p-4">
-                            <button type="submit" class="btn-login">Iniciar Sesión</button>
-                            <button type="submit" class="btn-register">Registrarse</button>
+                            <a type="button" class="btn-login" href="" id="btnLogin" onclick="login()">Iniciar
+                                Sesión</a>
+                            <a type="button" class="btn-register" href="/registro.html"
+                                onclick="login()">Registrarse</a>
                         </div>
+
                     </form>
                 </div>
             </div>
