@@ -6,6 +6,7 @@
 
     --primario: #c7d0d8;
     --botones: #92a5cb;
+    --bordes: #9aa7b2;
     --botonesLog: #50679a;
     --blanco: #fff;
     --negro: #000;
@@ -47,9 +48,7 @@ body {
     margin-top: 5%;
 }
 .prueba{
-    background-color: orange;
-    display: flex;
-    flex-direction: column;
+    text-align: center;
     align-items: center;
     border: .5rem solid var(--primario);
     padding-top: 5rem;
@@ -57,4 +56,35 @@ body {
     margin-right: 25%;
     margin-left: 25%;
     margin-top: 5%;
+}
+
+.div-user{
+    text-align: center;
+}
+
+.div-password{
+    text-align: center;
+}
+
+.title{
+    font-size: 3rem;
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+}
+
+.labelUser{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.labelPassword{
+    font-size: 2rem;
+}
+
+input{
+    width: 50rem;
+    border-color: var(--bordes);
+    border-style: solid;
+    border-radius: 0.5rem;
+    height: 4rem;
 }
