@@ -2,9 +2,150 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Proyecto TGS</title>
+    <!--    <link rel="stylesheet" src="estilo.css">-->
 </head>
-<body>
+<body class="container">
+
+
+<img id="imagen1" src="Images/logo.png">
+<img id="imagen2" src="Images/Ludwig.png">
+
+
+<div id="menu2">
+    <h1 id="titulo1">
+        ¿A quién se le atribuye el primer modelo de la teoría general de sistemas?
+    </h1>
+</div>
+
+<div class="m-5">
+
+</div>
+<div id="izquierda">
+    <p id="btn1"> Ludwig von Bertalanffy</p>
+    <p id="btn2"> Norbert Weiner</p>
+
+</div>
+<div id="derecha">
+    <p id="btn3"> David Rapaport</p>
+    <p id="btn4"> Kurt Lewin</p>
+</div>
+
+<div id="credits">
+    <button type="submit" class="btn btn_personalizado">Salir</button>
+</div>
+
+
+<style type="text/css">
+
+    h1#titulo1 {
+        top: 300px;
+        text-align: center;
+        font: 150% sans-serif;
+        font-family: "Homer Simpson UI"
+
+    }
+
+    p#btn1 {
+        background: #fcdbe6;
+        color: #f15c8e;
+        font-weight: bold;
+        padding: 15px;
+        border: 2px solid #fac9d9;
+        border-radius: 6px;
+    }
+
+    p#btn2 {
+        color: #a2a2a2;
+        font-weight: bold;
+        padding: 15px;
+        border: 2px solid #d8d8d8;
+        border-radius: 6px;
+    }
+
+    p#btn3 {
+        background: #e2fdf4;
+        color: #0ebd84;
+        font-weight: bold;
+        padding: 15px;
+        border: 2px solid #bdfae6;
+        border-radius: 6px;
+    }
+
+    p#btn4 {
+        background: #bdf0fa;
+        color: #0c92ac;
+        font-weight: bold;
+        padding: 15px;
+        border: 2px solid #abecf9;
+        border-radius: 6px;
+    }
+
+    img#imagen1{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100px;
+        height: 100px;
+    }
+    img#imagen2{
+        position: absolute;
+        left: 300px;
+        top: 170px;
+        width: 200px;
+        height: 200px;
+    }
+
+
+    div#derecha {
+        position: absolute;
+        left: 100px;
+        top: 400px;
+        width:290px;
+        /*float: left;*/
+    }
+
+    div#izquierda {
+        position: absolute;
+        left: 400px;
+        top: 400px;
+        width: 280px;
+    }
+
+    div#credits {
+        clear: both;
+    }
+
+    div#menu2 {
+        position: absolute;
+        left: 100px;
+        top: 100px;
+        width: 600px;
+    }
+
+    .btn_personalizado {
+        text-decoration: none;
+        position: absolute;
+        left: 700px;
+        top: 10px;
+
+        padding: 10px;
+        font-weight: 600;
+        font-size: 20px;
+        color: #ffffff;
+        background-color: #1883ba;
+        border-radius: 6px;
+        border: 2px solid #0016b0;
+    }
+
+</style>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
