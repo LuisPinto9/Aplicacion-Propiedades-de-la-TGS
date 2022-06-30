@@ -1,90 +1,100 @@
 /**Codigo esecial para todos los estilos**/
 
 :root {
-    --fuenteHeading: 'PT Sans', sans-serif;
-    --fuenteParrafos: 'Open Sans', sans-serif;
+  --fuenteHeading: "PT Sans", sans-serif;
+  --fuenteParrafos: "Open Sans", sans-serif;
 
-    --primario: #c7d0d8;
-    --botones: #92a5cb;
-    --bordes: #9aa7b2;
-    --botonesLog: #50679a;
-    --blanco: #fff;
-    --negro: #000;
-    --colorTitulo: #292f33;
+  --botones: #c7d0d8;
+  --primario: #92a5cb;
+  --bordesInput: #9aa7b2;
+  --botonesLog: #50679a;
+  --blanco: #fff;
+  --negro: #000;
+  --colorTitulo: #292f33;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%; /* 1rem = 10px */
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
-    font-family: var(--fuenteParrafos);
-    font-size: 1.6rem;
-    line-height: 2;
+  font-family: var(--fuenteParrafos);
+  font-size: 1.6rem;
+  line-height: 2;
 }
 
 /**==========Codigo esecial para todos los estilos=========**/
 
-.Header{
-    border-bottom: .1rem solid var(--negro);
-    margin-left: 2rem;
-    margin-right: 2rem;
+.Header {
+  border-bottom: 0.2rem solid var(--negro);
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
-.main-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: .5rem solid var(--primario);
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-    margin-right: 25%;
-    margin-left: 25%;
-    margin-top: 5%;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5rem solid var(--primario);
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  margin-right: 25%;
+  margin-left: 25%;
+  margin-top: 5%;
 }
-.prueba{
-    text-align: center;
-    align-items: center;
-    border: .5rem solid var(--primario);
-    padding-top: 5rem;
-    padding-bottom: 10rem;
-    margin-right: 25%;
-    margin-left: 25%;
-    margin-top: 5%;
-}
-
-.div-user{
-    text-align: center;
+.container-user {
+  text-align: center;
+  align-items: center;
+  border: 1rem dashed var(--primario);
+  padding-bottom: 8rem;
+  margin-right: 25%;
+  margin-left: 25%;
+  margin-top: 5%;
 }
 
-.div-password{
-    text-align: center;
+.div-user {
+  text-align: center;
 }
 
-.title{
-    font-size: 3rem;
-    font-family: 'Antonio', sans-serif;
-    font-weight: 700;
+.div-password {
+  text-align: center;
 }
 
-.labelUser{
-    text-align: center;
-    font-size: 2rem;
+.title-user {
+  color: var(--colorTitulo);
+  font-size: 3rem;
+  font-family: "Antonio", sans-serif;
+  font-weight: 700;
 }
 
-.labelPassword{
-    font-size: 2rem;
+label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
 }
 
-input{
-    width: 50rem;
-    border-color: var(--bordes);
-    border-style: solid;
-    border-radius: 0.5rem;
-    height: 4rem;
+input {
+  width: 50rem;
+  font-size: 2rem;
+  padding: 1rem;
+  border-color: var(--bordesInput);
+  border-style: solid;
+  border-radius: 0.5rem;
+  height: 4rem;
+}
+
+button {
+  height: 5rem;
+  background-color: var(--botones);
+  font-family: var(--fuenteParrafos);
+  color: var(--colorTitulo);
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  border-color: var(--botones);
 }
