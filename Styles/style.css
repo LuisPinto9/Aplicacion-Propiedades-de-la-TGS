@@ -50,13 +50,18 @@ body {
   margin-top: 5%;
 }
 .container-user {
+    position: relative;
   text-align: center;
   align-items: center;
-  border: 1rem dashed var(--primario);
-  padding-bottom: 8rem;
   margin-right: 25%;
   margin-left: 25%;
   margin-top: 5%;
+}
+
+.img-back{
+    width: 100%;
+    height: 90%;
+    position: absolute;
 }
 
 .div-user {
@@ -92,7 +97,6 @@ input {
 button {
   height: 5rem;
   background-color: var(--botones);
-  font-family: var(--fuenteParrafos);
   color: var(--colorTitulo);
   font-size: 2rem;
   border-radius: 0.5rem;
