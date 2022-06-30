@@ -30,6 +30,14 @@ body {
 /**==========Codigo esecial para todos los estilos=========**/
 
 .Header{
-    border-bottom: 1px solid var(--negro);
-    
+    border-bottom: .1rem solid var(--negro);
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.main-container{
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--primario);
+    margin: 10rem;
 }
