@@ -49,4 +49,11 @@ if ($option == 1) {
     }
 
     file_put_contents('.\Resource\user.json', json_encode($finalData));
+} else if ($option == 4) {
+    
+    $name = $_GET['name'];
+
+    $object = json_decode($name);
+
+    echo json_encode($object);
 }
