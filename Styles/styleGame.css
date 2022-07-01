@@ -46,13 +46,13 @@ body {
     margin-left: 20%;
 }
 
-.div-title{
+.div-title {
     margin-right: 85%;
     margin-left: 5%;
     margin-top: 0;
 }
 
-.title-questions{
+.title-questions {
     font-family: 'Simonetta', cursive;
     font-size: 3rem;
     color: var(--negro);
@@ -77,7 +77,7 @@ body {
     color: var(--blanco);
 }
 
-.btn-seleccionMultiple{
+.btn-seleccionMultiple {
     font-family: 'Simonetta', cursive;
     font-size: 3rem;
     background-color: var(--primario);
@@ -92,7 +92,7 @@ body {
     color: var(--negro);
 }
 
-.btn-seleccionUnica{
+.btn-seleccionUnica {
     font-family: 'Simonetta', cursive;
     font-size: 3rem;
     background-color: var(--primario);
@@ -107,7 +107,7 @@ body {
     color: var(--negro);
 }
 
-.btn-vF{
+.btn-vF {
     font-family: 'Simonetta', cursive;
     font-size: 3rem;
     background-color: var(--primario);
@@ -122,7 +122,7 @@ body {
     color: var(--negro);
 }
 
-.btn-random{
+.btn-random {
     font-family: 'Simonetta', cursive;
     font-size: 3rem;
     background-color: var(--primario);
@@ -137,7 +137,7 @@ body {
     color: var(--negro);
 }
 
-.div-btnPlay{
+.div-btnPlay {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,7 +146,7 @@ body {
     margin-left: 25%;
 }
 
-.btn-jugar{
+.btn-jugar {
     font-family: 'Simonetta', cursive;
     font-size: 3rem;
     background-color: var(--botones);

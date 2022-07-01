@@ -1,7 +1,7 @@
 function begin() {
 
     const xhr = new XMLHttpRequest();
-    xhr.open('get', "./Php/control.php?option=1", true)
+    xhr.open('get', "./Php/controlUsers.php?option=1", true)
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const data = JSON.parse(xhr.responseText)
@@ -14,7 +14,7 @@ function begin() {
 
 }
 
-function login(){
+function login() {
     const name = document.getElementById("inputUser").value;
     const password = document.getElementById("inputPassword").value;
     const xhr = new XMLHttpRequest();
@@ -29,14 +29,14 @@ function login(){
 function findUser(userN, password) {
 
     const xhr = new XMLHttpRequest();
-    xhr.open("get", "./Php/control.php?option=1", true);
+    xhr.open("get", "./Php/controlUsers.php?option=1", true);
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const data = JSON.parse(xhr.response);
-            data.forEach((user)=>{
+            data.forEach((user) => {
                 if (user.name === userN && user.password === password) {
                     return user
-                }else{
+                } else {
                     return null
                 }
             })
