@@ -17,13 +17,10 @@ function begin() {
 function login(){
     const name = document.getElementById("inputUser").value;
     const password = document.getElementById("inputPassword").value;
-    alert(name)
-    alert(password)
     const xhr = new XMLHttpRequest();
     xhr.open('get', `./Php/controlLogin.php?option=2&name=${name}&password=${password}`, true)
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
-alert(xhr.responseText)
         }
     }
     xhr.send(null)

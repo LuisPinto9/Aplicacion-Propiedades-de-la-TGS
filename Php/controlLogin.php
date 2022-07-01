@@ -16,6 +16,5 @@ if ($option == 1) {
 
     if (file_exists('..\Resources\login.json')) {
         file_put_contents('..\Resources\login.json', json_encode($newUser));
-        echo "ok";
     }
 }
