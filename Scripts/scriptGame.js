@@ -1,5 +1,4 @@
 function begin() {
-
     const xhr = new XMLHttpRequest();
     xhr.open('get', './Php/controlLogin.php?option=1', true)
     xhr.onreadystatechange = () => {
@@ -9,5 +8,4 @@ function begin() {
         }
     }
     xhr.send(null)
-
 }

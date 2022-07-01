@@ -123,12 +123,3 @@ input {
     background-color: #a7acb1;
     color: var(--colorTitulo);
   }
-
-button {
-  height: 5rem;
-  background-color: var(--botones);
-  color: var(--colorTitulo);
-  font-size: 2rem;
-  border-radius: 0.5rem;
-  border-color: var(--botones);
-}

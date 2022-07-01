@@ -38,6 +38,29 @@ body {
     margin-right: 2rem;
 }
 
+.container-questions {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    margin-right: 25%;
+    margin-left: 20%;
+}
+
+.div-title{
+    margin-right: 85%;
+    margin-left: 5%;
+    margin-top: 0;
+}
+
+.title-questions{
+    font-family: 'Simonetta', cursive;
+    font-size: 3rem;
+    color: var(--negro);
+    border-bottom: 0.2rem solid var(--negro);
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+}
+
 .btn-logOut {
     font-family: "Antonio", sans-serif;
     font-weight: 700;
@@ -52,4 +75,88 @@ body {
 .btn-logOut:hover {
     background-color: #3f5377;
     color: var(--blanco);
+}
+
+.btn-seleccionMultiple{
+    font-family: 'Simonetta', cursive;
+    font-size: 3rem;
+    background-color: var(--primario);
+    color: var(--negro);
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    border-radius: 1rem;
+}
+
+.btn-seleccionMultiple:hover {
+    background-color: #8495b6;
+    color: var(--negro);
+}
+
+.btn-seleccionUnica{
+    font-family: 'Simonetta', cursive;
+    font-size: 3rem;
+    background-color: var(--primario);
+    color: var(--negro);
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    border-radius: 1rem;
+}
+
+.btn-seleccionUnica:hover {
+    background-color: #8495b6;
+    color: var(--negro);
+}
+
+.btn-vF{
+    font-family: 'Simonetta', cursive;
+    font-size: 3rem;
+    background-color: var(--primario);
+    color: var(--negro);
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    border-radius: 1rem;
+}
+
+.btn-vF:hover {
+    background-color: #8495b6;
+    color: var(--negro);
+}
+
+.btn-random{
+    font-family: 'Simonetta', cursive;
+    font-size: 3rem;
+    background-color: var(--primario);
+    color: var(--negro);
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    border-radius: 1rem;
+}
+
+.btn-random:hover {
+    background-color: #8495b6;
+    color: var(--negro);
+}
+
+.div-btnPlay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+.btn-jugar{
+    font-family: 'Simonetta', cursive;
+    font-size: 3rem;
+    background-color: var(--botones);
+    color: var(--negro);
+    padding: 0.01em 2rem;
+    text-decoration: none;
+    border-radius: 3rem;
+}
+
+.btn-jugar:hover {
+    background-color: #8190af;
+    color: var(--negro);
 }
