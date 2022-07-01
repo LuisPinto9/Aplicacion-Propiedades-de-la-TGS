@@ -1,7 +1,7 @@
 function begin() {
 
     const xhr = new XMLHttpRequest();
-    xhr.open('get', './Resources/Control.php?option=1', true)
+    xhr.open('get', './Php/Control.php?option=1', true)
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const data = JSON.parse(xhr.response)
@@ -12,17 +12,18 @@ function begin() {
 
 }
 
-function userName() {
-    let name = document.getElementById("inputUser").value
-    data = findUser(name, password)
-    const xhr = new XMLHttpRequest();
-    xhr.open('post', `./Resources/Control.php?option=4&name=${user.name}`, true)
-    xhr.onreadystatechange = () => {
-        if (xhr.readyState === 4 && xhr.status === 200) {
+function login() {
+    const name = document.getElementById("inputUser").value;
+    const password = document.getElementById("inputPassword").value;
+    let data = findUser(name, password);
+    const xhr1 = new XMLHttpRequest();
+    xhr1.open('get', `./Php/ControlLogin.php?option=2&name=${name}&password=${password}`, true)
+    xhr1.onreadystatechange = () => {
+        if (xhr1.readyState === 4 && xhr1.status === 200) {
             
         }
     }
-    xhr.send(null)
+    xhr1.send(null)
 }
 
 function listData(data) {
@@ -35,7 +36,7 @@ function listData(data) {
 function findUser(user, password) {
 
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", "./Resources/Control.php?option=1", true);
+    xhr.open("GET", "./Php/Control.php?option=1", true);
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const data = JSON.parse(xhr.responseText);
