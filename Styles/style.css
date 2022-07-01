@@ -50,13 +50,18 @@ body {
   margin-top: 5%;
 }
 .container-user {
+  position: relative;
   text-align: center;
   align-items: center;
-  border: 1rem dashed var(--primario);
-  padding-bottom: 8rem;
   margin-right: 25%;
   margin-left: 25%;
   margin-top: 5%;
+}
+
+.img-back {
+  width: 100%;
+  height: 90%;
+  position: absolute;
 }
 
 .div-user {
@@ -89,10 +94,39 @@ input {
   height: 4rem;
 }
 
+.btn-login {
+  font-family: var(--fuenteParrafos);
+  font-size: 2rem;
+  background-color: var(--botones);
+  color: var(--colorTitulo);
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+.btn-login:hover {
+    background-color: #a7acb1;
+    color: var(--colorTitulo);
+  }
+
+.btn-register {
+  font-family: var(--fuenteParrafos);
+  font-size: 2rem;
+  background-color: var(--botones);
+  color: var(--colorTitulo);
+  padding: 0.5rem 3rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+.btn-register:hover {
+    background-color: #a7acb1;
+    color: var(--colorTitulo);
+  }
+
 button {
   height: 5rem;
   background-color: var(--botones);
-  font-family: var(--fuenteParrafos);
   color: var(--colorTitulo);
   font-size: 2rem;
   border-radius: 0.5rem;
