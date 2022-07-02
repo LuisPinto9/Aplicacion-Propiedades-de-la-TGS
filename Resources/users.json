@@ -1,8 +1,14 @@
 [
   {
-    "name": "Juan",
+    "name": "juan",
     "id": "1",
     "password": "12345",
+    "score": "0"
+  },
+  {
+    "name": "jorge",
+    "id": "2",
+    "password": "123456",
     "score": "0"
   }
 ]

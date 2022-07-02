@@ -57,20 +57,19 @@
         <div class="img-back">
             <h1 class="title-user">Inicio de sesión</h1>
             <div class="pt-5 pb-1">
-                <form>
-                    <div class="div-user">
-                        <label for="inputUser" class="label-user">Nombre de Usuario</label>
-                        <input type="text" class="input-user" id="inputUser">
-                    </div>
-                    <div class="div-password">
-                        <label for="inputPassword" class="label-password">Contraseña</label>
-                        <input type="password" class="input-password" id="inputPassword">
-                    </div>
-                    <div class="p-4">
-                        <a type="button" class="btn-login" href="./gameWindow.html" id="btnLogin" onclick="login()">Iniciar
-                            Sesión</a>
+                <form id="formulario">
+                    <label for="inputUser" class="label-user">Nombre de Usuario</label>
+                    <input type="text" name="name" class="input-user" id="inputUser" required>
+
+                    <label for="inputPassword" class="label-password">Contraseña</label>
+                    <input type="password" name="password" class="input-password" id="inputPassword" required>
+
+                    <div class="p-5">
+                        <button class="btn-login" id="btnLogin" onclick="login()">Iniciar Sesión</button>
+
                         <a type="button" class="btn-register" href="./registro.html">Registrarse</a>
                     </div>
+
                 </form>
             </div>
         </div>

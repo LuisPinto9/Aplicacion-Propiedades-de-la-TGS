@@ -100,10 +100,12 @@ input {
     font-size: 2rem;
     background-color: var(--botones);
     color: var(--colorTitulo);
-    padding: 0.5rem 2rem;
+    padding: 0.8rem 2rem;
     text-decoration: none;
     border-radius: 0.5rem;
+    border-color: var(--botones);
 }
+
 
 .btn-login:hover {
     background-color: #a7acb1;
@@ -115,7 +117,7 @@ input {
     font-size: 2rem;
     background-color: var(--botones);
     color: var(--colorTitulo);
-    padding: 0.5rem 3rem;
+    padding: 0.1rem 3rem;
     text-decoration: none;
     border-radius: 0.5rem;
 }
@@ -124,3 +126,4 @@ input {
     background-color: #a7acb1;
     color: var(--colorTitulo);
 }
+

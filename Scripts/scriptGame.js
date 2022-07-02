@@ -9,3 +9,5 @@ function begin() {
     }
     xhr.send(null)
 }
+
+begin()
