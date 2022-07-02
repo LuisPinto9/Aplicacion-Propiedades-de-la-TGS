@@ -80,9 +80,11 @@ body {
     font-weight: 700;
 }
 
+
 label {
     font-family: "Montserrat", sans-serif;
     font-size: 2rem;
+    font-weight: bold;
 }
 
 input {
@@ -93,6 +95,7 @@ input {
     border-style: solid;
     border-radius: 0.5rem;
     height: 4rem;
+    outline: none;
 }
 
 .btn-login {

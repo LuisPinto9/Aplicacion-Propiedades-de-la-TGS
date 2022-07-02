@@ -31,6 +31,7 @@
       </nav>
     </header>
 
+    <!--
     <main class="main-container">
         <h1 class="title">REGISTRO</h1>
         <form action="formulario">
@@ -56,6 +57,39 @@
                         id="rep-password">
             </div>
         </form>
-    </main>
+    </main>-->
+
+    <div class="container">
+
+      <div class="container-user">
+          <div class="img-back">
+              <img src="./Images/fondo.png" alt="">
+          </div>
+          <div class="img-back">
+              <h1 class="title-user">Registrarse</h1>
+              <div class="pt-5 pb-1">
+                  <form id="formulario">
+                      <label for="inputUser" class="label-user">Nuevo Nombre de usuario</label>
+                      <input type="text" name="name" class="input-user" id="inputUser" required>
+
+                      <br>
+                      <label for="inputPassword" class="label-password">Contraseña</label><br>
+                      <input type="password" name="password" class="input-password" id="inputPassword">
+
+                      <label for="inputPassword" class="label-password">Repita la contraseña</label>
+                      <input type="password" name="password" class="input-password" id="inputPassword">
+  
+                      <div class="p-5">
+                          <button class="btn-login" id="btnLogin" onclick="login()">Registrarse</button>
+  
+                          <a type="button" class="btn-register" href="./index.html">Volver</a>
+                      </div>
+  
+                  </form>
+              </div>
+          </div>
+      </div>
+  
+  </div>
   </body>
 </html>
