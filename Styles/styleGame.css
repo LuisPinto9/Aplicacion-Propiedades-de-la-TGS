@@ -115,7 +115,7 @@ body {
     color: var(--negro);
 }
 
-.btn-level3{
+.btn-level3 {
     font-family: 'Simonetta', cursive;
     font-size: 3rem;
     background-color: var(--primario);
@@ -145,19 +145,19 @@ body {
     color: var(--negro);
 }
 
-.div-d{
+.div-d {
     font-family: var(--fuenteParrafos);
     font-size: 2rem;
     background-color: #fff6f6;
     color: var(--negro);
 }
 
-.div-i{
+.div-i {
     border: solid black;
     border-radius: 1rem;
 }
 
-.div-a{
+.div-a {
     font-family: var(--fuenteParrafos);
     font-size: 3rem;
     color: var(--negro);

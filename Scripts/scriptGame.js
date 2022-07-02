@@ -56,7 +56,7 @@ function addButton(title) {
 }
 
 function level(level) {
-    qLevel=[]
+    qLevel = []
     const xhr = new XMLHttpRequest();
     xhr.open('get', './Php/controlQuestions.php?option=1', true)
     xhr.onreadystatechange = () => {
@@ -82,7 +82,7 @@ function showQuestion() {
     for (let i = 0; i < qLevel.length; i++) {
         questions += qLevel[i].description
     }
-    divQuestion.innerHTML=questions
+    divQuestion.innerHTML = questions
 }
 
 /*function level2() {
