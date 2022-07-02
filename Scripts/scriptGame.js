@@ -1,7 +1,8 @@
 let qLevel = []
-let questions = ""
+let options1 = ""
 let questionCount = 0
 
+//En este metodo se cargan todas las recompensas en la pagina dependiendo del nivel del usuario
 addEventListener("load", () => {
     let rewards = ""
     const xhr = new XMLHttpRequest();
@@ -29,32 +30,28 @@ addEventListener("load", () => {
 
 })
 
+//en esta funcion se esconden los div que muestran los niveles y se muestran los div que tienen las preguntas
 function showGame(levelV) {
     let game = document.getElementById("Game")
     let divQ = document.getElementById("divQuestions")
-    let divT = document.getElementById("divTitle")
     game.removeAttribute("hidden")
     divQ.setAttribute("hidden", "")
-    divT.setAttribute("hidden", "")
     level(levelV)
+
+
 }
 
-
-/*function hideGame() {
-    let game = document.getElementById("Game")
-    let divQ = document.getElementById("divQuestions")
-    divQ.removeAttribute("hidden")
-    game.setAttribute("hidden", "")
-}*/
-
+//en esta funcion se agregan las opciones de respuesta que hay en una pregunta
 function addButton(title) {
-    let divQ = document.getElementById("divQuestions")
-    questions += "<a type=\"button\" class=\"btn-random m-3\" href=\"#Game\" id=\"btnRandom\"\n" +
-        "                       onclick=\"showGame()\">" + title + " </a>"
+    let divQ = document.getElementById("divOptions")
+    divQ.innerHTML = ""
+    options1 += "<button class=\"btn-option m-3\" href=\"#Game\" id=\"btnRandom\"\n" +
+        "                       onclick=\"showGame()\">" + title + " </button>"
 
-    divQ.innerHTML = questions
+    divQ.innerHTML = options1
 }
 
+//en esta funcion se filtran las preguntas que corresponden a un nivel
 function level(level) {
     qLevel = []
     const xhr = new XMLHttpRequest();
@@ -76,55 +73,35 @@ function level(level) {
 
 }
 
+//en esta funcion se muestra una a una las preguntas que hay en el nivel
 function showQuestion() {
+    let divT = document.getElementById("divTitle")
     let divQuestion = document.getElementById("divD")
-    let questions = divQuestion.innerHTML
-    for (let i = 0; i < qLevel.length; i++) {
-        questions += qLevel[i].description
+
+    divQuestion.innerHTML = qLevel[questionCount].description
+    let options = qLevel[questionCount].options
+    for (let i = 0; i < options.length; i++) {
+        addButton(options[i])
     }
-    divQuestion.innerHTML = questions
+    options1 = ""
+    plusCount()
+    divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
+
 }
 
-/*function level2() {
-    qLevel = Array()
-    const xhr = new XMLHttpRequest();
-    xhr.open('get', './Php/controlQuestions.php?option=1', true)
-    xhr.onreadystatechange = () => {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            const data = JSON.parse(xhr.response)
-            data.forEach((e) => {
-                if (e.level === "2") {
-                    qLevel.push(e)
-                }
-
-            })
-            qLevel.forEach((e) => {
-                alert(e.title)
-            })
-
-        }
-    }
-    xhr.send(null)
+//esta funcion sirve para ir avanzando de pregunta
+function next() {
+    let divT = document.getElementById("divTitle")
+    divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
+    let divQuestion = document.getElementById("divD")
+    divQuestion.innerHTML = ""
+    divQuestion.innerHTML = qLevel[questionCount - 1].description
+    showQuestion()
 }
 
-function level3() {
-    qLevel = Array()
-    const xhr = new XMLHttpRequest();
-    xhr.open('get', './Php/controlQuestions.php?option=1', true)
-    xhr.onreadystatechange = () => {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            const data = JSON.parse(xhr.response)
-            data.forEach((e) => {
-                if (e.level === "3") {
-                    qLevel.push(e)
-                }
-
-            })
-            qLevel.forEach((e) => {
-                alert(e.title)
-            })
-
-        }
+//en esta funcion se va aumentando el contador que sirve para pasar de pregunta en pregunta
+function plusCount() {
+    if (questionCount < qLevel.length) {
+        questionCount++
     }
-    xhr.send(null)
-}*/
+}

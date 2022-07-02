@@ -38,14 +38,6 @@ body {
     margin-right: 2rem;
 }
 
-.container-questions {
-    position: relative;
-    text-align: center;
-    align-items: center;
-    margin-right: 25%;
-    margin-left: 20%;
-}
-
 .div-title {
     margin-right: 85%;
     margin-left: 5%;
@@ -62,6 +54,7 @@ body {
 }
 
 .label-user {
+    text-transform: uppercase;
     font-family: 'Simonetta', cursive;
     font-size: 3rem;
     color: var(--negro);
@@ -86,69 +79,68 @@ body {
 }
 
 .btn-level1 {
-    font-family: 'Simonetta', cursive;
+    font-family: "Antonio", sans-serif;
     font-size: 3rem;
     background-color: var(--primario);
-    color: var(--negro);
+    color: var(--blanco);
     padding: 0.9rem 2rem;
     text-decoration: none;
     border-radius: 1rem;
 }
 
 .btn-level1:hover {
-    background-color: #8495b6;
-    color: var(--negro);
+    background-color: #3f5377;
+    color: var(--blanco);
 }
 
 .btn-level2 {
-    font-family: 'Simonetta', cursive;
+    font-family: "Antonio", sans-serif;
     font-size: 3rem;
     background-color: var(--primario);
-    color: var(--negro);
+    color: var(--blanco);
     padding: 0.9rem 2rem;
     text-decoration: none;
     border-radius: 1rem;
 }
 
 .btn-level2:hover {
-    background-color: #8495b6;
-    color: var(--negro);
+    background-color: #3f5377;
+    color: var(--blanco);
 }
 
 .btn-level3 {
-    font-family: 'Simonetta', cursive;
+    font-family: "Antonio", sans-serif;
     font-size: 3rem;
     background-color: var(--primario);
-    color: var(--negro);
+    color: var(--blanco);
     padding: 0.9rem 2rem;
     text-decoration: none;
     border-radius: 1rem;
 }
 
 .btn-level3:hover {
-    background-color: #8495b6;
-    color: var(--negro);
+    background-color: #3f5377;
+    color: var(--blanco);
 }
 
 .btn-jugar {
-    font-family: 'Simonetta', cursive;
+    font-family: "Antonio", sans-serif;
     font-size: 3rem;
-    background-color: var(--botones);
-    color: var(--negro);
+    background-color: var(--botonesLog);
+    color: var(--blanco);
     padding: 0.01em 2rem;
     text-decoration: none;
     border-radius: 3rem;
 }
 
 .btn-jugar:hover {
-    background-color: #8190af;
-    color: var(--negro);
+    background-color: #3f5377;
+    color: var(--blanco);
 }
 
 .div-d {
     font-family: var(--fuenteParrafos);
-    font-size: 2rem;
-    background-color: #fff6f6;
+    font-size: 2.5rem;
     color: var(--negro);
 }
 
@@ -161,4 +153,21 @@ body {
     font-family: var(--fuenteParrafos);
     font-size: 3rem;
     color: var(--negro);
+}
+
+.question {
+    background-color: #b1c8ff;
+    border-radius: 3rem;
+
+}
+
+.btn-option {
+    font-family: 'Simonetta', cursive;
+    font-size: 3rem;
+    background-color: var(--botones);
+    color: var(--colorTitulo);
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    border-color: var(--botones);
 }

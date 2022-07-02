@@ -4,12 +4,10 @@
     "title": "V y F 1",
     "description": "Los Sistemas abiertos es la unión de los grupos humanos, procesos y actividades autoorganizadas como nichos ecológicos, tienen en cuenta  las causas externas e internas que perpetúan la vida del sistema.",
     "level": "1",
-    "solution": "a",
+    "solution": "verdadero",
     "options": [
-      {
-        "a": "verdadero",
-        "b": "falso"
-      }
+      "verdadero",
+      "falso"
     ],
     "score": "5",
     "finished": false
@@ -19,12 +17,10 @@
     "title": "V y F 2",
     "description": "Los objetivos de la teoría general de sistemas son:\nInvestigar el isomorfismo de conceptos, leyes y modelos en varios campos y facilitar las transferencias entre aquellos.\nPromocionar y desarrollar modelos teóricos en campos que carecen de ellos.\nReducir la duplicación de los esfuerzos teóricos.\nPromover la unidad de la ciencia a través de principios conceptuales y metodológicos unificadores.\n",
     "level": "1",
-    "solution": "a",
+    "solution": "verdadero",
     "options": [
-      {
-        "a": "verdadero",
-        "b": "falso"
-      }
+      "verdadero",
+      "falso"
     ],
     "score": "5",
     "finished": false
@@ -34,14 +30,12 @@
     "title": "unica 1",
     "description": "¿A quién se le atribuye el primer modelo de la teoría general de sistemas?",
     "level": "2",
-    "solution": "a",
+    "solution": "Ludwig von Bertalanffy",
     "options": [
-      {
-        "a": "Ludwig von Bertalanffy",
-        "b": "David Rapaport",
-        "c": "Norbert Weiner",
-        "d": "Kurt Lewin"
-      }
+      "Ludwig von Bertalanffy",
+      "David Rapaport",
+      "Norbert Weiner",
+      "Kurt Lewin"
     ],
     "score": "5",
     "finished": false
@@ -49,16 +43,14 @@
   {
     "id": "4",
     "title": "unica 2",
-    "description": "¿A quién se le atribuye el primer modelo de la teoría general de sistemas?",
+    "description": "¿A quién sejjkbnkj le atribuye el primer modelo de la teoría general de sistemas?",
     "level": "2",
-    "solution": "a",
+    "solution": "Ludwig von Bertalanffy",
     "options": [
-      {
-        "a": "Ludwig von Bertalanffy",
-        "b": "David Rapaport",
-        "c": "Norbert Weiner",
-        "d": "Kurt Lewin"
-      }
+      "Ludwig von Berwerwetwrettalanffy",
+      "David Rapaporewtwett",
+      "Norbert Wteweeiner",
+      "Kurt Lewetwin"
     ],
     "score": "5",
     "finished": false

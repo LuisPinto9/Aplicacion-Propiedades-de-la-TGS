@@ -45,7 +45,7 @@
                 <label class="label-user" id="labelUser"></label>
             </div>
             <div class="p-2" id="rewards">
-
+                <!--aqui van los premios del usuario por tener niveles-->
             </div>
 
             <div class="p-2" id="navbarSupportedContent">
@@ -60,55 +60,57 @@
 </div>
 
 <div class="container">
-
-    <div class="container-questions">
+    <div id="divQuestions">
         <div class="df-5">
-            <div class="pt-5 pb-3 " id="divQuestions">
-                <a type="button" class="btn-level1 m-3" href="#Game" id="btn1" onclick="showGame('1')">Nivel 1</a>
+            <div class="pt-5 pb-3 d-flex flex-row justify-content-center">
+                <div class="card m-5" style="width: 18rem;">
+                    <img src="./Images/level1.png" class="card-img-top" alt="...">
+                    <div class="card-body d-flex justify-content-center">
+                        <a type="button" class="btn-level1 m-3" href="#Game" id="btn1" onclick="showGame('1')">Nivel
+                            1</a>
+                    </div>
+                </div>
 
-                <a type="button" class="btn-level2 m-3" href="#Game" id="btn2" onclick="showGame('2')">Nivel 2</a>
+                <div class="card m-5" style="width: 18rem;">
+                    <img src="./Images/level2.png" class="card-img-top" alt="...">
+                    <div class="card-body d-flex justify-content-center">
+                        <a type="button" class="btn-level2 m-3" href="#Game" id="btn2" onclick="showGame('2')">Nivel
+                            2</a>
+                    </div>
+                </div>
 
-                <a type="button" class="btn-level3 m-3" href="#Game" id="btn3" onclick="showGame('3')">Nivel 3</a>
-
+                <div class="card m-5" style="width: 18rem;">
+                    <img src="./Images/level3.png" class="card-img-top" alt="...">
+                    <div class="card-body d-flex justify-content-center">
+                        <a type="button" class="btn-level3 m-3" href="#Game" id="btn3" onclick="showGame('3')">Nivel
+                            3</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="pt-5" id="Game" hidden>
-        <div id="questionsDiv">
+        <div class="question p-5" id="questionsDiv">
             <div class="d-flex flex-wrap justify-content-center">
 
-                <div class="div-d col-12" id="divD">
+                <div class="div-d col-12 p-5" id="divD">
+                    <!--aqui va la descripcion de la pregunta del nivel-->
                 </div>
-                <div class="p-5">
-                    <div class="div-i p-5">
-                        <img src="Images/logo.png" width="120" height="120">
-                    </div>
-                </div>
-
-
             </div>
-            <div class="div-a d-flex justify-content-center">
-                <button class="m-5">A</button>
-                <button class="m-5">B</button>
-                <button class="m-5">C</button>
-                <button class="m-5">D</button>
-
+            <div class="div-a d-flex justify-content-center" id="divOptions">
+                <!--aqui van las opciones del nivel-->
             </div>
-
         </div>
         <div class=" ">
             <div class="d-flex d-inline justify-content-center">
                 <a type="button" class="btn-jugar m-5" href="">Salir del nivel</a>
-                <a type="button" class="btn-jugar m-5" href="">Siguiente</a>
+                <a type="button" class="btn-jugar m-5" onclick="next()">Siguiente</a>
             </div>
-
         </div>
     </div>
 
-
 </div>
-
 
 </body>
 </html>
