@@ -43,6 +43,13 @@
             <a class="navbar-brand">
                 <img src="./Images/logo.png" alt="" width="100" height="90">
             </a>
+            <div class="p-2">
+                <label class="label-user" id="labelUser"></label>
+            </div>
+            <div class="p-2" id="rewards">
+
+            </div>
+            
             <div class="p-2" id="navbarSupportedContent">
                 <a type="button" class="btn-logOut" id="btnLogOut" href="index.html">Salir</a>
             </div>
@@ -58,29 +65,31 @@
 
     <div class="container-questions">
         <div class="df-5">
-            <div class="pt-5 pb-3">
-                <form>
-                    <div>
-                        <a type="button" class="btn-seleccionMultiple m-3" href="gameWindow.html"
-                           id="btnSeleccionMultiple" onclick="">Selección Múltiple</a>
+            <div class="pt-5 pb-3 " id="divQuestions">
+                <a type="button" class="btn-seleccionMultiple m-3" href="#Game"
+                   id="btnSeleccionMultiple" onclick="showGame()">Nivel 1</a>
 
-                        <a type="button" class="btn-seleccionUnica m-3" href="gameWindow.html" id="btnSeleccionUnica"
-                           onclick="">Selección Única</a>
+                <a type="button" class="btn-seleccionUnica m-3" href="#Game" id="btnSeleccionUnica"
+                   onclick="showGame()">Nivel 2</a>
 
-                        <a type="button" class="btn-vF m-3" href="gameWindow.html" id="btnVF" onclick="">V y F</a>
+                <a type="button" class="btn-vF m-3" href="#Game" id="btnVF" onclick="showGame()">Nivel 3</a>
 
-                        <a type="button" class="btn-random m-3" href="gameWindow.html" id="btnRandom" onclick="">Aleatoria</a>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
 
+    <div id="Game" hidden>
+        <div id="description">
+            soy una descripcion
+        </div>
+        <div class="div-btnPlay">
+            <a type="button" class="btn-jugar" href="">Atras</a>
+        </div>
+    </div>
+
+
 </div>
 
-<div class="div-btnPlay">
-    <a type="button" class="btn-jugar" href="">Jugar</a>
-</div>
 
 </body>
 </html>

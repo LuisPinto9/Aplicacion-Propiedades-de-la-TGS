@@ -1,0 +1,49 @@
+[
+  {
+    "id": "1",
+    "title": "V y F 1",
+    "description": "Los Sistemas abiertos es la unión de los grupos humanos, procesos y actividades autoorganizadas como nichos ecológicos, tienen en cuenta  las causas externas e internas que perpetúan la vida del sistema.",
+    "level": "1",
+    "solution": "a",
+    "options": [
+      {
+        "a": "verdadero",
+        "b": "falso"
+      }
+    ],
+    "score": "5",
+    "finished": false
+  },
+  {
+    "id": "2",
+    "title": "V y F 2",
+    "description": "Los objetivos de la teoría general de sistemas son:\nInvestigar el isomorfismo de conceptos, leyes y modelos en varios campos y facilitar las transferencias entre aquellos.\nPromocionar y desarrollar modelos teóricos en campos que carecen de ellos.\nReducir la duplicación de los esfuerzos teóricos.\nPromover la unidad de la ciencia a través de principios conceptuales y metodológicos unificadores.\n",
+    "level": "1",
+    "solution": "a",
+    "options": [
+      {
+        "a": "verdadero",
+        "b": "falso"
+      }
+    ],
+    "score": "5",
+    "finished": false
+  },
+  {
+    "id": "3",
+    "title": "unica 1",
+    "description": "¿A quién se le atribuye el primer modelo de la teoría general de sistemas?",
+    "level": "2",
+    "solution": "a",
+    "options": [
+      {
+        "a": "Ludwig von Bertalanffy",
+        "b": "David Rapaport",
+        "c": "Norbert Weiner",
+        "d": "Kurt Lewin"
+      }
+    ],
+    "score": "5",
+    "finished": false
+  }
+]
