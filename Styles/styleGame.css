@@ -61,6 +61,14 @@ body {
     margin-right: 0.1rem;
 }
 
+.label-user {
+    font-family: 'Simonetta', cursive;
+    font-size: 3rem;
+    color: var(--negro);
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+}
+
 .btn-logOut {
     font-family: "Antonio", sans-serif;
     font-weight: 700;
@@ -77,7 +85,7 @@ body {
     color: var(--blanco);
 }
 
-.btn-seleccionMultiple {
+.btn-level1 {
     font-family: 'Simonetta', cursive;
     font-size: 3rem;
     background-color: var(--primario);
@@ -87,12 +95,12 @@ body {
     border-radius: 1rem;
 }
 
-.btn-seleccionMultiple:hover {
+.btn-level1:hover {
     background-color: #8495b6;
     color: var(--negro);
 }
 
-.btn-seleccionUnica {
+.btn-level2 {
     font-family: 'Simonetta', cursive;
     font-size: 3rem;
     background-color: var(--primario);
@@ -102,12 +110,12 @@ body {
     border-radius: 1rem;
 }
 
-.btn-seleccionUnica:hover {
+.btn-level2:hover {
     background-color: #8495b6;
     color: var(--negro);
 }
 
-.btn-vF {
+.btn-level3{
     font-family: 'Simonetta', cursive;
     font-size: 3rem;
     background-color: var(--primario);
@@ -117,33 +125,9 @@ body {
     border-radius: 1rem;
 }
 
-.btn-vF:hover {
+.btn-level3:hover {
     background-color: #8495b6;
     color: var(--negro);
-}
-
-.btn-random {
-    font-family: 'Simonetta', cursive;
-    font-size: 3rem;
-    background-color: var(--primario);
-    color: var(--negro);
-    padding: 0.9rem 2rem;
-    text-decoration: none;
-    border-radius: 1rem;
-}
-
-.btn-random:hover {
-    background-color: #8495b6;
-    color: var(--negro);
-}
-
-.div-btnPlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1rem;
-    margin-right: 25%;
-    margin-left: 25%;
 }
 
 .btn-jugar {
@@ -158,5 +142,23 @@ body {
 
 .btn-jugar:hover {
     background-color: #8190af;
+    color: var(--negro);
+}
+
+.div-d{
+    font-family: var(--fuenteParrafos);
+    font-size: 2rem;
+    background-color: #fff6f6;
+    color: var(--negro);
+}
+
+.div-i{
+    border: solid black;
+    border-radius: 1rem;
+}
+
+.div-a{
+    font-family: var(--fuenteParrafos);
+    font-size: 3rem;
     color: var(--negro);
 }

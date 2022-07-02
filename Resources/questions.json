@@ -45,5 +45,22 @@
     ],
     "score": "5",
     "finished": false
+  },
+  {
+    "id": "4",
+    "title": "unica 2",
+    "description": "¿A quién se le atribuye el primer modelo de la teoría general de sistemas?",
+    "level": "2",
+    "solution": "a",
+    "options": [
+      {
+        "a": "Ludwig von Bertalanffy",
+        "b": "David Rapaport",
+        "c": "Norbert Weiner",
+        "d": "Kurt Lewin"
+      }
+    ],
+    "score": "5",
+    "finished": false
   }
 ]
