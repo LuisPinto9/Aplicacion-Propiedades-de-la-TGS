@@ -1,10 +1,16 @@
+
+
+
 function login() {
     let status = false;
     let score = "";
     let level = "";
     const name = document.getElementById("inputUser").value;
     const password = document.getElementById("inputPassword").value;
+
+
     const xhr2 = new XMLHttpRequest();
+
     xhr2.open("get", "./Php/controlUsers.php?option=1", false);
     xhr2.onreadystatechange = () => {
         if (xhr2.readyState === 4 && xhr2.status === 200) {
