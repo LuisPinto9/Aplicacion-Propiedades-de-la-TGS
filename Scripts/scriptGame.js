@@ -1,6 +1,7 @@
 let qLevel = []
 let options1 = ""
 let questionCount = 0
+let score = 0
 
 //En este metodo se cargan todas las recompensas en la pagina dependiendo del nivel del usuario
 addEventListener("load", () => {
@@ -10,6 +11,7 @@ addEventListener("load", () => {
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const data = JSON.parse(xhr.response)
+            score = parseInt(data.score)
             document.getElementById("labelUser").innerText = data.name
             if (data.level === "1") {
                 rewards += "<img src=\"Images/medalla.png\">"
@@ -37,17 +39,13 @@ function showGame(levelV) {
     game.removeAttribute("hidden")
     divQ.setAttribute("hidden", "")
     level(levelV)
-
-
 }
 
 //en esta funcion se agregan las opciones de respuesta que hay en una pregunta
 function addButton(title) {
     let divQ = document.getElementById("divOptions")
     divQ.innerHTML = ""
-    options1 += "<button class=\"btn-option m-3\" href=\"#Game\" id=\"btnRandom\"\n" +
-        "                       onclick=\"showGame()\">" + title + " </button>"
-
+    options1 += `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="validate('${title}')">${title}</button>`
     divQ.innerHTML = options1
 }
 
@@ -62,7 +60,6 @@ function level(level) {
             data.forEach((e) => {
                 if (e.level === level) {
                     qLevel.push(e)
-
                 }
 
             })
@@ -96,6 +93,10 @@ function next() {
     let divQuestion = document.getElementById("divD")
     divQuestion.innerHTML = ""
     divQuestion.innerHTML = qLevel[questionCount - 1].description
+    if (questionCount === qLevel.length){
+        alert("Esta fue la ultima pregunta")
+        finish()
+    }
     showQuestion()
 }
 
@@ -104,4 +105,27 @@ function plusCount() {
     if (questionCount < qLevel.length) {
         questionCount++
     }
+}
+
+//en esta funcion se valida que la opcion escogida sea correcta
+function validate(answer) {
+    if (questionCount <= qLevel.length){
+        let options = qLevel[questionCount-1].solution
+        if (options !== answer) {
+            alert("Respuesta incorrecta")
+            next()
+            return;
+        } else {
+            score += parseInt(qLevel[questionCount-1].score)
+            alert("Respuesta correcta")
+            next()
+            return;
+        }
+    }
+}
+
+//esta funcion sirve para terminar el nivel
+function finish(){
+    alert(`Puntuacion obtenida: ${score}`)
+    window.location.reload()
 }
