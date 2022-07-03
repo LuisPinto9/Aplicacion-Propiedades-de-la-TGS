@@ -2,6 +2,7 @@ let qLevel = []
 let options1 = ""
 let questionCount = 0
 let score = 0
+let user = []
 
 //En este metodo se cargan todas las recompensas en la pagina dependiendo del nivel del usuario
 addEventListener("load", () => {
@@ -11,7 +12,7 @@ addEventListener("load", () => {
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const data = JSON.parse(xhr.response)
-            score = parseInt(data.score)
+            user = data
             document.getElementById("labelUser").innerText = data.name
             if (data.level === "1") {
                 rewards += "<img src=\"Images/medalla.png\">"
@@ -29,7 +30,6 @@ addEventListener("load", () => {
         }
     }
     xhr.send(null)
-
 })
 
 //en esta funcion se esconden los div que muestran los niveles y se muestran los div que tienen las preguntas
@@ -126,6 +126,35 @@ function validate(answer) {
 
 //esta funcion sirve para terminar el nivel
 function finish() {
-    alert(`Puntuacion obtenida: ${score}`)
+    let total;
+    alert(`Puntuación obtenida: ${score}`)
+    total = score + parseInt(user.score)
+    user.score = total.toString()
+    saveScore()
+    saveScore2()
     window.location.reload()
+}
+
+//esta funcion sirve para sobreescribir la informacion del json de usuarios
+function saveScore(){
+    const xhr = new XMLHttpRequest();
+    xhr.open('get', `./Php/controlUsers.php?option=3&name=${user.name}&password=${user.password}&score=${user.score}&level=${user.level}`, true)
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+
+        }
+    }
+    xhr.send(null)
+}
+
+//esta funcion sirve para sobreescribir la informacion del login
+function saveScore2(){
+    const xhr = new XMLHttpRequest();
+    xhr.open('get', `./Php/controlLogin.php?option=2&name=${user.name}&password=${user.password}&score=${user.score}&level=${user.level}`, true)
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+
+        }
+    }
+    xhr.send(null)
 }

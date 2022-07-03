@@ -12,7 +12,7 @@ if ($option == 1) {
 
 } elseif ($option == 2) {
 
-    $newUser = array("name" => $_GET['name'], "id" => $_GET['id'], "passsword" => $_GET["password"], "score" => $_GET['score']);
+    $newUser = array("name" => $_GET['name'], "password" => $_GET['password'], "score" => $_GET["score"], "level" => $_GET["level"]);
 
     if (file_exists("..\Resources\users.json")) {
         $data = file_get_contents("..\Resources\users.json");
@@ -22,7 +22,7 @@ if ($option == 1) {
     }
 } elseif ($option == 3) {
 
-    $idDelete = $_GET["id"];
+    $userDelete = $_GET["name"];
     $finalData = [];
     $status = false;
     while ($status != true) {
@@ -30,9 +30,9 @@ if ($option == 1) {
             $data = file_get_contents("..\Resources\users.json");
             $newData = json_decode($data);
 
-            foreach ($newData as $user => $idSearch) {
+            foreach ($newData as $user => $userSearch) {
 
-                if ($idSearch->id == $idDelete) {
+                if ($userSearch->name == $userDelete) {
 
                     unset($newData[$user]);
 
@@ -45,7 +45,9 @@ if ($option == 1) {
     foreach ($newData as $user) {
         array_push($finalData, $user);
     }
+    $newUser = array("name" => $_GET['name'], "password" => $_GET['password'], "score" => $_GET["score"], "level" => $_GET["level"]);
 
-    file_put_contents('.\Resource\user.json', json_encode($finalData));
+    array_push($finalData, $newUser);
+    file_put_contents("..\Resources\users.json", json_encode($finalData));
 
 }

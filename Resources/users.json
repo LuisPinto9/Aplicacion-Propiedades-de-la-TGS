@@ -1,23 +1,20 @@
 [
   {
-    "name": "juan",
-    "id": "1",
-    "password": "12345",
-    "score": "0",
-    "level": "3"
-  },
-  {
     "name": "jorge",
-    "id": "2",
     "password": "123456",
     "score": "0",
     "level": "0"
   },
   {
     "name": "miguel",
-    "id": "2",
     "password": "123",
     "score": "0",
     "level": "2"
+  },
+  {
+    "name": "juan",
+    "password": "12345",
+    "score": "28",
+    "level": "3"
   }
 ]
