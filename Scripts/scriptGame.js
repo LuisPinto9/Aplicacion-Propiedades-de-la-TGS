@@ -93,7 +93,7 @@ function next() {
     let divQuestion = document.getElementById("divD")
     divQuestion.innerHTML = ""
     divQuestion.innerHTML = qLevel[questionCount - 1].description
-    if (questionCount === qLevel.length){
+    if (questionCount === qLevel.length) {
         alert("Esta fue la ultima pregunta")
         finish()
     }
@@ -109,14 +109,14 @@ function plusCount() {
 
 //en esta funcion se valida que la opcion escogida sea correcta
 function validate(answer) {
-    if (questionCount <= qLevel.length){
-        let options = qLevel[questionCount-1].solution
+    if (questionCount <= qLevel.length) {
+        let options = qLevel[questionCount - 1].solution
         if (options !== answer) {
             alert("Respuesta incorrecta")
             next()
             return;
         } else {
-            score += parseInt(qLevel[questionCount-1].score)
+            score += parseInt(qLevel[questionCount - 1].score)
             alert("Respuesta correcta")
             next()
             return;
@@ -125,7 +125,7 @@ function validate(answer) {
 }
 
 //esta funcion sirve para terminar el nivel
-function finish(){
+function finish() {
     alert(`Puntuacion obtenida: ${score}`)
     window.location.reload()
 }
