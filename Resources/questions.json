@@ -2,14 +2,14 @@
   {
     "id": "1",
     "title": "V y F 1",
-    "description": "Los Sistemas abiertos es la unión de los grupos humanos, procesos y actividades autoorganizadas como nichos ecológicos, tienen en cuenta  las causas externas e internas que perpetúan la vida del sistema.",
+    "description": "Los Sistemas abiertos es la unión de los grupos humanos, procesos y actividades autorganizadas como nichos ecológicos, tienen en cuenta  las causas externas e internas que perpetúan la vida del sistema.",
     "level": "1",
-    "solution": "verdadero",
+    "solution": "falso",
     "options": [
       "verdadero",
       "falso"
     ],
-    "score": "5",
+    "score": "3",
     "finished": false
   },
   {
@@ -22,15 +22,61 @@
       "verdadero",
       "falso"
     ],
-    "score": "5",
+    "score": "3",
     "finished": false
   },
   {
     "id": "3",
+    "title": "V y F 3",
+    "description": " Todos los elementos de un sistema deben estar dirigidos o enfocados en su objetivo primordial, teniendo importancia la forma en que estos actúen para alcanzarlo.\n",
+    "level": "1",
+    "solution": "verdadero",
+    "options": [
+      "verdadero",
+      "falso"
+    ],
+    "score": "3",
+    "finished": false
+  },
+  {
+    "id": "4",
+    "title": "V y F 4",
+    "description": "El equilibrio es el proceso que busca mantener la energía de un sistema, el crecimiento de este nos dice que todo sistema tiende a la desorganización, pero finalmente logrará la homogeneización con el ambiente\n ",
+    "level": "1",
+    "solution": "falso",
+    "options": [
+      "verdadero",
+      "falso"
+    ],
+    "score": "3",
+    "finished": false
+  },
+  {
+    "id": "5",
+    "title": "V y F 5",
+    "description": "La metodología utilizada por la TGS para un análisis y diseño de sistemas cuenta con cuatro etapas: en la primera de ellas se define el objetivo, un plan a de trabajo, recopilación de información y un diagnóstico de la eficacia y eficiencia de un sistema. ",
+    "level": "1",
+    "solution": "verdadero",
+    "options": [
+      "verdadero",
+      "falso"
+    ],
+    "score": "3",
+    "finished": false
+  },
+
+
+
+
+
+
+
+  {
+    "id": "6",
     "title": "unica 1",
     "description": "¿A quién se le atribuye el primer modelo de la teoría general de sistemas?",
     "level": "2",
-    "solution": "Ludwig von Bertalanffy",
+    "solution": "Adaptabilidad",
     "options": [
       "Ludwig von Bertalanffy",
       "David Rapaport",
@@ -41,18 +87,165 @@
     "finished": false
   },
   {
-    "id": "4",
+    "id": "7",
     "title": "unica 2",
-    "description": "¿A quién sejjkbnkj le atribuye el primer modelo de la teoría general de sistemas?",
+    "description": "Las ____________ constituyen la energía para las necesidades operativas, son los ingresos recursos (materiales, humanos, datos o información,...).\n",
     "level": "2",
-    "solution": "Ludwig von Berwerwetwrettalanffy",
+    "solution": "entrada",
     "options": [
-      "Ludwig von Berwerwetwrettalanffy",
-      "David Rapaporewtwett",
-      "Norbert Wteweeiner",
-      "Kurt Lewetwin"
+      "entrada",
+      "salida",
+      "proceso",
+      "retroalimentación"
     ],
     "score": "5",
     "finished": false
+  },
+  {
+    "id": "8",
+    "title": "unica 3",
+    "description": "los sistemas se pueden clasificar según 1-Entitividad, 2-Relación a su origen, 3-Relación al ambiente, seleccione los sistemas que se refieren a estas clasificaciones respectivamente:\n",
+    "level": "2",
+    "solution": "reales o abstractos, naturales o artificiales, abiertos o cerrados",
+    "options": [
+      "reales, cerrados, vivos",
+      "reales o abstractos, naturales o artificiales, abiertos o cerrados",
+      "Alopoiéticos, Autorreferentes, Sociales",
+      "sociales, vivos, Noológicos"
+    ],
+    "score": "5",
+    "finished": false
+  },
+  {
+    "id": "9",
+    "title": "unica 4",
+    "description": "Seleccione la respuesta que tenga el orden ascendente algunos de los niveles de jerarquía de un sistema.",
+    "level": "2",
+    "solution": "Sistema abierto, genético, social, sistema animal",
+    "options": [
+      "Estructura estática, sistema abierto, sistema humano",
+      "Sistema humano, sistema trascendental, estructura estática",
+      "Sistema abierto, genético, social, sistema animal",
+      "Sistema trascendente, sistema dinámico, sistema cibernético"
+    ],
+    "score": "5",
+    "finished": false
+  },
+  {
+    "id": "10",
+    "title": "unica 5",
+    "description": "Se entiende como la propiedad que tiene un sistema de aprender y modificar un proceso, un estado o una característica de acuerdo a las modificaciones que sufre el contexto:",
+    "level": "2",
+    "solution": "Ludwig von Berwerwetwrettalanffy",
+    "options": [
+      "Adaptabilidad",
+      "Equifinalidad",
+      "Teleología",
+      "Crecimiento"
+    ],
+    "score": "5",
+    "finished": false
+  },
+
+
+
+
+
+  {
+    "id": "11",
+    "title": "selección multiple 1",
+    "description": "Son características de un sistema abierto:",
+    "level": "3",
+    "solution": [
+      "Hay intercambio de materia y energía",
+      "Tiene entrada, transformación y salida",
+      "Tienen entropía negativa"
+    ],
+    "options": [
+      "Hay intercambio de materia y energía",
+      "Tiene entrada, transformación y salida",
+      "Tienen entropía negativa",
+      "No tiene homeostasis",
+      "Su retroalimentación es casi nula",
+      "Tienen multifinalidad"
+    ],
+    "score": "10",
+    "finished": false
+  },
+  {
+    "id": "12",
+    "title": "selección multiple 2",
+    "description": "Son condiciones necesarias para que exista un sistema:",
+    "level": "3",
+    "solution": [
+      "Tienen equifinalidad ",
+      "Los elementos que tienen objetivos parecidos trabajan interrelacionados"
+    ],
+    "options": [
+      "Tienen equifinalidad ",
+      "Los elementos que tienen objetivos parecidos trabajan interrelacionados",
+      "Hay elementos que no aportan dentro del sistema",
+      "Si un elemento fundamental de un sistema falla, no afecta al objetivo"
+
+    ],
+    "score": "10",
+    "finished": false
+  },
+  {
+    "id": "13",
+    "title": "selección multiple 3",
+    "description": "¿Cuáles son definiciones de “Sistema?",
+    "level": "3",
+    "solution": [
+      "Conjunto de elementos que detonan armonía e implican lógica que interactúan entre sí para el logro de un objetivo",
+      "Conjunto de componentes que interactúan para alcanzar un objetivo"
+    ],
+    "options": [
+      "Conjunto de elementos que detonan armonía e implican lógica que interactúan entre sí para el logro de un objetivo",
+      "Falta de orden o de coordinación en la forma de actuar de una persona o un organismo",
+      "Incompatibilidad, oposición o rivalidad entre personas, opiniones o ideas",
+      "Conjunto de componentes que interactúan para alcanzar un objetivo"
+
+    ],
+    "score": "10",
+    "finished": false
+  },
+  {
+    "id": "14",
+    "title": "selección multiple 4",
+    "description": "Algunas de las definiciones de elementos claves de la correcta definición de un sistema son:",
+    "level": "3",
+    "solution": [
+      "Enlace que vinculan entre sí a los elementos",
+      "Serie de pasos ordenados que cumplen una meta",
+      "Procesos que deben realizarse con limitación de recursos para que un sistema pueda funcionar correctamente",
+      "Permite la validación de unas actividades para conocer su correcto funcionamiento"
+    ],
+    "options": [
+      "Enlace que vinculan entre sí a los elementos",
+      "Serie de pasos ordenados que cumplen una meta",
+      "Procesos que deben realizarse con limitación de recursos para que un sistema pueda funcionar correctamente",
+      "Permite la validación de unas actividades para conocer su correcto funcionamiento"
+    ],
+    "score": "10",
+    "finished": false
+  },
+  {
+    "id": "15",
+    "title": "selección multiple 5",
+    "description": " Seleccione las palabras a las cuales la siguiente definición no hace alusión: Concepto cibernético que nos refiere a los procesos de autocausación. Cuando A causa B y B causa C, pero C causa A, luego A en lo esencial es autocausado(retroalimentación, morfostásis, morfogénesis) ",
+    "level": "3",
+    "solution": [
+      "Circularidad"
+    ],
+    "options": [
+      "Armonía",
+      "Cibernética",
+      "Circularidad",
+      "Conglomerado"
+    ],
+    "score": "10",
+    "finished": false
   }
+
 ]
