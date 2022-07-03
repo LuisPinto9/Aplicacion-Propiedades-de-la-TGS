@@ -64,19 +64,12 @@
     "score": "3",
     "finished": false
   },
-
-
-
-
-
-
-
   {
     "id": "6",
     "title": "unica 1",
     "description": "¿A quién se le atribuye el primer modelo de la teoría general de sistemas?",
     "level": "2",
-    "solution": "Adaptabilidad",
+    "solution": "Ludwig von Bertalanffy",
     "options": [
       "Ludwig von Bertalanffy",
       "David Rapaport",
@@ -146,11 +139,6 @@
     "score": "5",
     "finished": false
   },
-
-
-
-
-
   {
     "id": "11",
     "title": "selección multiple 1",
@@ -186,7 +174,6 @@
       "Los elementos que tienen objetivos parecidos trabajan interrelacionados",
       "Hay elementos que no aportan dentro del sistema",
       "Si un elemento fundamental de un sistema falla, no afecta al objetivo"
-
     ],
     "score": "10",
     "finished": false
@@ -205,7 +192,6 @@
       "Falta de orden o de coordinación en la forma de actuar de una persona o un organismo",
       "Incompatibilidad, oposición o rivalidad entre personas, opiniones o ideas",
       "Conjunto de componentes que interactúan para alcanzar un objetivo"
-
     ],
     "score": "10",
     "finished": false
@@ -238,7 +224,6 @@
     "solution": [
       "Circularidad"
     ],
-
     "options": [
       "Armonía",
       "Cibernética",
@@ -248,5 +233,4 @@
     "score": "10",
     "finished": false
   }
-
 ]
