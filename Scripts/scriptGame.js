@@ -127,9 +127,52 @@ function validate(answer) {
 //esta funcion sirve para terminar el nivel
 function finish() {
     let total;
+    let level2;
+    //alert(`nivel: ${level}`)
     alert(`Puntuación obtenida: ${score}`)
     total = score + parseInt(user.score)
-    user.score = total.toString()
+    alert(`total`+ total)
+    if(user.level=="0"){
+
+        alert(`entro 1`)
+        if(total==15){
+            alert(`entro 1`)
+            level2=parseInt(user.level) +1
+            user.level = level2.toString()
+            user.score = total.toString()
+        }else{
+
+            total=0;
+            user.score = total.toString()
+        }
+    }else
+    if(user.level=="1"){
+        alert(`entro 2`)
+        if(total==40){
+            level2=parseInt(user.level) +1
+            user.level = level2.toString()
+            user.score = total.toString()
+        }else{
+            total=15;
+            user.score = total.toString()
+        }
+    }else
+    if(user.level=="2"){
+        alert(`entro 3`)
+        if(total==90){
+            level2=parseInt(user.level) +1
+            user.level = level2.toString()
+            user.score = total.toString()
+        }else{
+            total=40;
+            user.score = total.toString()
+        }
+    }
+
+
+
+
+
     saveScore()
     saveScore2()
     window.location.reload()
