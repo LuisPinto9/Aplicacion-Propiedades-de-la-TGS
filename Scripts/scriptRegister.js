@@ -1,6 +1,6 @@
 
 function login2(){
-    //let status = false;
+
     let score = "0";
     let level = "0";
     let name = document.getElementById("inputUser").value;
@@ -18,8 +18,7 @@ function login2(){
             }
         }
         xhr3.send(null)
-        // listButton()
-        // document.getElementById("create").reset();
+
 
     }else{
         alert("contaseñas diferentes")
@@ -28,32 +27,32 @@ function login2(){
 }
 
 
-
-
-document.getElementById("inputUser").addEventListener("change", () => {
-
+function bloquear(){
     comprobarExistencia();
-})
+}
 
 
 
 function comprobarExistencia() {
 
-    let name = document.getElementById("inputUser").value
+    let name1 = document.getElementById("inputUser").value
     const xhr5 = new XMLHttpRequest();
     xhr5.open("GET", "./Php/controlUsers.php?option=1", true);
     xhr5.onreadystatechange = () => {
         if (xhr5.readyState === 4 && xhr5.status === 200) {
             const data = JSON.parse(xhr5.responseText);
 
+
             for (let i = 0; i < data.length; ++i) {
 
-                if (data[i].name === name) {
-                    alert("Ese ususario ya existe ")
-                    disableButton(2)
+                if (data[i].name === name1) {
 
+                    disableButton(2)
+                    alert("Ese usuario ya existe ")
+                    i=data.length
                 } else  {
                     disableButton(1)
+
                 }
             }
         }
@@ -68,15 +67,23 @@ function disableButton(estado) {
 
 
     const button = document.getElementById("btn-register1")
+    //si se bloquean estos no funciona
+    //const button2 = document.getElementById("input-password1")
+   // const button3 = document.getElementById("input-password2")
 
     switch (estado) {
 
         case 1:
-            button.disabled = true
+            button.disabled = false
+            alert("cambie nombre de usuario")
+            //button2.disabled = false
+            //button3.disabled = false
 
             break;
         case 2:
-            button.disabled = false
+            button.disabled = true
+            //button2.disabled = true
+            //button3.disabled = true
             break;
     }
 }
