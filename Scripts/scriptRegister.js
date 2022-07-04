@@ -28,26 +28,6 @@ function login2(){
 }
 
 
-function listButton() {
-
-    const xhr2 = new XMLHttpRequest();
-    xhr2.open('GET', './Php/controlUsers.php?option=1', true)
-    xhr2.onreadystatechange = () => {
-        if (xhr2.readyState === 4 && xhr2.status === 200) {
-            const data = JSON.parse(xhr2.response)
-            //listData(data)
-
-        }
-    }
-    xhr2.send(null)
-
-}
-function listData(data) {
-
-    data.sort((a, b) => a.name.localeCompare(b.name)).forEach((participant) => {
-        initialTable(participant.discipline, participant.name, participant.id, participant.eventPosition, participant.disciplineType, participant.event)
-    })
-}
 
 
 document.getElementById("inputUser").addEventListener("change", () => {
