@@ -87,7 +87,7 @@ function comprobarExistencia() {
 function disableButton(estado) {
 
 
-    const button = document.getElementById("btnLogin")
+    const button = document.getElementById("btn-register1")
 
     switch (estado) {
 
