@@ -82,7 +82,7 @@
   {
     "id": "7",
     "title": "unica 2",
-    "description": "Las ____________ constituyen la energía para las necesidades operativas, son los ingresos recursos (materiales, humanos, datos o información,...).\n",
+    "description": "Las ____________ constituyen la energía para las necesidades operativas, son los ingresos recursos (materiales, humanos, datos o información,...).",
     "level": "2",
     "solution": "entrada",
     "options": [
@@ -97,7 +97,7 @@
   {
     "id": "8",
     "title": "unica 3",
-    "description": "los sistemas se pueden clasificar según 1-Entitividad, 2-Relación a su origen, 3-Relación al ambiente, seleccione los sistemas que se refieren a estas clasificaciones respectivamente:\n",
+    "description": "los sistemas se pueden clasificar según: \n1-Entitividad\n2-Relación a su origen\n3-Relación al ambiente.\nSeleccione los sistemas que se refieren a estas clasificaciones respectivamente.\n",
     "level": "2",
     "solution": "Reales o abstractos, naturales o artificiales, abiertos o cerrados",
     "options": [
@@ -127,7 +127,7 @@
   {
     "id": "10",
     "title": "unica 5",
-    "description": "Se entiende como la propiedad que tiene un sistema de aprender y modificar un proceso, un estado o una característica de acuerdo a las modificaciones que sufre el contexto:",
+    "description": "Se entiende como la propiedad que tiene un sistema de aprender y modificar un proceso, un estado o una característica de acuerdo a las modificaciones que sufre el contexto.",
     "level": "2",
     "solution": "Adaptabilidad",
     "options": [

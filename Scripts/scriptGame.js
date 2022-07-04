@@ -13,6 +13,14 @@ addEventListener("load", () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const data = JSON.parse(xhr.response)
             user = data
+            if (data.level === "1" || data.level === "2") {
+                document.getElementById("btn2").removeAttribute("disabled")
+                document.getElementById("btn2").setAttribute("class", "btn-level2 m-3")
+            }
+            if (data.level === "2" || data.level === "3") {
+                document.getElementById("btn3").removeAttribute("disabled")
+                document.getElementById("btn3").setAttribute("class", "btn-level3 m-3")
+            }
             document.getElementById("labelUser").innerText = data.name
             if (data.level === "1") {
                 rewards += "<img src=\"Images/medalla.png\">"
@@ -131,11 +139,8 @@ function finish() {
     //alert(`nivel: ${level}`)
     alert(`Puntuación obtenida: ${score}`)
     total = score + parseInt(user.score)
-    alert(`total` + total)
     if (user.level === "0") {
-        alert(`entro 1`)
         if (total === 15) {
-            alert(`entro 1`)
             level2 = parseInt(user.level) + 1
             user.level = level2.toString()
             user.score = total.toString()
@@ -144,7 +149,6 @@ function finish() {
             user.score = total.toString()
         }
     } else if (user.level === "1") {
-        alert(`entro 2`)
         if (total === 40) {
             level2 = parseInt(user.level) + 1
             user.level = level2.toString()
@@ -154,7 +158,6 @@ function finish() {
             user.score = total.toString()
         }
     } else if (user.level === "2") {
-        alert(`entro 3`)
         if (total === 90) {
             level2 = parseInt(user.level) + 1
             user.level = level2.toString()
