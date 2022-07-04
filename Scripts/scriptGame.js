@@ -131,55 +131,46 @@ function finish() {
     //alert(`nivel: ${level}`)
     alert(`Puntuación obtenida: ${score}`)
     total = score + parseInt(user.score)
-    alert(`total`+ total)
-    if(user.level=="0"){
-
+    alert(`total` + total)
+    if (user.level === "0") {
         alert(`entro 1`)
-        if(total==15){
+        if (total === 15) {
             alert(`entro 1`)
-            level2=parseInt(user.level) +1
+            level2 = parseInt(user.level) + 1
             user.level = level2.toString()
             user.score = total.toString()
-        }else{
-
-            total=0;
+        } else {
+            total = 0;
             user.score = total.toString()
         }
-    }else
-    if(user.level=="1"){
+    } else if (user.level === "1") {
         alert(`entro 2`)
-        if(total==40){
-            level2=parseInt(user.level) +1
+        if (total === 40) {
+            level2 = parseInt(user.level) + 1
             user.level = level2.toString()
             user.score = total.toString()
-        }else{
-            total=15;
+        } else {
+            total = 15;
             user.score = total.toString()
         }
-    }else
-    if(user.level=="2"){
+    } else if (user.level === "2") {
         alert(`entro 3`)
-        if(total==90){
-            level2=parseInt(user.level) +1
+        if (total === 90) {
+            level2 = parseInt(user.level) + 1
             user.level = level2.toString()
             user.score = total.toString()
-        }else{
-            total=40;
+        } else {
+            total = 40;
             user.score = total.toString()
         }
     }
-
-
-
-
-
     saveScore()
     saveScore2()
     window.location.reload()
 }
 
 //esta funcion sirve para sobreescribir la informacion del json de usuarios
-function saveScore(){
+function saveScore() {
     const xhr = new XMLHttpRequest();
     xhr.open('get', `./Php/controlUsers.php?option=3&name=${user.name}&password=${user.password}&score=${user.score}&level=${user.level}`, true)
     xhr.onreadystatechange = () => {
@@ -191,7 +182,7 @@ function saveScore(){
 }
 
 //esta funcion sirve para sobreescribir la informacion del login
-function saveScore2(){
+function saveScore2() {
     const xhr = new XMLHttpRequest();
     xhr.open('get', `./Php/controlLogin.php?option=2&name=${user.name}&password=${user.password}&score=${user.score}&level=${user.level}`, true)
     xhr.onreadystatechange = () => {

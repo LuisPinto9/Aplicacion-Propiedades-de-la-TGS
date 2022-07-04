@@ -99,12 +99,12 @@
     "title": "unica 3",
     "description": "los sistemas se pueden clasificar según 1-Entitividad, 2-Relación a su origen, 3-Relación al ambiente, seleccione los sistemas que se refieren a estas clasificaciones respectivamente:\n",
     "level": "2",
-    "solution": "reales o abstractos, naturales o artificiales, abiertos o cerrados",
+    "solution": "Reales o abstractos, naturales o artificiales, abiertos o cerrados",
     "options": [
-      "reales, cerrados, vivos",
-      "reales o abstractos, naturales o artificiales, abiertos o cerrados",
+      "Reales, cerrados, vivos",
+      "Reales o abstractos, naturales o artificiales, abiertos o cerrados",
       "Alopoiéticos, Autorreferentes, Sociales",
-      "sociales, vivos, Noológicos"
+      "Sociales, vivos, Noológicos"
     ],
     "score": "5",
     "finished": false
@@ -129,7 +129,7 @@
     "title": "unica 5",
     "description": "Se entiende como la propiedad que tiene un sistema de aprender y modificar un proceso, un estado o una característica de acuerdo a las modificaciones que sufre el contexto:",
     "level": "2",
-    "solution": "Ludwig von Berwerwetwrettalanffy",
+    "solution": "Adaptabilidad",
     "options": [
       "Adaptabilidad",
       "Equifinalidad",
