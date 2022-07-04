@@ -1,6 +1,7 @@
 
 function login2(){
 
+
     let score = "0";
     let level = "0";
     let name = document.getElementById("inputUser").value;
