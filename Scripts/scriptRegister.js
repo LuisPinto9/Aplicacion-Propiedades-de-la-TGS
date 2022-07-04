@@ -7,6 +7,10 @@ function login2(){
     let password1 = document.getElementById("inputPassword1").value;
     let password2 = document.getElementById("inputPassword2").value;
 
+    if (password1 === "" && password2 === "" ) {
+        alert("Rellene todos los espaios")
+
+    }else
     if (password1 === password2 ) {
 
         const xhr3 = new XMLHttpRequest();
@@ -75,7 +79,7 @@ function disableButton(estado) {
 
         case 1:
             button.disabled = false
-            alert("cambie nombre de usuario")
+            //alert("cambie nombre de usuario")
             //button2.disabled = false
             //button3.disabled = false
 
