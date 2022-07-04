@@ -4,7 +4,7 @@ $option = $_GET['option'];
 
 if ($option == 1) {
 
-    $data = file_get_contents("..\Resources\users.json");
+    $data = file_get_contents("../Resources/users.json");
 
     $object = json_decode($data);
 
@@ -14,11 +14,11 @@ if ($option == 1) {
 
     $newUser = array("name" => $_GET['name'], "password" => $_GET['password'], "score" => $_GET["score"], "level" => $_GET["level"]);
 
-    if (file_exists("..\Resources\users.json")) {
-        $data = file_get_contents("..\Resources\users.json");
+    if (file_exists("../Resources/users.json")) {
+        $data = file_get_contents("../Resources/users.json");
         $newData = json_decode($data);
         array_push($newData, $newUser);
-        file_put_contents("..\Resources\users.json", json_encode($newData));
+        file_put_contents("../Resources/users.json", json_encode($newData));
     }
 } elseif ($option == 3) {
 
@@ -26,8 +26,8 @@ if ($option == 1) {
     $finalData = [];
     $status = false;
     while ($status != true) {
-        if (file_exists("..\Resources\users.json")) {
-            $data = file_get_contents("..\Resources\users.json");
+        if (file_exists("../Resources/users.json")) {
+            $data = file_get_contents("../Resources/users.json");
             $newData = json_decode($data);
 
             foreach ($newData as $user => $userSearch) {
@@ -48,6 +48,6 @@ if ($option == 1) {
     $newUser = array("name" => $_GET['name'], "password" => $_GET['password'], "score" => $_GET["score"], "level" => $_GET["level"]);
 
     array_push($finalData, $newUser);
-    file_put_contents("..\Resources\users.json", json_encode($finalData));
+    file_put_contents("../Resources/users.json", json_encode($finalData));
 
 }

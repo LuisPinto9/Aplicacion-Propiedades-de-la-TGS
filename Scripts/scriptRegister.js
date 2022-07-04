@@ -1,5 +1,4 @@
-
-function login2(){
+function login2() {
 
 
     let score = "0";
@@ -8,11 +7,10 @@ function login2(){
     let password1 = document.getElementById("inputPassword1").value;
     let password2 = document.getElementById("inputPassword2").value;
 
-    if (password1 === "" && password2 === "" ) {
+    if (password1 === "" && password2 === "") {
         alert("Rellene todos los espaios")
 
-    }else
-    if (password1 === password2 ) {
+    } else if (password1 === password2) {
 
         const xhr3 = new XMLHttpRequest();
 
@@ -25,17 +23,16 @@ function login2(){
         xhr3.send(null)
 
 
-    }else{
+    } else {
         alert("Las contraseñas no coinciden")
     }
 
 }
 
 
-function bloquear(){
+function bloquear() {
     comprobarExistencia();
 }
-
 
 
 function comprobarExistencia() {
@@ -54,8 +51,8 @@ function comprobarExistencia() {
 
                     disableButton(2)
                     alert("Ese usuario ya existe ")
-                    i=data.length
-                } else  {
+                    i = data.length
+                } else {
                     disableButton(1)
 
                 }
@@ -67,14 +64,13 @@ function comprobarExistencia() {
 }
 
 
-
 function disableButton(estado) {
 
 
     const button = document.getElementById("btn-register1")
     //si se bloquean estos no funciona
     //const button2 = document.getElementById("input-password1")
-   // const button3 = document.getElementById("input-password2")
+    // const button3 = document.getElementById("input-password2")
 
     switch (estado) {
 
