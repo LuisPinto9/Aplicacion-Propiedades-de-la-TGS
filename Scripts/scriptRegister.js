@@ -21,7 +21,7 @@ function login2(){
 
 
     }else{
-        alert("contaseñas diferentes")
+        alert("Las contraseñas no coinciden")
     }
 
 }
@@ -35,7 +35,7 @@ function bloquear(){
 
 function comprobarExistencia() {
 
-    let name1 = document.getElementById("inputUser").value
+    let name1 = document.getElementById("inputUser").value;
     const xhr5 = new XMLHttpRequest();
     xhr5.open("GET", "./Php/controlUsers.php?option=1", true);
     xhr5.onreadystatechange = () => {
