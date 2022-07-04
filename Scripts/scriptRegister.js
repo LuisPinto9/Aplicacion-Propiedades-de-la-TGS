@@ -1,4 +1,5 @@
-function login2() {
+
+function login2(){
 
 
     let score = "0";
@@ -7,27 +8,31 @@ function login2() {
     let password1 = document.getElementById("inputPassword1").value;
     let password2 = document.getElementById("inputPassword2").value;
 
-    if (password1 === "" && password2 === "") {
+    if (password1  === "" || password2 === ""|| name === "" ) {
         alert("Rellene todos los espaios")
 
-    } else if (password1 === password2) {
+    }else
+        if (password1 === password2) {
 
-        const xhr3 = new XMLHttpRequest();
+            const xhr3 = new XMLHttpRequest();
 
 
-        xhr3.open("GET", `./Php/controlUsers.php?option=2&name=${name}&password=${password1}&score=${score}&level=${level}`, true)
-        xhr3.onreadystatechange = () => {
-            if (xhr3.readyState === 4 && xhr3.status === 200) {
+            xhr3.open("GET", `./Php/controlUsers.php?option=2&name=${name}&password=${password1}&score=${score}&level=${level}`, true)
+            xhr3.onreadystatechange = () => {
+                if (xhr3.readyState === 4 && xhr3.status === 200) {
+                }
             }
+            xhr3.send(null)
+
+
+        } else {
+            alert("Las contraseñas no coinciden")
         }
-        xhr3.send(null)
 
 
-    } else {
-        alert("Las contraseñas no coinciden")
-    }
 
 }
+
 
 
 function bloquear() {
