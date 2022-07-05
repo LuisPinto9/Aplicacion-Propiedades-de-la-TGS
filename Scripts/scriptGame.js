@@ -13,7 +13,7 @@ addEventListener("load", () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const data = JSON.parse(xhr.response)
             user = data
-            if (data.level === "1" || data.level === "2") {
+            if (data.level === "1" || data.level === "2" || data.level === "3") {
                 document.getElementById("btn2").removeAttribute("disabled")
                 document.getElementById("btn2").setAttribute("class", "btn-level2 m-3")
             }
