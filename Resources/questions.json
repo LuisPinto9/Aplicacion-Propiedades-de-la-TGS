@@ -84,12 +84,12 @@
     "title": "unica 2",
     "description": "Las ____________ constituyen la energía para las necesidades operativas, son los ingresos recursos (materiales, humanos, datos o información,...).",
     "level": "2",
-    "solution": "entrada",
+    "solution": "entradas",
     "options": [
-      "entrada",
-      "salida",
-      "proceso",
-      "retroalimentación"
+      "entradas",
+      "salidas",
+      "procesos",
+      "retroalimentaciones"
     ],
     "score": "5",
     "finished": false
@@ -141,94 +141,75 @@
   },
   {
     "id": "11",
-    "title": "selección multiple 1",
-    "description": "Son características de un sistema abierto:",
+    "title": "unica 6",
+    "description": "Es la tarea de modificar el sistema para lograr el alcance de los objetivos:",
     "level": "3",
-    "solution": [
-      "Hay intercambio de materia y energía",
-      "Tiene entrada, transformación y salida",
-      "Tienen entropía negativa"
-    ],
+    "solution": "Optimización",
     "options": [
-      "Hay intercambio de materia y energía",
-      "Tiene entrada, transformación y salida",
-      "Tienen entropía negativa",
-      "No tiene homeostasis",
-      "Su retroalimentación es casi nula",
-      "Tienen multifinalidad"
+      "Parámetro",
+      "Organización",
+      "Optimización",
+      "Suboptimización"
     ],
     "score": "10",
     "finished": false
   },
   {
     "id": "12",
-    "title": "selección multiple 2",
-    "description": "Son condiciones necesarias para que exista un sistema:",
+    "title": "unica 7",
+    "description": "Se presenta cuando un sistema no alcanza sus objetivos por las restricciones del medio o porque el sistema tiene varios objetivos y los mismos son excluyentes:",
     "level": "3",
-    "solution": [
-      "Tienen equifinalidad ",
-      "Los elementos que tienen objetivos parecidos trabajan interrelacionados"
-    ],
+    "solution": "Suboptimización",
     "options": [
-      "Tienen equifinalidad ",
-      "Los elementos que tienen objetivos parecidos trabajan interrelacionados",
-      "Hay elementos que no aportan dentro del sistema",
-      "Si un elemento fundamental de un sistema falla, no afecta al objetivo"
+      "Parámetro",
+      "Organización",
+      "Optimización",
+      "Suboptimización"
     ],
     "score": "10",
     "finished": false
   },
   {
     "id": "13",
-    "title": "selección multiple 3",
-    "description": "¿Cuáles son definiciones de “Sistema?",
+    "title": "unica 8",
+    "description": "Es adjetivo de Sistema:",
     "level": "3",
-    "solution": [
-      "Conjunto de elementos que detonan armonía e implican lógica que interactúan entre sí para el logro de un objetivo",
-      "Conjunto de componentes que interactúan para alcanzar un objetivo"
-    ],
+    "solution": "Armonía",
     "options": [
-      "Conjunto de elementos que detonan armonía e implican lógica que interactúan entre sí para el logro de un objetivo",
-      "Falta de orden o de coordinación en la forma de actuar de una persona o un organismo",
-      "Incompatibilidad, oposición o rivalidad entre personas, opiniones o ideas",
-      "Conjunto de componentes que interactúan para alcanzar un objetivo"
+      "Armonía",
+      "Desorden",
+      "Opinión",
+      "Ninguna"
     ],
     "score": "10",
     "finished": false
   },
   {
     "id": "14",
-    "title": "selección multiple 4",
-    "description": "Algunas de las definiciones de elementos claves de la correcta definición de un sistema son:",
+    "title": "unica 9",
+    "description": "Mide la interacción que un sistema recibe del medio, se dice que a mayor o menor de esta, el sistema será más o menos abierto:",
     "level": "3",
-    "solution": [
-      "Enlace que vinculan entre sí a los elementos",
-      "Serie de pasos ordenados que cumplen una meta",
-      "Procesos que deben realizarse con limitación de recursos para que un sistema pueda funcionar correctamente",
-      "Permite la validación de unas actividades para conocer su correcto funcionamiento"
-    ],
+    "solution": "Permeabilidad",
     "options": [
-      "Enlace que vinculan entre sí a los elementos",
-      "Serie de pasos ordenados que cumplen una meta",
-      "Procesos que deben realizarse con limitación de recursos para que un sistema pueda funcionar correctamente",
-      "Permite la validación de unas actividades para conocer su correcto funcionamiento"
+      "Organización",
+      "Permeabilidad",
+      "Negentropía",
+      "Operadores"
     ],
     "score": "10",
     "finished": false
   },
   {
     "id": "15",
-    "title": "selección multiple 5",
-    "description": " Seleccione las palabras a las cuales la siguiente definición no hace alusión: Concepto cibernético que nos refiere a los procesos de autocausación. Cuando A causa B y B causa C, pero C causa A, luego A en lo esencial es autocausado(retroalimentación, morfostásis, morfogénesis) ",
+    "title": "unica 10",
+    "description": " Procesos de intercambio con el ambiente que tienden a preservar o mantener una forma, una organización o un estado dado de un sistema. Procesos de este tipo son característicos de los sistemas vivos:",
     "level": "3",
-    "solution": [
-      "Circularidad"
-    ],
+    "solution": "Morfostasis",
     "options": [
-      "Armonía",
-      "Cibernética",
       "Circularidad",
-      "Conglomerado"
+      "Cibernética ",
+      "Conglomerado",
+      "Morfostasis"
     ],
     "score": "10",
     "finished": false
