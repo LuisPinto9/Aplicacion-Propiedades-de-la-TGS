@@ -13,18 +13,6 @@ addEventListener("load", () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const data = JSON.parse(xhr.response)
             user = data
-            if (data.level === "1" || data.level === "2" || data.level === "3" || data.level === "4") {
-                document.getElementById("btn2").removeAttribute("disabled")
-                document.getElementById("btn2").setAttribute("class", "btn-level2 m-3")
-            }
-            if (data.level === "2" || data.level === "3" || data.level === "4") {
-                document.getElementById("btn3").removeAttribute("disabled")
-                document.getElementById("btn3").setAttribute("class", "btn-level3 m-3")
-            }
-            if (data.level === "3" || data.level === "4") {
-                document.getElementById("btn4").removeAttribute("disabled")
-                document.getElementById("btn4").setAttribute("class", "btn-level4 m-3")
-            }
             document.getElementById("labelUser").innerText = data.name
             if (data.level === "1") {
                 rewards += "<img src=\"Images/medalla.png\">"

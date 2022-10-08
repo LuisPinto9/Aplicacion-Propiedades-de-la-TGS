@@ -78,122 +78,20 @@ body {
     color: var(--blanco);
 }
 
-.btn-level1 {
+.btn-volver {
     font-family: "Antonio", sans-serif;
     font-size: 3rem;
-    background-color: var(--primario);
+    background-color: var(--botonesLog);
     color: var(--blanco);
-    padding: 0.9rem 2rem;
     text-decoration: none;
-    border-radius: 1rem;
+    border-radius: 3rem;
+    padding: 0.9rem 2rem;
     border: none;
     outline: none;
 }
 
-.btn-level1:hover {
+.btn-volver:hover {
     background-color: #3f5377;
-    color: var(--blanco);
-}
-
-.btn-level2 {
-    font-family: "Antonio", sans-serif;
-    font-size: 3rem;
-    background-color: var(--primario);
-    color: var(--blanco);
-    padding: 0.9rem 2rem;
-    text-decoration: none;
-    border-radius: 1rem;
-    border: none;
-    outline: none;
-}
-
-.btn-level2:hover {
-    background-color: #3f5377;
-    color: var(--blanco);
-}
-
-.btn-level21 {
-    font-family: "Antonio", sans-serif;
-    font-size: 3rem;
-    background-color: grey;
-    color: var(--blanco);
-    padding: 0.9rem 2rem;
-    text-decoration: none;
-    border-radius: 1rem;
-    border: none;
-    outline: none;
-}
-
-.btn-level21:hover {
-    background-color: grey;
-    color: var(--blanco);
-}
-
-.btn-level3 {
-    font-family: "Antonio", sans-serif;
-    font-size: 3rem;
-    background-color: var(--primario);
-    color: var(--blanco);
-    padding: 0.9rem 2rem;
-    text-decoration: none;
-    border-radius: 1rem;
-    border: none;
-    outline: none;
-}
-
-.btn-level3:hover {
-    background-color: #3f5377;
-    color: var(--blanco);
-}
-
-.btn-level31 {
-    font-family: "Antonio", sans-serif;
-    font-size: 3rem;
-    background-color: grey;
-    color: var(--blanco);
-    padding: 0.9rem 2rem;
-    text-decoration: none;
-    border-radius: 1rem;
-    border: none;
-    outline: none;
-}
-
-.btn-level31:hover {
-    background-color: grey;
-    color: var(--blanco);
-}
-
-.btn-level4 {
-    font-family: "Antonio", sans-serif;
-    font-size: 3rem;
-    background-color: var(--primario);
-    color: var(--blanco);
-    padding: 0.9rem 2rem;
-    text-decoration: none;
-    border-radius: 1rem;
-    border: none;
-    outline: none;
-}
-
-.btn-level4:hover {
-    background-color: #3f5377;
-    color: var(--blanco);
-}
-
-.btn-level41 {
-    font-family: "Antonio", sans-serif;
-    font-size: 3rem;
-    background-color: grey;
-    color: var(--blanco);
-    padding: 0.9rem 2rem;
-    text-decoration: none;
-    border-radius: 1rem;
-    border: none;
-    outline: none;
-}
-
-.btn-level41:hover {
-    background-color: grey;
     color: var(--blanco);
 }
 
