@@ -53,6 +53,12 @@ function showGame(levelV) {
 function addButton(title) {
     let divQ = document.getElementById("divOptions")
     divQ.innerHTML = ""
+//aca esta lo del tiempo
+    setTimeout(()=>{
+        next(2)
+        alert("acabo tiempo")
+    },3000);
+
     options1 += `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="validate('${title}')">${title}</button>`
     divQ.innerHTML = options1
 }
@@ -69,9 +75,9 @@ function level(level) {
                 if (e.level === level) {
                     qLevel.push(e)
                 }
-
             })
-            showQuestion()
+
+           showQuestion()
         }
     }
     xhr.send(null)
@@ -114,16 +120,16 @@ function next(correct) {
             alert("Esta fue la ultima pregunta")
             finish()
         }
-
         showQuestion()
 
     } else    {
-
+//retroalimentacion
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
         let divQuestion = document.getElementById("divD")
         divQuestion.innerHTML =  "retroalimentacion de la pregunta  <br/>"+ qLevel[questionCount - 1].feedback
         let divQ = document.getElementById("divOptions")
+
         divQ.innerHTML = `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="next(1)">  siguiente  </button>`
 
     }
