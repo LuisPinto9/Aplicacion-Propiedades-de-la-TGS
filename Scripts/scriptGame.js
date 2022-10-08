@@ -109,8 +109,7 @@ function showQuestion() {
 //esta funcion sirve para ir avanzando de pregunta
 function next(correct) {
 
-    let correcto = correct
-    if (correcto == "1") {
+    if (correct === "1") {
         //en que pregunta va
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
@@ -126,17 +125,12 @@ function next(correct) {
         }
         showQuestion()
 
-<<<<<<< HEAD
-    } else {
-
-=======
     } else    {
 //retroalimentacion
->>>>>>> 6673615edb84f16d7b06c50cea3ce557730e5b21
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
         let divQuestion = document.getElementById("divD")
-        divQuestion.innerHTML = "Retroalimentacion de la pregunta:  <br/>" + qLevel[questionCount - 1].feedback
+        divQuestion.innerHTML =  "retroalimentacion de la pregunta  <br/>"+ qLevel[questionCount - 1].feedback
         let divQ = document.getElementById("divOptions")
 
         divQ.innerHTML = `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="next(1)">  siguiente  </button>`
