@@ -80,12 +80,14 @@ function level(level) {
 
 //en esta funcion se muestra una a una las preguntas que hay en el nivel
 function showQuestion() {
+    //alert("respuesta cCorrecta 3")
     let divT = document.getElementById("divTitle")
     let divQuestion = document.getElementById("divD")
 
     divQuestion.innerHTML = qLevel[questionCount].description
     let options = qLevel[questionCount].options
     for (let i = 0; i < options.length; i++) {
+        //adieren las opciones
         addButton(options[i])
     }
     options1 = ""
@@ -95,23 +97,35 @@ function showQuestion() {
 }
 
 //esta funcion sirve para ir avanzando de pregunta
-function next() {
-    let divT = document.getElementById("divTitle")
-    divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
-    let divQuestion = document.getElementById("divD")
-    divQuestion.innerHTML = ""
-    divQuestion.innerHTML = qLevel[questionCount - 1].description
-    if (questionCount === qLevel.length) {
-        alert("Esta fue la ultima pregunta")
-        finish()
-    }
-    showQuestion()
-}
+function next(correct) {
 
-//en esta funcion se va aumentando el contador que sirve para pasar de pregunta en pregunta
-function plusCount() {
-    if (questionCount < qLevel.length) {
-        questionCount++
+    let correcto = correct
+    if (correcto == "1") {
+        //en que pregunta va
+        let divT = document.getElementById("divTitle")
+        divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
+
+        //la pregunta
+        let divQuestion = document.getElementById("divD")
+        divQuestion.innerHTML = ""
+        divQuestion.innerHTML = qLevel[questionCount - 1].description
+
+        if (questionCount === qLevel.length) {
+            alert("Esta fue la ultima pregunta")
+            finish()
+        }
+
+        showQuestion()
+
+    } else    {
+
+        let divT = document.getElementById("divTitle")
+        divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
+        let divQuestion = document.getElementById("divD")
+        divQuestion.innerHTML =  "retroalimentacion de la pregunta  <br/>"+ qLevel[questionCount - 1].feedback
+        let divQ = document.getElementById("divOptions")
+        divQ.innerHTML = `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="next(1)">  siguiente  </button>`
+
     }
 }
 
@@ -120,17 +134,25 @@ function validate(answer) {
     if (questionCount <= qLevel.length) {
         let options = qLevel[questionCount - 1].solution
         if (options !== answer) {
-            alert("Respuesta incorrecta")
-            next()
+            alert("Respuesta incorrecta ")
+            next("2")
             return;
         } else {
             score += parseInt(qLevel[questionCount - 1].score)
-            alert("Respuesta correcta")
-            next()
+            alert("Respuesta correcta ")
+            next("1")
             return;
         }
     }
 }
+//en esta funcion se va aumentando el contador que sirve para pasar de pregunta en pregunta
+function plusCount() {
+    if (questionCount < qLevel.length) {
+        questionCount++
+    }
+}
+
+
 
 //esta funcion sirve para terminar el nivel
 function finish() {
@@ -170,6 +192,7 @@ function finish() {
     saveScore()
     saveScore2()
     window.location.reload()
+    //vuelve a recargar por eso vuelve donde estan los niveles
 }
 
 //esta funcion sirve para sobreescribir la informacion del json de usuarios
