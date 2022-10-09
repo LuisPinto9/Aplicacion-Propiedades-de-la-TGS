@@ -7,7 +7,7 @@ let status = false
 
 //En este metodo se cargan todas las recompensas en la pagina dependiendo del nivel del usuario
 addEventListener("load", () => {
-    level('1')
+    level('4')
     let rewards = ""
     const xhr = new XMLHttpRequest();
     xhr.open('get', './Php/controlLogin.php?option=1', true)
@@ -16,13 +16,6 @@ addEventListener("load", () => {
             const data = JSON.parse(xhr.response)
             user = data
             document.getElementById("labelUser").innerText = data.name
-            if (data.level === "1") {
-                rewards += "<img src=\"Images/medalla.png\">"
-            }
-            if (data.level === "2") {
-                rewards += "<img src=\"Images/medalla.png\">"
-                rewards += "<img src=\"Images/trofeo.png\">"
-            }
             if (data.level === "3") {
                 rewards += "<img src=\"Images/medalla.png\">"
                 rewards += "<img src=\"Images/trofeo.png\">"
@@ -263,8 +256,8 @@ function finish() {
     }
     saveScore()
     saveScore2()
-    window.location.reload()
-    //vuelve a recargar por eso vuelve donde estan los niveles
+    window.location.href = "gameWindow.html";
+    //vuelve a la página de los niveles
 }
 
 //esta funcion sirve para sobreescribir la informacion del json de usuarios

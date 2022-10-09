@@ -1,1 +1,8 @@
-[{"name":"jorge","password":"123456","score":"0","level":"0"},{"name":"miguel","password":"123","score":"0","level":"0"},{"name":"juan","password":"12345","score":"0","level":"0"},{"name":"diana","password":"1","score":"0","level":"0"},{"name":"aaaa","password":"123","score":"90","level":"3"},{"name":"a","password":"1","score":"40","level":"2"},{"name":"luis","password":"1","score":"90","level":"4"}]
+[
+  {
+    "name": "luis",
+    "password": "1",
+    "score": "90",
+    "level": "4"
+  }
+]
