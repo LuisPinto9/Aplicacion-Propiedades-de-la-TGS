@@ -1,9 +1,9 @@
 let qLevel = []
-let options1 = ""
 let questionCount = 0
 let score = 0
 let user = []
-let words = [];
+let words = "";
+let status = false
 
 //En este metodo se cargan todas las recompensas en la pagina dependiendo del nivel del usuario
 addEventListener("load", () => {
@@ -46,16 +46,16 @@ const usedLettersElement = document.getElementById('usedLetters');
 
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
-ctx.canvas.width  = 0;
+ctx.canvas.width = 0;
 ctx.canvas.height = 0;
 
 const bodyParts = [
-    [4,2,1,1],
-    [4,3,1,2],
-    [3,5,1,1],
-    [5,5,1,1],
-    [3,3,1,1],
-    [5,3,1,1]
+    [4, 2, 1, 1],
+    [4, 3, 1, 2],
+    [3, 5, 1, 1],
+    [5, 5, 1, 1],
+    [3, 3, 1, 1],
+    [5, 3, 1, 1]
 ];
 
 let selectedWord;
@@ -77,33 +77,39 @@ const addBodyPart = bodyPart => {
 const wrongLetter = () => {
     addBodyPart(bodyParts[mistakes]);
     mistakes++;
-    if(mistakes === bodyParts.length) {
+    if (mistakes === bodyParts.length) {
+        status = false
         endGame();
-        validate("2")
+        next(false)
     }
 }
 
 const endGame = () => {
     document.removeEventListener('keydown', letterEvent);
     startButton.style.display = 'block';
+
 }
 
 const correctLetter = letter => {
-    const { children } =  wordContainer;
-    for(let i = 0; i < children.length; i++) {
-        if(children[i].innerHTML === letter) {
+    const {children} = wordContainer;
+    for (let i = 0; i < children.length; i++) {
+        if (children[i].innerHTML === letter) {
             children[i].classList.toggle('hidden');
             hits++;
         }
     }
-    if(hits === selectedWord.length) {
+    if (hits === selectedWord.length) {
+        status = true
+        if (status === true) {
+            score += parseInt(qLevel[questionCount - 1].score)
+            alert("Respuesta correcta ")
+        }
         endGame();
-        validate("1")
     }
 }
 
 const letterInput = letter => {
-    if(selectedWord.includes(letter)) {
+    if (selectedWord.includes(letter)) {
         correctLetter(letter);
     } else {
         wrongLetter();
@@ -114,7 +120,7 @@ const letterInput = letter => {
 
 const letterEvent = event => {
     let newLetter = event.key.toUpperCase();
-    if(newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)) {
+    if (newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)) {
         letterInput(newLetter);
     }
 };
@@ -130,12 +136,12 @@ const drawWord = () => {
 };
 
 const selectRandomWord = () => {
-    let word = words[Math.floor((Math.random() * words.length))].toUpperCase();
+    let word = words.toUpperCase();
     selectedWord = word.split('');
 };
 
 const drawHangMan = () => {
-    ctx.canvas.width  = 120;
+    ctx.canvas.width = 120;
     ctx.canvas.height = 160;
     ctx.scale(20, 20);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -159,7 +165,10 @@ const startGame = () => {
     document.addEventListener('keydown', letterEvent);
 };
 
-startButton.addEventListener('click', startGame);
+startButton.addEventListener('click', () => {
+    startGame()
+    showQuestion()
+});
 
 //en esta funcion se filtran las preguntas que corresponden a un nivel
 function level(level) {
@@ -174,7 +183,6 @@ function level(level) {
                     qLevel.push(e)
                 }
             })
-
             showQuestion()
         }
     }
@@ -183,6 +191,7 @@ function level(level) {
 
 //en esta funcion se muestra una a una las preguntas que hay en el nivel
 function showQuestion() {
+
     if (questionCount === qLevel.length) {
         alert("Esta fue la ultima pregunta")
         finish()
@@ -191,59 +200,35 @@ function showQuestion() {
     let divQuestion = document.getElementById("divD")
 
     divQuestion.innerHTML = qLevel[questionCount].description
-    words.push(qLevel[questionCount].solution)
-
-    options1 = ""
+    words = qLevel[questionCount].solution
+    startGame()
     plusCount()
     divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
-
-    startGame()
-    startButton.addEventListener('click', showQuestion);
-    words = [];
 }
 
 //esta funcion sirve para ir avanzando de pregunta
 function next(correct) {
 
-    if (correct === "1") {
+    if (correct === true) {
+
         //en que pregunta va
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
-
-        startGame()
-        startButton.addEventListener('click', showQuestion);
-        words = [];
+        words = qLevel[questionCount].solution
 
         //la pregunta
         let divQuestion = document.getElementById("divD")
         divQuestion.innerHTML = ""
         divQuestion.innerHTML = qLevel[questionCount - 1].description
+        startGame()
 
-        showQuestion()
-
-    } else    {
-
+    } else {
+        alert("Se acabaron las oportunidades")
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
         let divQuestion = document.getElementById("divD")
-        divQuestion.innerHTML =  "retroalimentacion de la pregunta  <br/>"+ qLevel[questionCount - 1].feedback
+        divQuestion.innerHTML = "retroalimentacion de la pregunta  <br/>" + qLevel[questionCount - 1].feedback
 
-    }
-}
-
-//en esta funcion se valida que la opcion escogida sea correcta
-function validate(answer) {
-    if (questionCount <= qLevel.length) {
-        if (answer === "2") {
-            alert("Respuesta incorrecta ")
-            next("2")
-            return;
-        } else {
-            score += parseInt(qLevel[questionCount - 1].score)
-            alert("Respuesta correcta ")
-            next("1")
-            return;
-        }
     }
 }
 
@@ -254,54 +239,25 @@ function plusCount() {
     }
 }
 
-
-
 //esta funcion sirve para terminar el nivel
 function finish() {
     let total;
     let level2;
-    //alert(`nivel: ${level}`)
     alert(`Puntuación obtenida: ${score}`)
     total = score + parseInt(user.score)
-    if (user.level === "0") {
-        if (total === 15) {
-            if (user.level === "0"){
+    if (user.level === "3") {
+        if (total === 165) {
+            if (user.level === "3") {
                 alert("Subiste de nivel")
             }
             level2 = parseInt(user.level) + 1
             user.level = level2.toString()
             user.score = total.toString()
         } else {
-            if (user.score === "0"){
+            if (user.score === "90") {
                 alert("Responde todas las preguntas correctamente para pasar de nivel")
             }
             total = 0;
-            user.score = total.toString()
-        }
-    } else if (user.level === "1") {
-        if (total === 40) {
-            alert("Subiste de nivel")
-            level2 = parseInt(user.level) + 1
-            user.level = level2.toString()
-            user.score = total.toString()
-        } else {
-            if (user.score === "15"){
-                alert("Responde todas las preguntas correctamente para pasar de nivel")
-            }
-            total = 15;
-            user.score = total.toString()
-        }
-    } else if (user.level === "2") {
-        if (total === 90) {
-            alert("Subiste de nivel")
-            level2 = parseInt(user.level) + 1
-            user.level = level2.toString()
-            user.score = total.toString()
-        } else {
-            if (user.score === "40"){
-                alert("Responde todas las preguntas correctamente para pasar de nivel")
-            }
-            total = 40;
             user.score = total.toString()
         }
     }
@@ -321,6 +277,7 @@ function saveScore() {
     }
     xhr.send(null)
 }
+
 //esta funcion sirve para sobreescribir la informacion del login
 function saveScore2() {
     const xhr = new XMLHttpRequest();
