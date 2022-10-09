@@ -1,16 +1,52 @@
 /**Codigo esecial para todos los estilos**/
 
+.progress-bar{
+    position: relative;
+    width: 700px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.progress-bar::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bar-color);
+    transform: translatex(-100%);
+    animation: fill-bar 6s 1s ease-in-out forwards;
+}
+
+@keyframes fill-bar{
+    to{
+        transform: translateX(var(--fill-size));
+    }
+}
+
+/*
 .inicio{
     width: 0%;
 }
+
+
 .final{
     width: 100%;
 }
+
 .animacion{
     transition: all 5s ease .2s ;
 }
 
+*/
+
 :root {
+
+    --bar-color: violet;
+    --fill-size: 0%;
+
+
     --fuenteHeading: "PT Sans", sans-serif;
     --fuenteParrafos: "Open Sans", sans-serif;
 

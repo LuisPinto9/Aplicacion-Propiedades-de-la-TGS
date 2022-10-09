@@ -55,10 +55,17 @@ addEventListener("load", () => {
 
 //en esta funcion se esconden los div que muestran los niveles y se muestran los div que tienen las preguntas
 function showGame(levelV) {
+
     let game = document.getElementById("Game")
-    let divQ = document.getElementById("divQuestions")
     game.removeAttribute("hidden")
+    //preguntas
+    let divQ = document.getElementById("divQuestions")
     divQ.setAttribute("hidden", "")
+    //barra tiempo
+    let barra1 = document.getElementById("Game1")
+    barra1.removeAttribute("hidden")
+    animar();
+
     level(levelV)
 }
 
@@ -94,7 +101,7 @@ function level(level) {
 
 //en esta funcion se muestra una a una las preguntas que hay en el nivel
 function animar() {
-    document.getElementById("barra").classList.toggle("final");
+    document.getElementById("barra").classList.toggle("progress-bar");
 }
 
 function showQuestion() {
@@ -137,7 +144,7 @@ function showQuestion() {
 
 //esta funcion sirve para ir avanzando de pregunta
 function next(correct) {
-
+    animar();
     if (correct === "1") {
         //en que pregunta va
         let divT = document.getElementById("divTitle")
@@ -156,6 +163,7 @@ function next(correct) {
         showQuestion()
 
     } else {
+        animar();
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
         let divQuestion = document.getElementById("divD")
