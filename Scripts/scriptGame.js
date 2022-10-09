@@ -7,6 +7,44 @@ let user = []
 
 let temporizador ;
 let time=5;
+//En este metodo se cargan todas las recompensas en la pagina dependiendo del nivel del usuario
+/**
+ addEventListener("load", () => {
+    let rewards = ""
+    const xhr = new XMLHttpRequest();
+    xhr.open('get', './Php/controlLogin.php?option=1', true)
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            const data = JSON.parse(xhr.response)
+            user = data
+            if (data.level === "1" || data.level === "2" || data.level === "3") {
+                document.getElementById("btn2").removeAttribute("disabled")
+                document.getElementById("btn2").setAttribute("class", "btn-level2 m-3")
+            }
+            if (data.level === "2" || data.level === "3") {
+                document.getElementById("btn3").removeAttribute("disabled")
+                document.getElementById("btn3").setAttribute("class", "btn-level3 m-3")
+            }
+            document.getElementById("labelUser").innerText = data.name
+            if (data.level === "1") {
+                rewards += "<img src=\"Images/medalla.png\">"
+            }
+            if (data.level === "2") {
+                rewards += "<img src=\"Images/medalla.png\">"
+                rewards += "<img src=\"Images/trofeo.png\">"
+            }
+            if (data.level === "3") {
+                rewards += "<img src=\"Images/medalla.png\">"
+                rewards += "<img src=\"Images/trofeo.png\">"
+                rewards += "<img src=\"Images/estrella.png\">"
+            }
+            document.getElementById("rewards").innerHTML = rewards
+        }
+    }
+    xhr.send(null)
+})
+
+ **/
 
 addEventListener("load", () => {
     let rewards = ""
@@ -77,18 +115,6 @@ function level(level) {
                 }
             })
 
-            /**
-
-             let temporizador = setTimeout(()=>{
-
-
-                next(2)
-                alert("acabo tiempo")
-            },3000);
-
-             **/
-            // clearTimeout(temporizador);
-
 
 
             showQuestion()
@@ -98,6 +124,7 @@ function level(level) {
 }
 
 //en esta funcion se muestra una a una las preguntas que hay en el nivel
+
 function showQuestion() {
     //alert("respuesta cCorrecta 3")
     let divT = document.getElementById("divTitle")
@@ -106,8 +133,21 @@ function showQuestion() {
     divQuestion.innerHTML = qLevel[questionCount].description
     let options = qLevel[questionCount].options
 
+
+
     temporizador= setInterval(()=>{
-        time--;
+        time = time-1;
+
+        if(time==0){
+            alert("se acabo el tiempo")
+            clearInterval(temporizador);
+            time=6;
+            next(2);
+        }else{
+            let time3= document.getElementById('time2')
+            time3.innerHTML = time;
+        }
+
     }, 1000)
 
     /**
@@ -134,6 +174,7 @@ function showQuestion() {
     plusCount()
     divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
 }
+
 
 //esta funcion sirve para ir avanzando de pregunta
 function next(correct) {
@@ -180,7 +221,8 @@ function validate(answer) {
         } else {
             score += parseInt(qLevel[questionCount - 1].score)
             alert("Respuesta correcta ")
-            clearTimeout(temporizador);
+            clearInterval(temporizador);
+            time=6;
             next("1")
             return;
 
@@ -250,7 +292,6 @@ function finish() {
     window.location.reload()
     //vuelve a recargar por eso vuelve donde estan los niveles
 }
-
 //esta funcion sirve para sobreescribir la informacion del json de usuarios
 function saveScore() {
     const xhr = new XMLHttpRequest();
