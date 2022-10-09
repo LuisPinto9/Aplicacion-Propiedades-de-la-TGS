@@ -16,7 +16,7 @@
     height: 100%;
     background-color: var(--bar-color);
     transform: translatex(-100%);
-    animation: fill-bar 6s 1s ease-in-out forwards;
+    animation: fill-bar 10s 1s ease-in-out forwards;
 }
 
 @keyframes fill-bar{

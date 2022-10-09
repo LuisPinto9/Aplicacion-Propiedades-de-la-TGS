@@ -4,7 +4,7 @@ let questionCount = 0
 let score = 0
 let user = []
 let temporizador;
-let time = 5;
+let time = 11;
 
 //En este metodo se cargan todas las recompensas en la pagina dependiendo del nivel del usuario
 addEventListener("load", () => {
@@ -103,16 +103,14 @@ function level(level) {
 function animar() {
     document.getElementById("barra").classList.toggle("progress-bar");
 }
-
 function showQuestion() {
-    //alert("respuesta cCorrecta 3")
+
     let divT = document.getElementById("divTitle")
     let divQuestion = document.getElementById("divD")
 
     divQuestion.innerHTML = qLevel[questionCount].description
     let options = qLevel[questionCount].options
 
-    // animar();
 
     temporizador = setInterval(() => {
         time = time - 1;
@@ -120,11 +118,12 @@ function showQuestion() {
         if (time === 0) {
             alert("se acabo el tiempo")
             clearInterval(temporizador);
-            time = 6;
+            time = 11;
             next(2);
         } else {
             let time3 = document.getElementById('time2')
-            time3.innerHTML = time;
+            //time3.innerHTML = time;
+            time3.innerHTML = " ";
         }
 
     }, 1000)
@@ -138,14 +137,19 @@ function showQuestion() {
     plusCount()
     divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
 
+
     animar();
 }
 
 
 //esta funcion sirve para ir avanzando de pregunta
-function next(correct) {
-    animar();
-    if (correct === "1") {
+function next(correct,a) {
+
+    if (correct === '1') {
+        if(a === '2'){
+            document.getElementById("barra").style.visibility = "visible"
+        }
+
         //en que pregunta va
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
@@ -159,17 +163,19 @@ function next(correct) {
             alert("Esta fue la ultima pregunta")
             finish()
         }
-
+        animar();
         showQuestion()
 
     } else {
-        animar();
+        //ocultar barra
+        document.getElementById("barra").style.visibility = "hidden"
+        time = 0;
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
         let divQuestion = document.getElementById("divD")
         divQuestion.innerHTML = "Retroalimentación de la pregunta:  <br/>" + qLevel[questionCount - 1].feedback
         let divQ = document.getElementById("divOptions")
-        divQ.innerHTML = `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="next('1')">Siguiente</button>`
+        divQ.innerHTML = `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="next('1','2') ">Siguiente</button>`
 
     }
 }
@@ -180,14 +186,14 @@ function validate(answer) {
         let options = qLevel[questionCount - 1].solution
         if (options !== answer) {
             alert("Respuesta incorrecta ")
-            next("2")
+            next("2","2")
             return;
         } else {
             score += parseInt(qLevel[questionCount - 1].score)
             alert("Respuesta correcta ")
             clearInterval(temporizador);
-            time = 6;
-            next("1")
+            time = 11;
+            next("1","1")
             return;
 
         }
