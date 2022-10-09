@@ -3,7 +3,7 @@ let options1 = ""
 let questionCount = 0
 let score = 0
 let user = []
-const words = ['homeostasis','entropia'];
+let words = [];
 
 //En este metodo se cargan todas las recompensas en la pagina dependiendo del nivel del usuario
 addEventListener("load", () => {
@@ -33,6 +33,7 @@ addEventListener("load", () => {
     xhr.send(null)
 })
 const wordContainer = document.getElementById('wordContainer');
+const startButton = document.getElementById('startButton');
 const usedLettersElement = document.getElementById('usedLetters');
 
 let canvas = document.getElementById('canvas');
@@ -68,7 +69,10 @@ const addBodyPart = bodyPart => {
 const wrongLetter = () => {
     addBodyPart(bodyParts[mistakes]);
     mistakes++;
-    if(mistakes === bodyParts.length) endGame();
+    if(mistakes === bodyParts.length){
+        endGame()
+        validate(selectedWord);
+    }
 }
 
 const endGame = () => {
@@ -115,7 +119,8 @@ const drawWord = () => {
 };
 
 const selectRandomWord = () => {
-    let word = words[Math.floor((Math.random() * words.length))].toUpperCase();
+    let word = words[0].toUpperCase();
+    alert(words)
     selectedWord = word.split('');
 };
 
@@ -143,23 +148,24 @@ const startGame = () => {
     document.addEventListener('keydown', letterEvent);
 };
 
-addEventListener('load', startGame);
 
 //en esta funcion se esconden los div que muestran los niveles y se muestran los div que tienen las preguntas
 function showGame(levelV) {
+
     let game = document.getElementById("Game")
     let divQ = document.getElementById("divQuestions")
     game.removeAttribute("hidden")
     divQ.setAttribute("hidden", "")
     level(levelV)
 }
-//en esta funcion se agregan las opciones de respuesta que hay en una pregunta
+/*//en esta funcion se agregan las opciones de respuesta que hay en una pregunta
 function addButton(title) {
     let divQ = document.getElementById("divOptions")
     divQ.innerHTML = ""
     options1 += `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="validate('${title}')"  >  ${title}</button>`
     divQ.innerHTML = options1
-}
+}*/
+
 //en esta funcion se filtran las preguntas que corresponden a un nivel
 function level(level) {
     qLevel = []
@@ -174,20 +180,6 @@ function level(level) {
                 }
             })
 
-            /**
-
-             let temporizador = setTimeout(()=>{
-
-
-                next(2)
-                alert("acabo tiempo")
-            },3000);
-
-             **/
-            // clearTimeout(temporizador);
-
-
-
             showQuestion()
         }
     }
@@ -196,40 +188,19 @@ function level(level) {
 
 //en esta funcion se muestra una a una las preguntas que hay en el nivel
 function showQuestion() {
-    //alert("respuesta cCorrecta 3")
     let divT = document.getElementById("divTitle")
     let divQuestion = document.getElementById("divD")
 
     divQuestion.innerHTML = qLevel[questionCount].description
-    let options = qLevel[questionCount].options
+    words.push(qLevel[questionCount].solution)
 
-    temporizador= setInterval(()=>{
-        time--;
-    }, 1000)
-
-    /**
-
-     setTimeout(()=>{
-        next(2)
-        alert("acabo tiempo")
-    },3000);
-
-     temporizador = setTimeout(()=>{
-    next(2)
-    alert("se acabo el tiempo")
-},4000);
-
-     // clearTimeout(temporizador)
-
-     **/
-
-    for (let i = 0; i < options.length; i++) {
-        //adieren las opciones
-        addButton(options[i])
-    }
     options1 = ""
     plusCount()
     divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
+
+    startGame()
+    startButton.addEventListener('click', showQuestion);
+    words = [];
 }
 
 //esta funcion sirve para ir avanzando de pregunta
@@ -245,11 +216,11 @@ function next(correct) {
         divQuestion.innerHTML = ""
         divQuestion.innerHTML = qLevel[questionCount - 1].description
 
+
         if (questionCount === qLevel.length) {
             alert("Esta fue la ultima pregunta")
             finish()
         }
-
 
         showQuestion()
 
