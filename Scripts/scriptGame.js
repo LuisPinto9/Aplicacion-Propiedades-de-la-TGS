@@ -4,7 +4,10 @@ let questionCount = 0
 let score = 0
 let user = []
 
-//En este metodo se cargan todas las recompensas en la pagina dependiendo del nivel del usuario
+
+let temporizador ;
+let time=5;
+
 addEventListener("load", () => {
     let rewards = ""
     const xhr = new XMLHttpRequest();
@@ -44,6 +47,7 @@ addEventListener("load", () => {
     xhr.send(null)
 })
 
+
 //en esta funcion se esconden los div que muestran los niveles y se muestran los div que tienen las preguntas
 function showGame(levelV) {
     let game = document.getElementById("Game")
@@ -52,21 +56,13 @@ function showGame(levelV) {
     divQ.setAttribute("hidden", "")
     level(levelV)
 }
-
 //en esta funcion se agregan las opciones de respuesta que hay en una pregunta
 function addButton(title) {
     let divQ = document.getElementById("divOptions")
     divQ.innerHTML = ""
-//aca esta lo del tiempo
-    setTimeout(()=>{
-        next(2)
-        alert("acabo tiempo")
-    },3000);
-
-    options1 += `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="validate('${title}')">${title}</button>`
+    options1 += `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="validate('${title}')"  >  ${title}</button>`
     divQ.innerHTML = options1
 }
-
 //en esta funcion se filtran las preguntas que corresponden a un nivel
 function level(level) {
     qLevel = []
@@ -81,11 +77,24 @@ function level(level) {
                 }
             })
 
-           showQuestion()
+            /**
+
+             let temporizador = setTimeout(()=>{
+
+
+                next(2)
+                alert("acabo tiempo")
+            },3000);
+
+             **/
+            // clearTimeout(temporizador);
+
+
+
+            showQuestion()
         }
     }
     xhr.send(null)
-
 }
 
 //en esta funcion se muestra una a una las preguntas que hay en el nivel
@@ -96,6 +105,27 @@ function showQuestion() {
 
     divQuestion.innerHTML = qLevel[questionCount].description
     let options = qLevel[questionCount].options
+
+    temporizador= setInterval(()=>{
+        time--;
+    }, 1000)
+
+    /**
+
+     setTimeout(()=>{
+        next(2)
+        alert("acabo tiempo")
+    },3000);
+
+     temporizador = setTimeout(()=>{
+    next(2)
+    alert("se acabo el tiempo")
+},4000);
+
+     // clearTimeout(temporizador)
+
+     **/
+
     for (let i = 0; i < options.length; i++) {
         //adieren las opciones
         addButton(options[i])
@@ -103,13 +133,13 @@ function showQuestion() {
     options1 = ""
     plusCount()
     divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
-
 }
 
 //esta funcion sirve para ir avanzando de pregunta
 function next(correct) {
 
-    if (correct === "1") {
+    let correcto = correct
+    if (correcto == "1") {
         //en que pregunta va
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
@@ -123,16 +153,17 @@ function next(correct) {
             alert("Esta fue la ultima pregunta")
             finish()
         }
+
+
         showQuestion()
 
     } else    {
-//retroalimentacion
+
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
         let divQuestion = document.getElementById("divD")
         divQuestion.innerHTML =  "retroalimentacion de la pregunta  <br/>"+ qLevel[questionCount - 1].feedback
         let divQ = document.getElementById("divOptions")
-
         divQ.innerHTML = `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="next(1)">  siguiente  </button>`
 
     }
@@ -144,23 +175,26 @@ function validate(answer) {
         let options = qLevel[questionCount - 1].solution
         if (options !== answer) {
             alert("Respuesta incorrecta ")
+
             next("2")
             return;
         } else {
             score += parseInt(qLevel[questionCount - 1].score)
             alert("Respuesta correcta ")
+            clearTimeout(temporizador);
             next("1")
             return;
+
         }
     }
 }
-
 //en esta funcion se va aumentando el contador que sirve para pasar de pregunta en pregunta
 function plusCount() {
     if (questionCount < qLevel.length) {
         questionCount++
     }
 }
+
 
 
 //esta funcion sirve para terminar el nivel
@@ -224,19 +258,16 @@ function saveScore() {
     xhr.open('get', `./Php/controlUsers.php?option=3&name=${user.name}&password=${user.password}&score=${user.score}&level=${user.level}`, true)
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
-
         }
     }
     xhr.send(null)
 }
-
 //esta funcion sirve para sobreescribir la informacion del login
 function saveScore2() {
     const xhr = new XMLHttpRequest();
     xhr.open('get', `./Php/controlLogin.php?option=2&name=${user.name}&password=${user.password}&score=${user.score}&level=${user.level}`, true)
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
-
         }
     }
     xhr.send(null)

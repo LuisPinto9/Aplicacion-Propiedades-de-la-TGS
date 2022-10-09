@@ -3,6 +3,7 @@ let options1 = ""
 let questionCount = 0
 let score = 0
 let user = []
+const words = ['homeostasis','entropia'];
 
 //En este metodo se cargan todas las recompensas en la pagina dependiendo del nivel del usuario
 addEventListener("load", () => {
@@ -31,6 +32,118 @@ addEventListener("load", () => {
     }
     xhr.send(null)
 })
+const wordContainer = document.getElementById('wordContainer');
+const usedLettersElement = document.getElementById('usedLetters');
+
+let canvas = document.getElementById('canvas');
+let ctx = canvas.getContext('2d');
+ctx.canvas.width  = 0;
+ctx.canvas.height = 0;
+
+const bodyParts = [
+    [4,2,1,1],
+    [4,3,1,2],
+    [3,5,1,1],
+    [5,5,1,1],
+    [3,3,1,1],
+    [5,3,1,1]
+];
+
+let selectedWord;
+let usedLetters;
+let mistakes;
+let hits;
+
+const addLetter = letter => {
+    const letterElement = document.createElement('span');
+    letterElement.innerHTML = letter.toUpperCase();
+    usedLettersElement.appendChild(letterElement);
+}
+
+const addBodyPart = bodyPart => {
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(...bodyPart);
+};
+
+const wrongLetter = () => {
+    addBodyPart(bodyParts[mistakes]);
+    mistakes++;
+    if(mistakes === bodyParts.length) endGame();
+}
+
+const endGame = () => {
+    document.removeEventListener('keydown', letterEvent);
+    startButton.style.display = 'block';
+}
+
+const correctLetter = letter => {
+    const { children } =  wordContainer;
+    for(let i = 0; i < children.length; i++) {
+        if(children[i].innerHTML === letter) {
+            children[i].classList.toggle('hidden');
+            hits++;
+        }
+    }
+    if(hits === selectedWord.length) endGame();
+}
+
+const letterInput = letter => {
+    if(selectedWord.includes(letter)) {
+        correctLetter(letter);
+    } else {
+        wrongLetter();
+    }
+    addLetter(letter);
+    usedLetters.push(letter);
+};
+
+const letterEvent = event => {
+    let newLetter = event.key.toUpperCase();
+    if(newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)) {
+        letterInput(newLetter);
+    }
+};
+
+const drawWord = () => {
+    selectedWord.forEach(letter => {
+        const letterElement = document.createElement('span');
+        letterElement.innerHTML = letter.toUpperCase();
+        letterElement.classList.add('letter');
+        letterElement.classList.add('hidden');
+        wordContainer.appendChild(letterElement);
+    });
+};
+
+const selectRandomWord = () => {
+    let word = words[Math.floor((Math.random() * words.length))].toUpperCase();
+    selectedWord = word.split('');
+};
+
+const drawHangMan = () => {
+    ctx.canvas.width  = 120;
+    ctx.canvas.height = 160;
+    ctx.scale(20, 20);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#d95d39';
+    ctx.fillRect(0, 7, 4, 1);
+    ctx.fillRect(1, 0, 1, 8);
+    ctx.fillRect(2, 0, 3, 1);
+    ctx.fillRect(4, 1, 1, 1);
+};
+
+const startGame = () => {
+    usedLetters = [];
+    mistakes = 0;
+    hits = 0;
+    wordContainer.innerHTML = '';
+    usedLettersElement.innerHTML = '';
+    drawHangMan();
+    selectRandomWord();
+    drawWord();
+    document.addEventListener('keydown', letterEvent);
+};
+
+addEventListener('load', startGame);
 
 //en esta funcion se esconden los div que muestran los niveles y se muestran los div que tienen las preguntas
 function showGame(levelV) {
@@ -61,8 +174,8 @@ function level(level) {
                 if (e.level === level) {
                     qLevel.push(e)
                 }
-
             })
+
             showQuestion()
         }
     }
@@ -91,8 +204,7 @@ function showQuestion() {
 //esta funcion sirve para ir avanzando de pregunta
 function next(correct) {
 
-    let correcto = correct
-    if (correcto == "1") {
+    if (correct === "1") {
         //en que pregunta va
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
@@ -106,16 +218,16 @@ function next(correct) {
             alert("Esta fue la ultima pregunta")
             finish()
         }
-
         showQuestion()
 
-    } else {
-
+    } else    {
+//retroalimentacion
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
         let divQuestion = document.getElementById("divD")
-        divQuestion.innerHTML = "Retroalimentacion de la pregunta:  <br/>" + qLevel[questionCount - 1].feedback
+        divQuestion.innerHTML =  "retroalimentacion de la pregunta  <br/>"+ qLevel[questionCount - 1].feedback
         let divQ = document.getElementById("divOptions")
+
         divQ.innerHTML = `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="next(1)">  siguiente  </button>`
 
     }

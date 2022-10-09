@@ -29,7 +29,7 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
 
-    <script src="Scripts/scriptAhorcado.js"></script>
+    <script src="Scripts/scriptAhorcado.js" defer></script>
 
     <title>Juego</title>
 </head>
@@ -59,8 +59,15 @@
     <h1 class="title-questions">Ahorcado</h1>
 </div>
 
+<div id="divQuestions" class="card m-5" style="width: 18rem; border-color: white">
+    <h1>Adivina la pregunta segun el texto</h1>
+    <div class="card-body d-flex justify-content-center">
+        <button class="btn-level41 m-3" href="#Game" onclick="showGame('1')" id="btn4">comenzar</button>
+    </div>
+</div>
+
 <div class="container">
-    <div class="pt-5" id="Game">
+    <div class="pt-5" id="Game" hidden>
         <div class="question p-5" id="questionsDiv">
             <div class="d-flex flex-wrap justify-content-center">
 
@@ -70,11 +77,20 @@
             </div>
             <div class="div-a d-flex justify-content-center" id="divOptions">
                 <!--aqui van las opciones del nivel-->
+                <div>
+                    <canvas id="canvas"></canvas>
+                    <div id="usedLetters"></div>
+                </div>
+                <div id="usedLetters"></div>
+                <div id="wordContainer"></div>
             </div>
         </div>
+    </div>
     <div class=" ">
         <div class="d-flex d-inline justify-content-center" id="divFinal">
-            <button class="btn-volver m-3" href="#Game" onclick="location.href='gameWindow.html'" id="btnVolver">Salir del nivel</button>
+            <button class="btn-volver m-3" href="#Game" onclick="location.href='gameWindow.html'" id="btnVolver">Salir
+                del nivel
+            </button>
         </div>
     </div>
 </div>
