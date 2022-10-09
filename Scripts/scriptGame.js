@@ -159,7 +159,7 @@ function next(correct) {
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
         let divQuestion = document.getElementById("divD")
-        divQuestion.innerHTML = "Retroalimentación de la pregunta  <br/>" + qLevel[questionCount - 1].feedback
+        divQuestion.innerHTML = "Retroalimentación de la pregunta:  <br/>" + qLevel[questionCount - 1].feedback
         let divQ = document.getElementById("divOptions")
         divQ.innerHTML = `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="next('1')">Siguiente</button>`
 
