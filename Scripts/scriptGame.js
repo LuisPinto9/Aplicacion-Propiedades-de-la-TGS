@@ -43,6 +43,12 @@ addEventListener("load", () => {
                 rewards += "<img src=\"Images/trofeo.png\">"
                 rewards += "<img src=\"Images/estrella.png\">"
             }
+            if (data.level === "4") {
+                rewards += "<img src=\"Images/medalla.png\">"
+                rewards += "<img src=\"Images/trofeo.png\">"
+                rewards += "<img src=\"Images/estrella.png\">"
+                rewards += "<img src=\"Images/medalla2.png\">"
+            }
             document.getElementById("rewards").innerHTML = rewards
         }
     }
@@ -78,9 +84,6 @@ function level(level) {
                     qLevel.push(e)
                 }
             })
-
-
-
             showQuestion()
         }
     }
@@ -91,7 +94,6 @@ function level(level) {
 function animar(){
     document.getElementById("barra").classList.toggle("final");
 }
-
 
 function showQuestion() {
     //alert("respuesta cCorrecta 3")
@@ -106,7 +108,7 @@ function showQuestion() {
     temporizador= setInterval(()=>{
         time = time-1;
 
-        if(time==0){
+        if(time===0){
             alert("se acabo el tiempo")
             clearInterval(temporizador);
             time=6;
@@ -160,7 +162,7 @@ function next(correct) {
         let divQuestion = document.getElementById("divD")
         divQuestion.innerHTML =  "retroalimentacion de la pregunta  <br/>"+ qLevel[questionCount - 1].feedback
         let divQ = document.getElementById("divOptions")
-        divQ.innerHTML = `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="next('1')">  siguiente  </button>`
+        divQ.innerHTML = `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="next('1')">Siguiente</button>`
 
     }
 }

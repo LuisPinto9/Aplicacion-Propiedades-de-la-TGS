@@ -169,10 +169,10 @@ body {
     min-width: 12px;
 }
 
-.startButton {
+.start-button {
     margin-top: 20px;
     appearance: none;
-    font-family: 'SF Pixelate', sans-serif;
+    font-family: 'Simonetta', cursive;
     border: none;
     width: 300px;
     padding: 10px;

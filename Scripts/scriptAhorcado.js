@@ -7,6 +7,7 @@ let words = [];
 
 //En este metodo se cargan todas las recompensas en la pagina dependiendo del nivel del usuario
 addEventListener("load", () => {
+    showGame('1')
     let rewards = ""
     const xhr = new XMLHttpRequest();
     xhr.open('get', './Php/controlLogin.php?option=1', true)
@@ -27,11 +28,18 @@ addEventListener("load", () => {
                 rewards += "<img src=\"Images/trofeo.png\">"
                 rewards += "<img src=\"Images/estrella.png\">"
             }
+            if (data.level === "4") {
+                rewards += "<img src=\"Images/medalla.png\">"
+                rewards += "<img src=\"Images/trofeo.png\">"
+                rewards += "<img src=\"Images/estrella.png\">"
+                rewards += "<img src=\"Images/medalla2.png\">"
+            }
             document.getElementById("rewards").innerHTML = rewards
         }
     }
     xhr.send(null)
 })
+
 const wordContainer = document.getElementById('wordContainer');
 const startButton = document.getElementById('startButton');
 const usedLettersElement = document.getElementById('usedLetters');
@@ -69,9 +77,9 @@ const addBodyPart = bodyPart => {
 const wrongLetter = () => {
     addBodyPart(bodyParts[mistakes]);
     mistakes++;
-    if(mistakes === bodyParts.length){
-        endGame()
-        validate(selectedWord);
+    if(mistakes === bodyParts.length) {
+        endGame();
+        next('2')
     }
 }
 
@@ -119,8 +127,7 @@ const drawWord = () => {
 };
 
 const selectRandomWord = () => {
-    let word = words[0].toUpperCase();
-    alert(words)
+    let word = words[Math.floor((Math.random() * words.length))].toUpperCase();
     selectedWord = word.split('');
 };
 
@@ -142,20 +149,22 @@ const startGame = () => {
     hits = 0;
     wordContainer.innerHTML = '';
     usedLettersElement.innerHTML = '';
+    startButton.style.display = 'none';
     drawHangMan();
     selectRandomWord();
     drawWord();
     document.addEventListener('keydown', letterEvent);
 };
 
+startButton.addEventListener('click', startGame);
 
 //en esta funcion se esconden los div que muestran los niveles y se muestran los div que tienen las preguntas
 function showGame(levelV) {
 
     let game = document.getElementById("Game")
     let divQ = document.getElementById("divQuestions")
-    game.removeAttribute("hidden")
-    divQ.setAttribute("hidden", "")
+    /*game.removeAttribute("hidden")
+    divQ.setAttribute("hidden", "")*/
     level(levelV)
 }
 /*//en esta funcion se agregan las opciones de respuesta que hay en una pregunta
@@ -211,6 +220,10 @@ function next(correct) {
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
 
+        startGame()
+        startButton.addEventListener('click', showQuestion);
+        words = [];
+
         //la pregunta
         let divQuestion = document.getElementById("divD")
         divQuestion.innerHTML = ""
@@ -230,8 +243,6 @@ function next(correct) {
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
         let divQuestion = document.getElementById("divD")
         divQuestion.innerHTML =  "retroalimentacion de la pregunta  <br/>"+ qLevel[questionCount - 1].feedback
-        let divQ = document.getElementById("divOptions")
-        divQ.innerHTML = `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="next('1')">  siguiente  </button>`
 
     }
 }
