@@ -25,7 +25,7 @@ addEventListener("load", () => {
                 rewards += "<img src=\"Images/medalla.png\">"
                 rewards += "<img src=\"Images/trofeo.png\">"
                 rewards += "<img src=\"Images/estrella.png\">"
-                rewards += "<img src=\"Images/medalla2.png\">"
+                rewards += "<img src=\"Images/trofeo2.png\">"
             }
             document.getElementById("rewards").innerHTML = rewards
         }
@@ -223,7 +223,7 @@ function next(correct) {
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
         let divQuestion = document.getElementById("divD")
-        divQuestion.innerHTML = "retroalimentacion de la pregunta  <br/>" + qLevel[questionCount - 1].feedback
+        divQuestion.innerHTML = "Retroalimentación de la pregunta  <br/>" + qLevel[questionCount - 1].feedback
 
     }
 }

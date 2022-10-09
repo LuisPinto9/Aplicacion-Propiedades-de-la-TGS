@@ -44,7 +44,7 @@
   {
     "id": "4",
     "title": "V y F 4",
-    "description": "El equilibrio es el proceso que busca mantener la energía de un sistema, el crecimiento de este nos dice que todo sistema tiende a la desorganización, pero finalmente logrará la homogeneización con el ambiente\n ",
+    "description": "El equilibrio es el proceso que busca mantener la energía de un sistema, el crecimiento de este nos dice que todo sistema tiende a la desorganización, pero finalmente logrará la homogeneización con el ambiente.\n ",
     "level": "1",
     "solution": "falso",
     "feedback": "Entropía<br/>Proceso que busca mantener la energía del sistema. El segundo principio de la\ntermodinámica establece el crecimiento de la entropía, es decir, la máxima probabilidad\nde los sistemas es su progresiva desorganización y, finalmente, su homogeneización con\nel ambiente. Los sistemas cerrados están irremediablemente condenados a la\ndesorganización. No obstante, hay sistemas que, al menos temporalmente, revierten esta\ntendencia al aumentar sus estados de organización. También puede definirse como el\ndesgaste que el sistema presenta por el transcurso del tiempo o por el funcionamiento\ndel mismo. Los sistemas altamente entrópicos tienden a desaparecer por el desgaste\ngenerado por su proceso sistémico. Los mismos deben tener rigurosos sistemas de\ncontrol y mecanismos de revisión, reelaboración y cambio permanente, para evitar su\ndesaparición a través del tiempo. <br/>En un sistema cerrado la entropía siempre debe ser positiva. Sin embargo, en los sistemas abiertos biológicos o sociales, la entropía puede ser reducida o mejor aun transformarse en entropía negativa, es decir, un proceso de organización más completo y de capacidad para transformar los recursos. Esto es posible porque en los sistemas abiertos los recursos utilizados para reducir el proceso de entropía se toman del medio externo. Así mismo, los sistemas vivientes se mantienen en un estado estable y pueden evitar el incremento de la entropía y aun desarrollarse hacia estados de orden y de organización creciente. <br/><br/>\nPara mayor información sobre entropía <br/> https://www.youtube.com/watch?v=FApIdf9VwPk&ab_channel=Luc%C3%AdaRobles\n",
@@ -228,5 +228,56 @@
     ],
     "score": "10",
     "finished": false
-  }
+  },{
+  "id": "16",
+  "title": "ahorcado 1",
+  "description": "Un sistema de ________ estudia la conducta del sistema con el fin de regular de un modo conveniente para su supervivencia. Tiene elementos básicos como Variable, mecanismos sensores y motores, fuente de energía y retroalimentación. Estos miden los cambios en la variable y desarrollan actividades para corregirlos.",
+  "level": "4",
+  "solution": "Control",
+  "feedback": "",
+  "options": null,
+  "score": "15",
+  "finished": false
+},
+  {
+    "id": "17",
+    "title": "ahorcado 2",
+    "description": "Los sistemas ________ son sistemas abiertos que intercambian con el entorno, en el curso de su existencia experimentan cambios y transformaciones, se hallan en\nconstante movimiento, evolución y transformación, pero conservan su organización como la variable más importante.",
+    "level": "4",
+    "solution": "Dinamicos",
+    "feedback": "",
+    "options": null,
+    "score": "15",
+    "finished": false
+  },{
+  "id": "18",
+  "title": "ahorcado 3",
+  "description" : "Los sistemas ___________ son sistemas de pensamiento emergentes y al mismo tiempo constituyentes de los sistemas sociales. Ejemplo: las ciencias, las ideologías, las religiones, los mitos, etc., forman parte de este tipo particular de sistemas.",
+  "level": "4",
+  "solution": "Noologicos",
+  "feedback": "",
+  "options": null,
+  "score": "15",
+  "finished": false
+},{
+  "id": "19",
+  "title": "ahorcado 4",
+  "description": "Es una caja que se utiliza para representar a los sistemas cuando no se sabe\nqué elementos o cosas los componen, pero se sabe que a determinadas entradas\ncorresponden determinadas salidas. Presumiendo que, a determinados estímulos, las\nvariables funcionaran en cierto sentido, se pueden inducir.",
+  "level": "4",
+  "solution": "CajaNegra",
+  "feedback": "",
+  "options": null,
+  "score": "15",
+  "finished": false
+},{
+  "id": "20",
+  "title": "ahorcado 5",
+  "description": "Un sistema tiene ________ cuando puede mantenerse en equilibrio a través del flujo continuo de materiales, energía e información, así mantener su funcionamiento de manera efectiva.",
+  "level": "4",
+  "solution": "Estabilidad",
+  "feedback": "",
+  "options": null,
+  "score": "15",
+  "finished": false
+}
 ]
