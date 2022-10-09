@@ -234,7 +234,7 @@
   "description": "Un sistema de ________ estudia la conducta del sistema con el fin de regular de un modo conveniente para su supervivencia. Tiene elementos básicos como Variable, mecanismos sensores y motores, fuente de energía y retroalimentación. Estos miden los cambios en la variable y desarrollan actividades para corregirlos.",
   "level": "4",
   "solution": "Control",
-  "feedback": "",
+  "feedback": "La respuesta era control",
   "options": null,
   "score": "15",
   "finished": false
@@ -245,7 +245,7 @@
     "description": "Los sistemas ________ son sistemas abiertos que intercambian con el entorno, en el curso de su existencia experimentan cambios y transformaciones, se hallan en\nconstante movimiento, evolución y transformación, pero conservan su organización como la variable más importante.",
     "level": "4",
     "solution": "Dinámicos",
-    "feedback": "",
+    "feedback": "La respuesta era dinámicos",
     "options": null,
     "score": "15",
     "finished": false
@@ -255,7 +255,7 @@
   "description" : "Los sistemas ___________ son sistemas de pensamiento emergentes y al mismo tiempo constituyentes de los sistemas sociales. Ejemplo: las ciencias, las ideologías, las religiones, los mitos, etc., forman parte de este tipo particular de sistemas.",
   "level": "4",
   "solution": "Noológicos",
-  "feedback": "",
+  "feedback": "La respuesta era noológicos",
   "options": null,
   "score": "15",
   "finished": false
@@ -265,7 +265,7 @@
   "description": "Es una caja que se utiliza para representar a los sistemas cuando no se sabe\nqué elementos o cosas los componen, pero se sabe que a determinadas entradas\ncorresponden determinadas salidas. Presumiendo que, a determinados estímulos, las\nvariables funcionaran en cierto sentido, se pueden inducir.",
   "level": "4",
   "solution": "CajaNegra",
-  "feedback": "",
+  "feedback": "La respuesta era caja negra",
   "options": null,
   "score": "15",
   "finished": false
@@ -275,7 +275,7 @@
   "description": "Un sistema tiene ________ cuando puede mantenerse en equilibrio a través del flujo continuo de materiales, energía e información, así mantener su funcionamiento de manera efectiva.",
   "level": "4",
   "solution": "Estabilidad",
-  "feedback": "",
+  "feedback": "La respuesta era estabilidad",
   "options": null,
   "score": "15",
   "finished": false
