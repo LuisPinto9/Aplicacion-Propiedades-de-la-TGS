@@ -59,14 +59,14 @@
     <h1 class="title-questions">Ahorcado</h1>
 </div>
 
-<div id="divQuestions" class="card m-5" style="width: 18rem; border-color: white">
-    <h1>Adivina la pregunta segun el texto</h1>
-    <div class="card-body d-flex justify-content-center">
-        <button class="btn-level41 m-3" href="#Game" onclick="showGame('1')" id="btn4">comenzar</button>
-    </div>
-</div>
-
 <div class="container">
+    <div id="divQuestions" class="card m-5" style="width: 18rem; border-color: white">
+        <h1>Adivina la pregunta según el texto</h1>
+        <div class="card-body d-flex justify-content-center">
+            <button class="btn-start m-3" href="#Game" onclick="showGame('1')" id="btnStart">comenzar</button>
+        </div>
+    </div>
+
     <div class="pt-5" id="Game" hidden>
         <div class="question p-5" id="questionsDiv">
             <div class="d-flex flex-wrap justify-content-center">
@@ -83,6 +83,7 @@
                 </div>
                 <div id="usedLetters"></div>
                 <div id="wordContainer"></div>
+                <button id="startButton">siguiente</button>
             </div>
         </div>
     </div>
