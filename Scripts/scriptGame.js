@@ -8,43 +8,7 @@ let user = []
 let temporizador ;
 let time=5;
 //En este metodo se cargan todas las recompensas en la pagina dependiendo del nivel del usuario
-/**
- addEventListener("load", () => {
-    let rewards = ""
-    const xhr = new XMLHttpRequest();
-    xhr.open('get', './Php/controlLogin.php?option=1', true)
-    xhr.onreadystatechange = () => {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            const data = JSON.parse(xhr.response)
-            user = data
-            if (data.level === "1" || data.level === "2" || data.level === "3") {
-                document.getElementById("btn2").removeAttribute("disabled")
-                document.getElementById("btn2").setAttribute("class", "btn-level2 m-3")
-            }
-            if (data.level === "2" || data.level === "3") {
-                document.getElementById("btn3").removeAttribute("disabled")
-                document.getElementById("btn3").setAttribute("class", "btn-level3 m-3")
-            }
-            document.getElementById("labelUser").innerText = data.name
-            if (data.level === "1") {
-                rewards += "<img src=\"Images/medalla.png\">"
-            }
-            if (data.level === "2") {
-                rewards += "<img src=\"Images/medalla.png\">"
-                rewards += "<img src=\"Images/trofeo.png\">"
-            }
-            if (data.level === "3") {
-                rewards += "<img src=\"Images/medalla.png\">"
-                rewards += "<img src=\"Images/trofeo.png\">"
-                rewards += "<img src=\"Images/estrella.png\">"
-            }
-            document.getElementById("rewards").innerHTML = rewards
-        }
-    }
-    xhr.send(null)
-})
 
- **/
 
 addEventListener("load", () => {
     let rewards = ""
@@ -124,6 +88,10 @@ function level(level) {
 }
 
 //en esta funcion se muestra una a una las preguntas que hay en el nivel
+function animar(){
+    document.getElementById("barra").classList.toggle("final");
+}
+
 
 function showQuestion() {
     //alert("respuesta cCorrecta 3")
@@ -133,7 +101,7 @@ function showQuestion() {
     divQuestion.innerHTML = qLevel[questionCount].description
     let options = qLevel[questionCount].options
 
-
+   // animar();
 
     temporizador= setInterval(()=>{
         time = time-1;
@@ -150,21 +118,7 @@ function showQuestion() {
 
     }, 1000)
 
-    /**
 
-     setTimeout(()=>{
-        next(2)
-        alert("acabo tiempo")
-    },3000);
-
-     temporizador = setTimeout(()=>{
-    next(2)
-    alert("se acabo el tiempo")
-},4000);
-
-     // clearTimeout(temporizador)
-
-     **/
 
     for (let i = 0; i < options.length; i++) {
         //adieren las opciones
@@ -173,6 +127,8 @@ function showQuestion() {
     options1 = ""
     plusCount()
     divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
+
+    animar();
 }
 
 

@@ -1,5 +1,15 @@
 /**Codigo esecial para todos los estilos**/
 
+.inicio{
+    width: 0%;
+}
+.final{
+    width: 100%;
+}
+.animacion{
+    transition: all 5s ease .2s ;
+}
+
 :root {
     --fuenteHeading: "PT Sans", sans-serif;
     --fuenteParrafos: "Open Sans", sans-serif;
