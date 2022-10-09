@@ -145,7 +145,7 @@ const drawHangMan = () => {
     ctx.canvas.height = 160;
     ctx.scale(20, 20);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#d95d39';
+    ctx.fillStyle = '#413331';
     ctx.fillRect(0, 7, 4, 1);
     ctx.fillRect(1, 0, 1, 8);
     ctx.fillRect(2, 0, 3, 1);

@@ -170,16 +170,12 @@ body {
 }
 
 .start-button {
-    margin-top: 20px;
-    appearance: none;
     font-family: 'Simonetta', cursive;
-    border: none;
-    width: 300px;
-    padding: 10px;
-    background: #d95d39;
-    color: #fff;
-    font-weight: 600;
-    font-size: 20px;
-    border-radius: 4px;
-    cursor: pointer;
+    font-size: 3rem;
+    background-color: var(--botones);
+    color: var(--colorTitulo);
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    border-color: var(--botones);
 }
