@@ -174,6 +174,9 @@ function level(level) {
             data.forEach((e) => {
                 if (e.level === level) {
                     qLevel.push(e)
+                    qLevel.sort(function () {
+                        return Math.random() - 0.5
+                    });
                 }
             })
             showQuestion()
