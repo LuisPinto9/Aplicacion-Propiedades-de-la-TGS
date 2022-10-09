@@ -253,7 +253,7 @@ function finish() {
             if (user.score === "90") {
                 alert("Responde todas las preguntas correctamente para pasar de nivel")
             }
-            total = 0;
+            total = 90;
             user.score = total.toString()
         }
     }
