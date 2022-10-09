@@ -7,7 +7,7 @@ let words = [];
 
 //En este metodo se cargan todas las recompensas en la pagina dependiendo del nivel del usuario
 addEventListener("load", () => {
-    showGame('1')
+    level('1')
     let rewards = ""
     const xhr = new XMLHttpRequest();
     xhr.open('get', './Php/controlLogin.php?option=1', true)
@@ -79,7 +79,7 @@ const wrongLetter = () => {
     mistakes++;
     if(mistakes === bodyParts.length) {
         endGame();
-        next('2')
+        validate("2")
     }
 }
 
@@ -96,7 +96,10 @@ const correctLetter = letter => {
             hits++;
         }
     }
-    if(hits === selectedWord.length) endGame();
+    if(hits === selectedWord.length) {
+        endGame();
+        validate("1")
+    }
 }
 
 const letterInput = letter => {
@@ -158,23 +161,6 @@ const startGame = () => {
 
 startButton.addEventListener('click', startGame);
 
-//en esta funcion se esconden los div que muestran los niveles y se muestran los div que tienen las preguntas
-function showGame(levelV) {
-
-    let game = document.getElementById("Game")
-    let divQ = document.getElementById("divQuestions")
-    /*game.removeAttribute("hidden")
-    divQ.setAttribute("hidden", "")*/
-    level(levelV)
-}
-/*//en esta funcion se agregan las opciones de respuesta que hay en una pregunta
-function addButton(title) {
-    let divQ = document.getElementById("divOptions")
-    divQ.innerHTML = ""
-    options1 += `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="validate('${title}')"  >  ${title}</button>`
-    divQ.innerHTML = options1
-}*/
-
 //en esta funcion se filtran las preguntas que corresponden a un nivel
 function level(level) {
     qLevel = []
@@ -197,6 +183,10 @@ function level(level) {
 
 //en esta funcion se muestra una a una las preguntas que hay en el nivel
 function showQuestion() {
+    if (questionCount === qLevel.length) {
+        alert("Esta fue la ultima pregunta")
+        finish()
+    }
     let divT = document.getElementById("divTitle")
     let divQuestion = document.getElementById("divD")
 
@@ -229,12 +219,6 @@ function next(correct) {
         divQuestion.innerHTML = ""
         divQuestion.innerHTML = qLevel[questionCount - 1].description
 
-
-        if (questionCount === qLevel.length) {
-            alert("Esta fue la ultima pregunta")
-            finish()
-        }
-
         showQuestion()
 
     } else    {
@@ -250,22 +234,19 @@ function next(correct) {
 //en esta funcion se valida que la opcion escogida sea correcta
 function validate(answer) {
     if (questionCount <= qLevel.length) {
-        let options = qLevel[questionCount - 1].solution
-        if (options !== answer) {
+        if (answer === "2") {
             alert("Respuesta incorrecta ")
-
             next("2")
             return;
         } else {
             score += parseInt(qLevel[questionCount - 1].score)
             alert("Respuesta correcta ")
-            clearTimeout(temporizador);
             next("1")
             return;
-
         }
     }
 }
+
 //en esta funcion se va aumentando el contador que sirve para pasar de pregunta en pregunta
 function plusCount() {
     if (questionCount < qLevel.length) {

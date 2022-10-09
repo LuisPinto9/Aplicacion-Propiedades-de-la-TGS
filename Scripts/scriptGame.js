@@ -3,13 +3,10 @@ let options1 = ""
 let questionCount = 0
 let score = 0
 let user = []
+let temporizador;
+let time = 5;
 
-
-let temporizador ;
-let time=5;
 //En este metodo se cargan todas las recompensas en la pagina dependiendo del nivel del usuario
-
-
 addEventListener("load", () => {
     let rewards = ""
     const xhr = new XMLHttpRequest();
@@ -64,6 +61,7 @@ function showGame(levelV) {
     divQ.setAttribute("hidden", "")
     level(levelV)
 }
+
 //en esta funcion se agregan las opciones de respuesta que hay en una pregunta
 function addButton(title) {
     let divQ = document.getElementById("divOptions")
@@ -71,6 +69,7 @@ function addButton(title) {
     options1 += `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="validate('${title}')"  >  ${title}</button>`
     divQ.innerHTML = options1
 }
+
 //en esta funcion se filtran las preguntas que corresponden a un nivel
 function level(level) {
     qLevel = []
@@ -91,7 +90,7 @@ function level(level) {
 }
 
 //en esta funcion se muestra una a una las preguntas que hay en el nivel
-function animar(){
+function animar() {
     document.getElementById("barra").classList.toggle("final");
 }
 
@@ -103,23 +102,22 @@ function showQuestion() {
     divQuestion.innerHTML = qLevel[questionCount].description
     let options = qLevel[questionCount].options
 
-   // animar();
+    // animar();
 
-    temporizador= setInterval(()=>{
-        time = time-1;
+    temporizador = setInterval(() => {
+        time = time - 1;
 
-        if(time===0){
+        if (time === 0) {
             alert("se acabo el tiempo")
             clearInterval(temporizador);
-            time=6;
+            time = 6;
             next(2);
-        }else{
-            let time3= document.getElementById('time2')
+        } else {
+            let time3 = document.getElementById('time2')
             time3.innerHTML = time;
         }
 
     }, 1000)
-
 
 
     for (let i = 0; i < options.length; i++) {
@@ -152,15 +150,13 @@ function next(correct) {
             finish()
         }
 
-
         showQuestion()
 
-    } else    {
-
+    } else {
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
         let divQuestion = document.getElementById("divD")
-        divQuestion.innerHTML =  "retroalimentacion de la pregunta  <br/>"+ qLevel[questionCount - 1].feedback
+        divQuestion.innerHTML = "retroalimentacion de la pregunta  <br/>" + qLevel[questionCount - 1].feedback
         let divQ = document.getElementById("divOptions")
         divQ.innerHTML = `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="next('1')">Siguiente</button>`
 
@@ -173,28 +169,26 @@ function validate(answer) {
         let options = qLevel[questionCount - 1].solution
         if (options !== answer) {
             alert("Respuesta incorrecta ")
-
             next("2")
             return;
         } else {
             score += parseInt(qLevel[questionCount - 1].score)
             alert("Respuesta correcta ")
             clearInterval(temporizador);
-            time=6;
+            time = 6;
             next("1")
             return;
 
         }
     }
 }
+
 //en esta funcion se va aumentando el contador que sirve para pasar de pregunta en pregunta
 function plusCount() {
     if (questionCount < qLevel.length) {
         questionCount++
     }
 }
-
-
 
 //esta funcion sirve para terminar el nivel
 function finish() {
@@ -205,14 +199,14 @@ function finish() {
     total = score + parseInt(user.score)
     if (user.level === "0") {
         if (total === 15) {
-            if (user.level === "0"){
+            if (user.level === "0") {
                 alert("Subiste de nivel")
             }
             level2 = parseInt(user.level) + 1
             user.level = level2.toString()
             user.score = total.toString()
         } else {
-            if (user.score === "0"){
+            if (user.score === "0") {
                 alert("Responde todas las preguntas correctamente para pasar de nivel")
             }
             total = 0;
@@ -225,7 +219,7 @@ function finish() {
             user.level = level2.toString()
             user.score = total.toString()
         } else {
-            if (user.score === "15"){
+            if (user.score === "15") {
                 alert("Responde todas las preguntas correctamente para pasar de nivel")
             }
             total = 15;
@@ -238,7 +232,7 @@ function finish() {
             user.level = level2.toString()
             user.score = total.toString()
         } else {
-            if (user.score === "40"){
+            if (user.score === "40") {
                 alert("Responde todas las preguntas correctamente para pasar de nivel")
             }
             total = 40;
@@ -250,6 +244,7 @@ function finish() {
     window.location.reload()
     //vuelve a recargar por eso vuelve donde estan los niveles
 }
+
 //esta funcion sirve para sobreescribir la informacion del json de usuarios
 function saveScore() {
     const xhr = new XMLHttpRequest();
@@ -260,6 +255,7 @@ function saveScore() {
     }
     xhr.send(null)
 }
+
 //esta funcion sirve para sobreescribir la informacion del login
 function saveScore2() {
     const xhr = new XMLHttpRequest();
