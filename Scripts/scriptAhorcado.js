@@ -15,7 +15,14 @@ addEventListener("load", () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const data = JSON.parse(xhr.response)
             user = data
-            document.getElementById("labelUser").innerText = data.name
+            document.getElementById("labelUser").innerText = data.name[0].toUpperCase() + data.name.substring(1)
+            let level = parseInt(user.level) + 1
+            document.getElementById("labelLevel").innerText = " / Nivel: " + level.toString()
+            document.getElementById("labelScore").innerText = " / Puntuación: " + data.score
+
+            if (user.level === "4"){
+                document.getElementById("labelLevel").innerText = " / Nivel: Max."
+            }
             if (data.level === "3") {
                 rewards += "<img src=\"Images/medalla.png\">"
                 rewards += "<img src=\"Images/trofeo.png\">"

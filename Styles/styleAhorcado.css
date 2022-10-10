@@ -54,7 +54,6 @@ body {
 }
 
 .label-user {
-    text-transform: uppercase;
     font-family: 'Simonetta', cursive;
     font-size: 3rem;
     color: var(--negro);
