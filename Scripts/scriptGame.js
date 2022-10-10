@@ -27,7 +27,14 @@ addEventListener("load", () => {
                 document.getElementById("btn4").removeAttribute("disabled")
                 document.getElementById("btn4").setAttribute("class", "btn-level4 m-3")
             }
-            document.getElementById("labelUser").innerText = data.name
+            document.getElementById("labelUser").innerText = data.name[0].toUpperCase() + data.name.substring(1)
+            let level = parseInt(user.level) + 1
+            document.getElementById("labelLevel").innerText = " / Nivel: " + level.toString()
+            document.getElementById("labelScore").innerText = " / Puntuación: " + data.score
+            if (user.level === "4"){
+                document.getElementById("labelLevel").innerText = " / Nivel: Max."
+            }
+
             if (data.level === "1") {
                 rewards += "<img src=\"Images/medalla.png\">"
             }
