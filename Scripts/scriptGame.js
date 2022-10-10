@@ -122,8 +122,8 @@ function showQuestion() {
             next(2);
         } else {
             let time3 = document.getElementById('time2')
-            time3.innerHTML = time;
-            //time3.innerHTML = " ";
+            //time3.innerHTML = time;
+            time3.innerHTML = " ";
         }
 
     }, 1000)
