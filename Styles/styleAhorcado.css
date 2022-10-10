@@ -94,30 +94,10 @@ body {
     color: var(--blanco);
 }
 
-.btn-jugar {
-    font-family: "Antonio", sans-serif;
-    font-size: 3rem;
-    background-color: var(--botonesLog);
-    color: var(--blanco);
-    padding: 0.01em 2rem;
-    text-decoration: none;
-    border-radius: 3rem;
-}
-
-.btn-jugar:hover {
-    background-color: #3f5377;
-    color: var(--blanco);
-}
-
 .div-d {
     font-family: var(--fuenteParrafos);
     font-size: 2.5rem;
     color: var(--negro);
-}
-
-.div-i {
-    border: solid black;
-    border-radius: 1rem;
 }
 
 .div-a {
