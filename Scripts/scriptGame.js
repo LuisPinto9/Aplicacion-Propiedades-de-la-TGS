@@ -151,6 +151,7 @@ function next(correct,a) {
         }
 
         //en que pregunta va
+
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
 
