@@ -122,8 +122,8 @@ function showQuestion() {
             next(2);
         } else {
             let time3 = document.getElementById('time2')
-            //time3.innerHTML = time;
-            time3.innerHTML = " ";
+            time3.innerHTML = time;
+            //time3.innerHTML = " ";
         }
 
     }, 1000)
@@ -170,7 +170,7 @@ function next(correct,a) {
     } else {
         //ocultar barra
         document.getElementById("barra").style.visibility = "hidden"
-        time = 0;
+        time = 11;
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
         let divQuestion = document.getElementById("divD")
