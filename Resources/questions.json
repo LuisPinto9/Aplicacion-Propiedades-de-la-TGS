@@ -5,7 +5,7 @@
     "description": "Los Sistemas abiertos es la unión de los grupos humanos, procesos y actividades autorganizadas como nichos ecológicos, tienen en cuenta  las causas externas e internas que perpetúan la vida del sistema.",
     "level": "1",
     "solution": "falso",
-    "feedback": "Sistemas vivos. <br/>Esta es una de las perspectiva desde las que se han estudiado los sistemas, asume que los grupos humanos, procesos y actividades son autoorganizados, como nichos ecológicos. Esta forma de entender los sistemas nace de la biología (Maturana y Varela) y pone el énfasis en las referencias internas y externas que posibilitan perpetuar la vida misma del sistema (autopoiesis), de un sistema diferenciable dentro de su entorno (los límites) pero con el que tiene constante interacción, mediante la cuál el sistema se va modificando: acoplamiento estructural. Es así que son sistemas que presentan intercambio con el ambiente, a través de entradas y salidas. Intercambian energía y materia con el ambiente. Son adaptativos para sobrevivir. Su estructura es óptima cuando el conjunto de elementos del sistema se organiza, aproximándose a una operación adaptativa. La adaptabilidad es un continuo proceso de aprendizaje y de autoorganización (célula, la planta, el hombre, la sociedad), nacen, se reproducen y mueren.",
+    "feedback": "Sistemas vivos. <br/>Esta es una de las perspectiva desde las que se han estudiado los sistemas, asume que los grupos humanos, procesos y actividades son autoorganizados, como nichos ecológicos. Esta forma de entender los sistemas nace de la biología (Maturana y Varela) y pone el énfasis en las referencias internas y externas que posibilitan perpetuar la vida misma del sistema (autopoiesis), de un sistema diferenciable dentro de su entorno (los límites) pero con el que tiene constante interacción, mediante la cuál el sistema se va modificando: acoplamiento estructural. Es así que son sistemas que presentan intercambio con el ambiente, a través de entradas y salidas. Intercambian energía y materia con el ambiente. Son adaptativos para sobrevivir. Su estructura es óptima cuando el conjunto de elementos del sistema se organiza, aproximándose a una operación adaptativa. La adaptabilidad es un continuo proceso de aprendizaje y de auto-organización (célula, la planta, el hombre, la sociedad), nacen, se reproducen y mueren.",
     "options": [
       "verdadero",
       "falso"
@@ -19,7 +19,7 @@
     "description": "Los objetivos de la teoría general de sistemas son:\nInvestigar el isomorfismo de conceptos, leyes y modelos en varios campos y facilitar las transferencias entre aquellos.\nPromocionar y desarrollar modelos teóricos en campos que carecen de ellos.\nReducir la duplicación de los esfuerzos teóricos.\nPromover la unidad de la ciencia a través de principios conceptuales y metodológicos unificadores.\n",
     "level": "1",
     "solution": "verdadero",
-    "feedback": "Objetivos <br/>\nLos objetivos originales de la teoría general de sistemas son: <br/>\na. Impulsar el desarrollo de una terminología general que permita describir las características, funciones y comportamientos sistémicos. <br/>\nb. Desarrollar un conjunto de leyes aplicables a todos estos comportamientos. <br/>\nc. Promover una formalización (matemática) de estas leyes. <br/>\nMas adelante en 1954 se plantearon nuevos objetivos en “la Society for General Systems Research”: <br/>\na. Investigar el isomorfismo de conceptos, leyes y modelos en varios campos y facilitar las transferencias entre aquellos. <br/>\nb. Promocionar y desarrollar modelos teóricos en campos que carecen de ellos. <br/>\nc. Reducir la duplicación de los esfuerzos teóricos. <br/>\nd. Promover la unidad de la ciencia a través de principios conceptuales y metodológicos unificadores.\n",
+    "feedback": "Objetivos <br/>\nLos objetivos originales de la teoría general de sistemas son: <br/>\na. Impulsar el desarrollo de una terminología general que permita describir las características, funciones y comportamientos sistémicos. <br/>\nb. Desarrollar un conjunto de leyes aplicables a todos estos comportamientos. <br/>\nc. Promover una formalización (matemática) de estas leyes. <br/>\nMas adelante en 1954 se plantearon nuevos objetivos en “la Society for General Systems Research”: <br/>\na. Investigar el isomorfismo de conceptos, leyes y modelos en varios campos y facilitar las transferencias entre aquellos. <br/>\nb. Promocionar y desarrollar modelos teóricos en campos que carecen de ellos. <br/>\nc. Reducir la duplicación de los esfuerzos teóricos. <br/>\nd. Promover la unidad de la ciencia a través de principios conceptuales y metodológicos unificadores.",
     "options": [
       "verdadero",
       "falso"
@@ -30,10 +30,10 @@
   {
     "id": "3",
     "title": "V y F 3",
-    "description": " Todos los elementos de un sistema deben estar dirigidos o enfocados en su objetivo primordial, teniendo importancia la forma en que estos actúen para alcanzarlo.\n",
+    "description": "Todos los elementos de un sistema deben estar dirigidos o enfocados en su objetivo primordial, teniendo importancia la forma en que estos actúen para alcanzarlo.",
     "level": "1",
     "solution": "verdadero",
-    "feedback": "El objetivo en los sistemas<br/>Los sistemas cumplen con una función básica o principal, por tanto todos los elementos estarán encaminados a perseguir dicho fin. Para nuestro estudio, el fin de un sistema corresponde al resultado que ha de obtener. Sin un fin, un sistema no tiene razón de existir. Esta razón es el punto de partida de los diseñadores y analistas para un estudio a fondo y completo de un sistema. Todos los elementos deben estar dirigidos o enfocados en su objetivo primordial, no importa la forma en que estos actúen para alcanzarlo. Entre las características que enmarcan a un objetivo de un sistema, tenemos: <br/> a. El fin (objetivo) resume las funciones realizadas en un sistema: Da una idea de un qué y un porqué se hacen las cosas. <br/>b. El objetivo emite una impresión sobre la envergadura y espacio de un sistema. Hasta dónde tiene su alcance y cuáles son sus limitaciones. <br/>c. El objetivo es claramente medible. Ya sea por la observación directa, indicadores, comparaciones y análisis de la conveniencia de resultados. Un objetivo se consigue o no se consigue",
+    "feedback": "El objetivo en los sistemas<br/>Los sistemas cumplen con una función básica o principal, por tanto todos los elementos estarán encaminados a perseguir dicho fin. Para nuestro estudio, el fin de un sistema corresponde al resultado que ha de obtener. Sin un fin, un sistema no tiene razón de existir. Esta razón es el punto de partida de los diseñadores y analistas para un estudio a fondo y completo de un sistema. Todos los elementos deben estar dirigidos o enfocados en su objetivo primordial, no importa la forma en que estos actúen para alcanzarlo. Entre las características que enmarcan a un objetivo de un sistema, tenemos: <br/> a. El fin (objetivo) resume las funciones realizadas en un sistema: Da una idea de un qué y un porqué se hacen las cosas. <br/>b. El objetivo emite una impresión sobre la envergadura y espacio de un sistema. Hasta dónde tiene su alcance y cuáles son sus limitaciones. <br/>c. El objetivo es claramente medible. Ya sea por la observación directa, indicadores, comparaciones y análisis de la conveniencia de resultados. Un objetivo se consigue o no se consigue.",
     "options": [
       "verdadero",
       "falso"
@@ -44,10 +44,10 @@
   {
     "id": "4",
     "title": "V y F 4",
-    "description": "El equilibrio es el proceso que busca mantener la energía de un sistema, el crecimiento de este nos dice que todo sistema tiende a la desorganización, pero finalmente logrará la homogeneización con el ambiente.\n ",
+    "description": "El equilibrio es el proceso que busca mantener la energía de un sistema, el crecimiento de este nos dice que todo sistema tiende a la desorganización, pero finalmente logrará la homogeneización con el ambiente.",
     "level": "1",
     "solution": "falso",
-    "feedback": "Entropía<br/>Proceso que busca mantener la energía del sistema. El segundo principio de la\ntermodinámica establece el crecimiento de la entropía, es decir, la máxima probabilidad\nde los sistemas es su progresiva desorganización y, finalmente, su homogeneización con\nel ambiente. Los sistemas cerrados están irremediablemente condenados a la\ndesorganización. No obstante, hay sistemas que, al menos temporalmente, revierten esta\ntendencia al aumentar sus estados de organización. También puede definirse como el\ndesgaste que el sistema presenta por el transcurso del tiempo o por el funcionamiento\ndel mismo. Los sistemas altamente entrópicos tienden a desaparecer por el desgaste\ngenerado por su proceso sistémico. Los mismos deben tener rigurosos sistemas de\ncontrol y mecanismos de revisión, reelaboración y cambio permanente, para evitar su\ndesaparición a través del tiempo. <br/>En un sistema cerrado la entropía siempre debe ser positiva. Sin embargo, en los sistemas abiertos biológicos o sociales, la entropía puede ser reducida o mejor aun transformarse en entropía negativa, es decir, un proceso de organización más completo y de capacidad para transformar los recursos. Esto es posible porque en los sistemas abiertos los recursos utilizados para reducir el proceso de entropía se toman del medio externo. Así mismo, los sistemas vivientes se mantienen en un estado estable y pueden evitar el incremento de la entropía y aun desarrollarse hacia estados de orden y de organización creciente. <br/><br/>\nPara mayor información sobre entropía <br/> https://www.youtube.com/watch?v=FApIdf9VwPk&ab_channel=Luc%C3%AdaRobles\n",
+    "feedback": "Entropía<br/>Proceso que busca mantener la energía del sistema. El segundo principio de la\ntermodinámica establece el crecimiento de la entropía, es decir, la máxima probabilidad\nde los sistemas es su progresiva desorganización y, finalmente, su homogeneización con\nel ambiente. Los sistemas cerrados están irremediablemente condenados a la\ndesorganización. No obstante, hay sistemas que, al menos temporalmente, revierten esta\ntendencia al aumentar sus estados de organización. También puede definirse como el\ndesgaste que el sistema presenta por el transcurso del tiempo o por el funcionamiento\ndel mismo. Los sistemas altamente entrópicos tienden a desaparecer por el desgaste\ngenerado por su proceso sistémico. Los mismos deben tener rigurosos sistemas de\ncontrol y mecanismos de revisión, reelaboración y cambio permanente, para evitar su\ndesaparición a través del tiempo. <br/>En un sistema cerrado la entropía siempre debe ser positiva. Sin embargo, en los sistemas abiertos biológicos o sociales, la entropía puede ser reducida o mejor aun transformarse en entropía negativa, es decir, un proceso de organización más completo y de capacidad para transformar los recursos. Esto es posible porque en los sistemas abiertos los recursos utilizados para reducir el proceso de entropía se toman del medio externo. Así mismo, los sistemas vivientes se mantienen en un estado estable y pueden evitar el incremento de la entropía y aun desarrollarse hacia estados de orden y de organización creciente.<br> <br>Para mayor información sobre entropía <a href='https://www.youtube.com/watch?v=FApIdf9VwPk&ab_channel=Luc%C3%AdaRobles'>has click aquí.</a>",
     "options": [
       "verdadero",
       "falso"
@@ -58,10 +58,10 @@
   {
     "id": "5",
     "title": "V y F 5",
-    "description": "La metodología utilizada por la TGS para un análisis y diseño de sistemas cuenta con cuatro etapas: en la primera de ellas se define el objetivo, un plan a de trabajo, recopilación de información y un diagnóstico de la eficacia y eficiencia de un sistema. ",
+    "description": "La metodología utilizada por la TGS para un análisis y diseño de sistemas cuenta con cuatro etapas: en la primera de ellas se define el objetivo, un plan a de trabajo, recopilación de información y un diagnóstico de la eficacia y eficiencia de un sistema.",
     "level": "1",
     "solution": "verdadero",
-    "feedback": "Metodología de aplicación de la TGS para el análisis y diseño de sistemas<br/>\nDesde el punto de vista de la administración está compuesta de las siguientes etapas: <br/>\na. Análisis de situación: es la etapa en que el analista toma conocimiento del sistema, se ubica en cuanto a su origen, objetivo y trayectoria. <br/>\n1. Definición de objetivo: determinar para qué ha sido requerido ya que en general se le plantean los efectos pero no las causas.\n2. Formulación del plan de trabajo: fijar los límites de interés del estudio a realizar, la metodología a seguir, los recursos materiales y humanos que necesitará, el tiempo requerido y el costo del mismo. Esta etapa se conoce como propuesta de servicio y a partir de su aprobación se continúa con la metodología.\n3. Relevamiento: recopilar toda la información referida al sistema en estudio, como así también toda la información que hace al límite de interés.\n4. Diagnóstico: medir la eficacia y la eficiencia del sistema en estudio. Eficacia es cuando el sistema logra los objetivos y eficiencia es cuando el sistema logra los objetivos con una relación costo beneficio positiva. Si un sistema es eficaz pero no eficiente el analista deberá cambiar los métodos del sistema, si un sistema no es eficaz el analista deberá cambiar el sistema y si un sistema es eficiente el analista sólo podrá optimizarlo. <br/>\nb. Diseño: el analista diseña el nuevo sistema.\n1. Diseño global: determinar las salidas, los archivos, las entradas del sistema, hacer\nun cálculo de costos y enumerar los procedimientos. El diseño global debe ser presentado para su aprobación.\n2. Diseño detallado: desarrollar en detalle la totalidad de los procedimientos enumerados en el diseño global y formular la estructura de organización la cual se aplicara sobre dichos procedimientos. <br/>\nc. Implementación: la implementación del sistema diseñado significa llevar a la práctica\nal mismo, esta puesta en marcha puede hacerse de tres formas.\n1. Global.\n2. En fases.\n3. En paralelo<br/>\nd. Seguimiento y control: El analista debe verificar los resultados del sistema implementado y aplicar las acciones correctivas que considere necesarias para ajustar el problema.\n\n\n",
+    "feedback": "Metodología de aplicación de la TGS para el análisis y diseño de sistemas<br/>\nDesde el punto de vista de la administración está compuesta de las siguientes etapas: <br/>\na. Análisis de situación: es la etapa en que el analista toma conocimiento del sistema, se ubica en cuanto a su origen, objetivo y trayectoria. <br/>\n1. Definición de objetivo: determinar para qué ha sido requerido ya que en general se le plantean los efectos pero no las causas.\n2. Formulación del plan de trabajo: fijar los límites de interés del estudio a realizar, la metodología a seguir, los recursos materiales y humanos que necesitará, el tiempo requerido y el costo del mismo. Esta etapa se conoce como propuesta de servicio y a partir de su aprobación se continúa con la metodología.\n3. Relevamiento: recopilar toda la información referida al sistema en estudio, como así también toda la información que hace al límite de interés.\n4. Diagnóstico: medir la eficacia y la eficiencia del sistema en estudio. Eficacia es cuando el sistema logra los objetivos y eficiencia es cuando el sistema logra los objetivos con una relación costo beneficio positiva. Si un sistema es eficaz pero no eficiente el analista deberá cambiar los métodos del sistema, si un sistema no es eficaz el analista deberá cambiar el sistema y si un sistema es eficiente el analista sólo podrá optimizarlo. <br/>\nb. Diseño: el analista diseña el nuevo sistema.\n1. Diseño global: determinar las salidas, los archivos, las entradas del sistema, hacer\nun cálculo de costos y enumerar los procedimientos. El diseño global debe ser presentado para su aprobación.\n2. Diseño detallado: desarrollar en detalle la totalidad de los procedimientos enumerados en el diseño global y formular la estructura de organización la cual se aplicara sobre dichos procedimientos. <br/>\nc. Implementación: la implementación del sistema diseñado significa llevar a la práctica\nal mismo, esta puesta en marcha puede hacerse de tres formas.\n1. Global.\n2. En fases.\n3. En paralelo<br/>\nd. Seguimiento y control: El analista debe verificar los resultados del sistema implementado y aplicar las acciones correctivas que considere necesarias para ajustar el problema.",
     "options": [
       "verdadero",
       "falso"
@@ -75,7 +75,7 @@
     "description": "¿A quién se le atribuye el primer modelo de la teoría general de sistemas?",
     "level": "2",
     "solution": "Ludwig von Bertalanffy",
-    "feedback": "En las décadas de los años 40, 50 y 60 del siglo XX se desarrolló una gran diversidad de aproximaciones en las diferentes ciencias. Aproximaciones teóricas con características en común: deficiencias para conceptualizar fenómenos, la no explicación de algunos de ellos y la no aplicabilidad de los enfoques analítico-reduccionistas y sus principios mecánico-causales, a raíz de ello surge como respuesta la perspectiva de la Teoría de sistemas, siendo su principio clave la noción de totalidad orgánica1 . El primer modelo y su teoría es atribuible al biólogo Ludwig von Bertalanffy (1901-1972) en la década de 1940, quien acuñó la denominación teoría general de sistemas (TGS). Para él, la TGS debería constituirse en un mecanismo de integración entre las ciencias naturales y sociales y ser al mismo tiempo un instrumento básico para la formación y preparación de científicos. <br/><br/>\nPara consultar más precursores de la Teoría General de Sistemas: <br/> -https://tgscarlostrivino.wixsite.com/udec/precursores <br/>-científica.https://www.youtube.com/watch?v=y14_XXlBY9M&ab_channel=SusanaM%C3%A9ndez\n",
+    "feedback": "En las décadas de los años 40, 50 y 60 del siglo XX se desarrolló una gran diversidad de aproximaciones en las diferentes ciencias. Aproximaciones teóricas con características en común: deficiencias para conceptualizar fenómenos, la no explicación de algunos de ellos y la no aplicabilidad de los enfoques analítico-reduccionistas y sus principios mecánico-causales, a raíz de ello surge como respuesta la perspectiva de la Teoría de sistemas, siendo su principio clave la noción de totalidad orgánica1 . El primer modelo y su teoría es atribuible al biólogo Ludwig von Bertalanffy (1901-1972) en la década de 1940, quien acuñó la denominación teoría general de sistemas (TGS). Para él, la TGS debería constituirse en un mecanismo de integración entre las ciencias naturales y sociales y ser al mismo tiempo un instrumento básico para la formación y preparación de científicos.<br><br>Para consultar más precursores de la Teoría General de Sistemas <a href = 'https://tgscarlostrivino.wixsite.com/udec/precursores'>has click aquí</a> o <a href='https://www.youtube.com/watch?v=y14_XXlBY9M&ab_channel=SusanaM%C3%A9ndez'>has click aquí.</a>",
     "options": [
       "Ludwig von Bertalanffy",
       "David Rapaport",
@@ -88,10 +88,10 @@
   {
     "id": "7",
     "title": "unica 2",
-    "description": "Las ____________ constituyen la energía para las necesidades operativas, son los ingresos recursos (materiales, humanos, datos o información,...).",
+    "description": "Las ____________ constituyen la energía para las necesidades operativas, son los ingresos recursos (materiales, humanos, datos o información, etcétera).",
     "level": "2",
     "solution": "entradas",
-    "feedback": "Componentes de un sistema <br/>\nUn sistema debe ser alimentado mediante el ingreso de un recurso (entrada), para poder activar los procesos y así arrojar los resultados requeridos (salida). Con este modelo los sistemas permiten resolver un sinnúmero de eventualidades, que de ahora en adelante lo llamaremos entrada-proceso-salida (EPS). <br/>\nLas entradas constituyen la energía para las necesidades operativas, son los ingresos o recursos (materiales, humanos, datos o información,...). El proceso es el conjunto de operaciones realizadas para la transformación de entradas en salidas. Las salidas son los resultados que el proceso entrega al transformar las entradas.\n<br/><br/>Para consultar más sobre componentes de un sistema:\n<br/>-https://www.youtube.com/watch?v=QbBy20GPlqc&ab_channel=Psicolog%C3%ADaAnimada\n",
+    "feedback": "Componentes de un sistema <br/>\nUn sistema debe ser alimentado mediante el ingreso de un recurso (entrada), para poder activar los procesos y así arrojar los resultados requeridos (salida). Con este modelo los sistemas permiten resolver un sinnúmero de eventualidades, que de ahora en adelante lo llamaremos entrada-proceso-salida (EPS). <br/>\nLas entradas constituyen la energía para las necesidades operativas, son los ingresos o recursos (materiales, humanos, datos o información, etcétera). El proceso es el conjunto de operaciones realizadas para la transformación de entradas en salidas. Las salidas son los resultados que el proceso entrega al transformar las entradas.<br/><br>Para consultar más sobre componentes de un sistema <a href ='https://www.youtube.com/watch?v=QbBy20GPlqc&ab_channel=Psicolog%C3%ADaAnimada'>has click aquí.</a>\n",
     "options": [
       "entradas",
       "salidas",
@@ -107,7 +107,7 @@
     "description": "Los sistemas se pueden clasificar según: \n1-Entitividad\n2-Relación a su origen\n3-Relación al ambiente.\nSeleccione los sistemas que se refieren a estas clasificaciones respectivamente.\n",
     "level": "2",
     "solution": "Reales o abstractos, naturales o artificiales, abiertos o cerrados",
-    "feedback": "Clasificación de Sistemas<br/> Existen tres tipos generales de sistemas que encontramos a diario en nuestras vidas: Los sistemas naturales, los sistemas artificiales y un tercero que resulta de la combinación de ambos, llamados sistemas compuestos. En la TGS los sistemas pueden clasificarse según su: <br/> Entitividad; pueden ser reales o abstractos. Mientras los primeros presumen una existencia independiente del observador (quien los descubrió), los segundos son construcciones simbólicas, como el caso de la lógica y la matemática. <br/>\nOrigen; pueden ser naturales o artificiales, distinción que apunta a destacar la dependencia o no en su estructuración por parte de otros sistemas. <br/>Ambiente; pueden ser abiertos o cerrados, según que realicen intercambio o no con sus ambientes. Si intercambian materia, energía e informaciones con el entorno, entre los que se describen sistemas físicos (climáticos, planetarios), vivientes (vegetales, animales y humanos), sociales (animales, humanos, sociológicos, históricos), psíquicos (individuales y colectivos), noéticos (ciencias, religiones, arte), etc. Estos sistemas son organizacionalmente cerrados e informacionalmente abiertos. <br/><br/>Para consultar más sobre clasificación de sistemas: <br/> https://www.youtube.com/watch?v=nRHigbYzLr4&ab_channel=Germ%C3%A1nFigueroa\n",
+    "feedback": "Clasificación de Sistemas<br/> Existen tres tipos generales de sistemas que encontramos a diario en nuestras vidas: Los sistemas naturales, los sistemas artificiales y un tercero que resulta de la combinación de ambos, llamados sistemas compuestos. En la TGS los sistemas pueden clasificarse según su: <br/> Entitividad; pueden ser reales o abstractos. Mientras los primeros presumen una existencia independiente del observador (quien los descubrió), los segundos son construcciones simbólicas, como el caso de la lógica y la matemática. <br/>\nOrigen; pueden ser naturales o artificiales, distinción que apunta a destacar la dependencia o no en su estructuración por parte de otros sistemas. <br/>Ambiente; pueden ser abiertos o cerrados, según que realicen intercambio o no con sus ambientes. Si intercambian materia, energía e informaciones con el entorno, entre los que se describen sistemas físicos (climáticos, planetarios), vivientes (vegetales, animales y humanos), sociales (animales, humanos, sociológicos, históricos), psíquicos (individuales y colectivos), noéticos (ciencias, religiones, arte), etc. Estos sistemas son organizacionalmente cerrados e informacionalmente abiertos. <br/><br/>Para consultar más sobre clasificación de sistemas <a href='https://www.youtube.com/watch?v=nRHigbYzLr4&ab_channel=Germ%C3%A1nFigueroa'>has click aquí.</a>",
     "options": [
       "Reales, cerrados, vivos",
       "Reales o abstractos, naturales o artificiales, abiertos o cerrados",
@@ -123,7 +123,7 @@
     "description": "Seleccione la respuesta que tenga el orden ascendente algunos de los niveles de jerarquía de un sistema.",
     "level": "2",
     "solution": "Sistema abierto, genético, social, sistema animal",
-    "feedback": "Jerarquía de los sistemas<br/>Al considerar los distintos tipos de sistemas se establece los siguientes niveles jerárquicos: <br/>1. Primer nivel, estructura estática. Se le puede llamar nivel de los marcos de referencia. <br/>2. Segundo nivel, sistema dinámico simple. Considera movimientos necesarios y predeterminados. Puede denominarse reloj de trabajo. <br/>3. Tercer nivel, mecanismo de control o sistema cibernético. El sistema se autorregula para mantener su equilibrio. <br/> 4. Cuarto nivel, \"sistema abierto\" o autoestructurado. En este nivel se comienza a diferenciar la vida. Puede considerarse nivel de célula. <br/>5. Quinto nivel, genético-social. Está caracterizado por las plantas. <br/>6. Sexto nivel, sistema animal. Se caracteriza por su creciente movilidad, comportamiento teleológico y su autoconciencia. <br/>7. Séptimo nivel, sistema humano. Es el nivel del ser individual, considerado como un sistema con conciencia y habilidad para utilizar el lenguaje y los símbolos. <br/>8. Octavo nivel, sistema social o sistema de organizaciones humanas considera el contenido y significado de mensajes, la naturaleza y dimensiones del sistema de valores, la transcripción de imágenes en registros históricos, sutiles simbolizaciones artísticas, música, poesía y la compleja gama de emociones humanas . <br/> 9. Noveno nivel, sistemas trascendentales. Completan los niveles de clasificación: estos son los últimos y absolutos, los ineludibles y desconocidos, los cuales también presentan estructuras sistemáticas e interrelaciones. <br/><br/>Para consultar más sobre jerarquía de los sistemas: <br/>https://www.youtube.com/watch?v=nRpun07lciU&ab_channel=TeoriadesistemasURJC",
+    "feedback": "Jerarquía de los sistemas<br/>Al considerar los distintos tipos de sistemas se establece los siguientes niveles jerárquicos: <br/>1. Primer nivel, estructura estática. Se le puede llamar nivel de los marcos de referencia. <br/>2. Segundo nivel, sistema dinámico simple. Considera movimientos necesarios y predeterminados. Puede denominarse reloj de trabajo. <br/>3. Tercer nivel, mecanismo de control o sistema cibernético. El sistema se autorregula para mantener su equilibrio. <br/> 4. Cuarto nivel, \"sistema abierto\" o autoestructurado. En este nivel se comienza a diferenciar la vida. Puede considerarse nivel de célula. <br/>5. Quinto nivel, genético-social. Está caracterizado por las plantas. <br/>6. Sexto nivel, sistema animal. Se caracteriza por su creciente movilidad, comportamiento teleológico y su autoconciencia. <br/>7. Séptimo nivel, sistema humano. Es el nivel del ser individual, considerado como un sistema con conciencia y habilidad para utilizar el lenguaje y los símbolos. <br/>8. Octavo nivel, sistema social o sistema de organizaciones humanas considera el contenido y significado de mensajes, la naturaleza y dimensiones del sistema de valores, la transcripción de imágenes en registros históricos, sutiles simbolizaciones artísticas, música, poesía y la compleja gama de emociones humanas . <br/> 9. Noveno nivel, sistemas trascendentales. Completan los niveles de clasificación: estos son los últimos y absolutos, los ineludibles y desconocidos, los cuales también presentan estructuras sistemáticas e interrelaciones. <br/><br/>Para consultar más sobre jerarquía de los sistemas <a href='https://www.youtube.com/watch?v=nRpun07lciU&ab_channel=TeoriadesistemasURJC'>has click aquí.</a>",
     "options": [
       "Estructura estática, sistema abierto, sistema humano",
       "Sistema humano, sistema trascendental, estructura estática",
@@ -139,7 +139,7 @@
     "description": "Se entiende como la propiedad que tiene un sistema de aprender y modificar un proceso, un estado o una característica de acuerdo a las modificaciones que sufre el contexto.",
     "level": "2",
     "solution": "Adaptabilidad",
-    "feedback": "Adaptabilidad<br/> Propiedad que tiene un sistema de aprender y modificar un proceso, un estado o una característica de acuerdo a las modificaciones que sufre el contexto. Para que un sistema pueda ser adaptable debe tener un fluido intercambio con el medio en el que se desarrolla y un continuo proceso de aprendizaje y autoorganización. <br/>Algunos ejemplos son el ser humano, la bolsa de valores, las sociedades de insectos y colonias de hormigas, la biósfera y el ecosistema, el cerebro y el sistema inmunitario, las células etc. ",
+    "feedback": "Adaptabilidad<br/> Propiedad que tiene un sistema de aprender y modificar un proceso, un estado o una característica de acuerdo a las modificaciones que sufre el contexto. Para que un sistema pueda ser adaptable debe tener un fluido intercambio con el medio en el que se desarrolla y un continuo proceso de aprendizaje y autoorganización. <br/>Algunos ejemplos son el ser humano, la bolsa de valores, las sociedades de insectos y colonias de hormigas, la biósfera y el ecosistema, el cerebro y el sistema inmunitario, las células, etcétera.",
     "options": [
       "Adaptabilidad",
       "Equifinalidad",
@@ -228,17 +228,18 @@
     ],
     "score": "10",
     "finished": false
-  },{
-  "id": "16",
-  "title": "ahorcado 1",
-  "description": "Un sistema de ________ estudia la conducta del sistema con el fin de regular de un modo conveniente para su supervivencia. Tiene elementos básicos como Variable, mecanismos sensores y motores, fuente de energía y retroalimentación. Estos miden los cambios en la variable y desarrollan actividades para corregirlos.",
-  "level": "4",
-  "solution": "Control",
-  "feedback": "La respuesta era control",
-  "options": null,
-  "score": "15",
-  "finished": false
-},
+  },
+  {
+    "id": "16",
+    "title": "ahorcado 1",
+    "description": "Un sistema de ________ estudia la conducta del sistema con el fin de regular de un modo conveniente para su supervivencia. Tiene elementos básicos como Variable, mecanismos sensores y motores, fuente de energía y retroalimentación. Estos miden los cambios en la variable y desarrollan actividades para corregirlos.",
+    "level": "4",
+    "solution": "Control",
+    "feedback": "La respuesta era control",
+    "options": null,
+    "score": "15",
+    "finished": false
+  },
   {
     "id": "17",
     "title": "ahorcado 2",
@@ -249,35 +250,38 @@
     "options": null,
     "score": "15",
     "finished": false
-  },{
-  "id": "18",
-  "title": "ahorcado 3",
-  "description" : "Los sistemas ___________ son sistemas de pensamiento emergentes y al mismo tiempo constituyentes de los sistemas sociales. Ejemplo: las ciencias, las ideologías, las religiones, los mitos, etc., forman parte de este tipo particular de sistemas.",
-  "level": "4",
-  "solution": "Noológicos",
-  "feedback": "La respuesta era noológicos",
-  "options": null,
-  "score": "15",
-  "finished": false
-},{
-  "id": "19",
-  "title": "ahorcado 4",
-  "description": "Es una caja que se utiliza para representar a los sistemas cuando no se sabe\nqué elementos o cosas los componen, pero se sabe que a determinadas entradas\ncorresponden determinadas salidas. Presumiendo que, a determinados estímulos, las\nvariables funcionaran en cierto sentido, se pueden inducir.",
-  "level": "4",
-  "solution": "CajaNegra",
-  "feedback": "La respuesta era caja negra",
-  "options": null,
-  "score": "15",
-  "finished": false
-},{
-  "id": "20",
-  "title": "ahorcado 5",
-  "description": "Un sistema tiene ________ cuando puede mantenerse en equilibrio a través del flujo continuo de materiales, energía e información, así mantener su funcionamiento de manera efectiva.",
-  "level": "4",
-  "solution": "Estabilidad",
-  "feedback": "La respuesta era estabilidad",
-  "options": null,
-  "score": "15",
-  "finished": false
-}
+  },
+  {
+    "id": "18",
+    "title": "ahorcado 3",
+    "description": "Los sistemas ___________ son sistemas de pensamiento emergentes y al mismo tiempo constituyentes de los sistemas sociales. Ejemplo: las ciencias, las ideologías, las religiones, los mitos, etc., forman parte de este tipo particular de sistemas.",
+    "level": "4",
+    "solution": "Noológicos",
+    "feedback": "La respuesta era noológicos",
+    "options": null,
+    "score": "15",
+    "finished": false
+  },
+  {
+    "id": "19",
+    "title": "ahorcado 4",
+    "description": "Es una caja que se utiliza para representar a los sistemas cuando no se sabe\nqué elementos o cosas los componen, pero se sabe que a determinadas entradas\ncorresponden determinadas salidas. Presumiendo que, a determinados estímulos, las\nvariables funcionaran en cierto sentido, se pueden inducir.",
+    "level": "4",
+    "solution": "CajaNegra",
+    "feedback": "La respuesta era caja negra",
+    "options": null,
+    "score": "15",
+    "finished": false
+  },
+  {
+    "id": "20",
+    "title": "ahorcado 5",
+    "description": "Un sistema tiene ________ cuando puede mantenerse en equilibrio a través del flujo continuo de materiales, energía e información, así mantener su funcionamiento de manera efectiva.",
+    "level": "4",
+    "solution": "Estabilidad",
+    "feedback": "La respuesta era estabilidad",
+    "options": null,
+    "score": "15",
+    "finished": false
+  }
 ]
