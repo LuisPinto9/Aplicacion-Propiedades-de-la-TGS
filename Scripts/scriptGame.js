@@ -31,7 +31,7 @@ addEventListener("load", () => {
             let level = parseInt(user.level) + 1
             document.getElementById("labelLevel").innerText = " / Nivel: " + level.toString()
             document.getElementById("labelScore").innerText = " / Puntuación: " + data.score
-            if (user.level === "4"){
+            if (user.level === "4") {
                 document.getElementById("labelLevel").innerText = " / Nivel: Max."
             }
 
@@ -106,10 +106,12 @@ function level(level) {
     xhr.send(null)
 }
 
-//en esta funcion se muestra una a una las preguntas que hay en el nivel
+//En esta función se empieza la animación de la barra de progreso
 function animar() {
     document.getElementById("barra").classList.toggle("progress-bar");
 }
+
+//en esta funcion se muestra una a una las preguntas que hay en el nivel
 function showQuestion() {
 
     let divT = document.getElementById("divTitle")
@@ -123,7 +125,7 @@ function showQuestion() {
         time = time - 1;
 
         if (time === 0) {
-            alert("se acabo el tiempo")
+            alert("Se acabo el tiempo")
             clearInterval(temporizador);
             time = 11;
             next(2);
@@ -132,7 +134,6 @@ function showQuestion() {
             //time3.innerHTML = time;
             time3.innerHTML = " ";
         }
-
     }, 1000)
 
 
@@ -149,13 +150,15 @@ function showQuestion() {
 }
 
 
-//esta funcion sirve para ir avanzando de pregunta
-function next(correct,a) {
+//esta función sirve para ir avanzando de pregunta
+function next(correct, a) {
 
     if (correct === '1') {
-        if(a === '2'){
+        if (a === '2') {
             document.getElementById("barra").style.visibility = "visible"
         }
+        let barra1 = document.getElementById("Game1")
+        barra1.removeAttribute("hidden")
 
         //en que pregunta va
 
@@ -171,6 +174,11 @@ function next(correct,a) {
             alert("Esta fue la ultima pregunta")
             finish()
         }
+
+
+        clearInterval(temporizador);
+        time = 11;
+
         animar();
         showQuestion()
 
@@ -184,6 +192,8 @@ function next(correct,a) {
         divQuestion.innerHTML = "Retroalimentación de la pregunta:  <br/>" + qLevel[questionCount - 1].feedback
         let divQ = document.getElementById("divOptions")
         divQ.innerHTML = `<button class="btn-option m-3" href="#Game" id="btnRandom" onclick="next('1','2') ">Siguiente</button>`
+        let barra1 = document.getElementById("Game1")
+        barra1.setAttribute("hidden", "")
 
     }
 }
@@ -194,16 +204,13 @@ function validate(answer) {
         let options = qLevel[questionCount - 1].solution
         if (options !== answer) {
             alert("Respuesta incorrecta ")
-            next("2","2")
-            return;
+            next("2", "2")
         } else {
             score += parseInt(qLevel[questionCount - 1].score)
             alert("Respuesta correcta ")
             clearInterval(temporizador);
             time = 11;
-            next("1","1")
-            return;
-
+            next("1", "1")
         }
     }
 }
