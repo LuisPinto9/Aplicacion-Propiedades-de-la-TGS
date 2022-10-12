@@ -10,12 +10,12 @@ function login2() {
         alert("Rellene todos los espacios")
 
     } else if (password1 === password2) {
-
         const xhr3 = new XMLHttpRequest();
 
         xhr3.open("GET", `./Php/controlUsers.php?option=2&name=${name}&password=${password1}&score=${score}&level=${level}`, true)
         xhr3.onreadystatechange = () => {
             if (xhr3.readyState === 4 && xhr3.status === 200) {
+                window.location.href="index.html";
             }
         }
         xhr3.send(null)
@@ -48,7 +48,6 @@ function comprobarExistencia() {
                     i = data.length
                 } else {
                     disableButton(1)
-
                 }
             }
         }
