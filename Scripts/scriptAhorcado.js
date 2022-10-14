@@ -257,8 +257,8 @@ function finish() {
             user.level = level2.toString()
             user.score = total.toString()
         } else {
-            if (user.score === "90") {
-                alert("Responde todas las preguntas correctamente para pasar de nivel")
+            if (score < 75) {
+                alert("Responde todas las preguntas correctamente para llegar al máximo nivel")
             }
             total = 90;
             user.score = total.toString()

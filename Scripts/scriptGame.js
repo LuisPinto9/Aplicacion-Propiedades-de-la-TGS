@@ -1,7 +1,10 @@
 let qLevel = []
 let options1 = ""
 let questionCount = 0
+//El score es la puntuacion que se va acumulando en cada nivel
 let score = 0
+//Auxiliar de nivel para saber que nivel esta haciendo el usuario
+let auxLevel = ""
 let user = []
 let temporizador;
 let time = 11;
@@ -72,7 +75,7 @@ function showGame(levelV) {
     let barra1 = document.getElementById("Game1")
     barra1.removeAttribute("hidden")
     animar();
-
+    auxLevel = levelV
     level(levelV)
 }
 
@@ -229,7 +232,7 @@ function finish() {
     //alert(`nivel: ${level}`)
     alert(`Puntuación obtenida: ${score}`)
     total = score + parseInt(user.score)
-    if (user.level === "0") {
+    if (auxLevel === "1" && user.level === "0") {
         if (total === 15) {
             if (user.level === "0") {
                 alert("Subiste de nivel")
@@ -238,33 +241,33 @@ function finish() {
             user.level = level2.toString()
             user.score = total.toString()
         } else {
-            if (user.score === "0") {
+            if (score < 15) {
                 alert("Responde todas las preguntas correctamente para pasar de nivel")
             }
             total = 0;
             user.score = total.toString()
         }
-    } else if (user.level === "1") {
+    } else if (auxLevel === "2" && user.level === "1") {
         if (total === 40) {
             alert("Subiste de nivel")
             level2 = parseInt(user.level) + 1
             user.level = level2.toString()
             user.score = total.toString()
         } else {
-            if (user.score === "15") {
-                alert("Responde todas las preguntas correctamente para pasar de nivel")
-            }
             total = 15;
             user.score = total.toString()
+            if (score < 25) {
+                alert("Responde todas las preguntas correctamente para pasar de nivel")
+            }
         }
-    } else if (user.level === "2") {
+    } else if (auxLevel === "3" && user.level === "2") {
         if (total === 90) {
             alert("Subiste de nivel")
             level2 = parseInt(user.level) + 1
             user.level = level2.toString()
             user.score = total.toString()
         } else {
-            if (user.score === "40") {
+            if (score < 50) {
                 alert("Responde todas las preguntas correctamente para pasar de nivel")
             }
             total = 40;

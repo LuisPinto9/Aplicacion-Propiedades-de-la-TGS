@@ -23,7 +23,6 @@ function login2() {
     } else {
         alert("Las contraseñas no coinciden")
     }
-
 }
 
 function bloquear() {
