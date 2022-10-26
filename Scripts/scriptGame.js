@@ -188,7 +188,7 @@ function next(correct, a) {
     } else {
         //ocultar barra
         document.getElementById("barra").style.visibility = "hidden"
-        time = 11;
+        time = 0;
         let divT = document.getElementById("divTitle")
         divT.innerHTML = `<h1 class="title-questions">Pregunta ${questionCount}/${qLevel.length}</h1>`
         let divQuestion = document.getElementById("divD")
